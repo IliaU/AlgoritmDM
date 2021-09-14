@@ -1,0 +1,479 @@
+16.03.2020 22:38:47	Stаrting	Старт программы
+16.03.2020 22:38:47	Com_Provider	Загрузка провайдера
+16.03.2020 22:38:47	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:38:47	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:38:47	Com_Provider	Строка подключения корректна
+16.03.2020 22:38:47	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:38:47	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:39:21	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:39:21	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:39:21	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:39:21	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 22:39:21	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:39:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+16.03.2020 22:39:24	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 22:43:32	Stopping	Закрытие программы
+16.03.2020 22:45:52	Stаrting	Старт программы
+16.03.2020 22:45:52	Com_Provider	Загрузка провайдера
+16.03.2020 22:45:52	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:45:52	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:45:52	Com_Provider	Строка подключения корректна
+16.03.2020 22:45:52	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:45:52	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:47:05	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:47:05	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:47:05	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:47:05	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonusD
+16.03.2020 22:47:05	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:47:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2 AffectedRows
+16.03.2020 22:47:07	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 22:47:10	Stopping	Закрытие программы
+16.03.2020 22:48:13	Stаrting	Старт программы
+16.03.2020 22:48:13	Com_Provider	Загрузка провайдера
+16.03.2020 22:48:13	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:48:13	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:48:14	Com_Provider	Строка подключения корректна
+16.03.2020 22:48:14	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:48:14	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:48:42	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:48:42	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:48:42	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:48:42	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonusD
+16.03.2020 22:48:42	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:48:47	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 863 AffectedRows
+16.03.2020 22:48:52	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2010 AffectedRows
+16.03.2020 22:48:54	Stopping	Закрытие программы
+16.03.2020 22:49:21	Stаrting	Старт программы
+16.03.2020 22:49:21	Com_Provider	Загрузка провайдера
+16.03.2020 22:49:21	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:49:21	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:49:21	Com_Provider	Строка подключения корректна
+16.03.2020 22:49:21	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:49:21	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:49:52	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:49:52	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:49:52	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:49:52	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonusD
+16.03.2020 22:49:52	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:49:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2 AffectedRows
+16.03.2020 22:49:53	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 22:49:55	Stopping	Закрытие программы
+16.03.2020 22:51:03	Stаrting	Старт программы
+16.03.2020 22:51:03	Com_Provider	Загрузка провайдера
+16.03.2020 22:51:03	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:51:03	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:51:03	Com_Provider	Строка подключения корректна
+16.03.2020 22:51:03	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:51:03	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:51:40	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:51:40	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:51:40	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:51:40	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 22:51:40	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:51:42	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+16.03.2020 22:51:42	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 22:51:46	Stopping	Закрытие программы
+16.03.2020 22:59:11	Stаrting	Старт программы
+16.03.2020 22:59:11	Com_Provider	Загрузка провайдера
+16.03.2020 22:59:11	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:59:11	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:59:11	Com_Provider	Строка подключения корректна
+16.03.2020 22:59:11	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 22:59:11	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 22:59:44	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 22:59:44	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 22:59:45	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 22:59:45	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 22:59:45	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 22:59:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+16.03.2020 22:59:46	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 23:00:25	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 23:00:25	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 23:00:25	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 23:00:25	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 23:00:25	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 23:00:27	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+16.03.2020 23:00:27	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 23:02:39	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 23:02:39	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 23:02:39	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 23:02:39	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 23:02:39	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 23:02:40	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+16.03.2020 23:02:41	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 23:02:57	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 23:02:57	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 23:02:57	Wokflow	Отчистка списка объектов в задании bonusD
+16.03.2020 23:02:57	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+16.03.2020 23:02:57	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 23:03:03	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 80 AffectedRows
+16.03.2020 23:03:08	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 198 AffectedRows
+16.03.2020 23:03:13	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 315 AffectedRows
+16.03.2020 23:03:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 435 AffectedRows
+16.03.2020 23:03:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 552 AffectedRows
+16.03.2020 23:03:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 669 AffectedRows
+16.03.2020 23:03:33	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 788 AffectedRows
+16.03.2020 23:03:38	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 909 AffectedRows
+16.03.2020 23:03:43	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1028 AffectedRows
+16.03.2020 23:03:48	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1150 AffectedRows
+16.03.2020 23:03:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1270 AffectedRows
+16.03.2020 23:03:58	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1390 AffectedRows
+16.03.2020 23:04:03	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1510 AffectedRows
+16.03.2020 23:04:08	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1638 AffectedRows
+16.03.2020 23:04:13	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1786 AffectedRows
+16.03.2020 23:04:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1935 AffectedRows
+16.03.2020 23:04:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2088 AffectedRows
+16.03.2020 23:04:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2238 AffectedRows
+16.03.2020 23:04:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2387 AffectedRows
+16.03.2020 23:04:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2536 AffectedRows
+16.03.2020 23:04:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2686 AffectedRows
+16.03.2020 23:04:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2835 AffectedRows
+16.03.2020 23:04:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2986 AffectedRows
+16.03.2020 23:04:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3135 AffectedRows
+16.03.2020 23:05:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3278 AffectedRows
+16.03.2020 23:05:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3428 AffectedRows
+16.03.2020 23:05:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3579 AffectedRows
+16.03.2020 23:05:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3728 AffectedRows
+16.03.2020 23:05:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3881 AffectedRows
+16.03.2020 23:05:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4032 AffectedRows
+16.03.2020 23:05:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4181 AffectedRows
+16.03.2020 23:05:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4332 AffectedRows
+16.03.2020 23:05:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4483 AffectedRows
+16.03.2020 23:05:47	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4591 AffectedRows
+16.03.2020 23:05:48	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 23:06:41	Stopping	Закрытие программы
+16.03.2020 23:14:25	Stаrting	Старт программы
+16.03.2020 23:14:25	Com_Provider	Загрузка провайдера
+16.03.2020 23:14:25	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 23:14:25	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 23:14:25	Com_Provider	Строка подключения корректна
+16.03.2020 23:14:25	SprWorkflow	Добавление задачи bonus в список заданий 
+16.03.2020 23:14:25	SprWorkflow	Добавление задачи bonusD в список заданий 
+16.03.2020 23:15:06	Com_Thread	Изменился статус обработчика заданий на: Starting
+16.03.2020 23:15:06	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+16.03.2020 23:15:06	Wokflow	Отчистка списка объектов в задании bonus
+16.03.2020 23:15:06	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+16.03.2020 23:15:06	Com_Thread	Изменился статус обработчика заданий на: Running
+16.03.2020 23:15:11	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 54 AffectedRows
+16.03.2020 23:15:12	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 62 AffectedRows
+16.03.2020 23:15:12	Com_Thread	Изменился статус обработчика заданий на: Completed
+16.03.2020 23:15:14	Stopping	Закрытие программы
+17.03.2020 11:42:20	Stаrting	Старт программы
+17.03.2020 11:42:20	Com_Provider	Загрузка провайдера
+17.03.2020 11:42:20	DocXmlConfig	Обработка конфигурационного файла
+17.03.2020 11:42:20	Com_Provider	Загрузка провайдера: Oracle
+17.03.2020 11:42:21	Com_Provider	Строка подключения корректна
+17.03.2020 11:42:21	SprWorkflow	Добавление задачи bonus в список заданий 
+17.03.2020 11:42:21	SprWorkflow	Добавление задачи bonusD в список заданий 
+17.03.2020 11:42:40	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 11:42:40	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 11:42:40	Wokflow	Отчистка списка объектов в задании bonusD
+17.03.2020 11:42:40	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+17.03.2020 11:42:40	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 11:42:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 49 AffectedRows
+17.03.2020 11:42:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 215 AffectedRows
+17.03.2020 11:42:56	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 375 AffectedRows
+17.03.2020 11:43:01	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 534 AffectedRows
+17.03.2020 11:43:06	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 699 AffectedRows
+17.03.2020 11:43:11	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 863 AffectedRows
+17.03.2020 11:43:16	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1030 AffectedRows
+17.03.2020 11:43:21	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1195 AffectedRows
+17.03.2020 11:43:26	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1362 AffectedRows
+17.03.2020 11:43:31	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1527 AffectedRows
+17.03.2020 11:43:36	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1693 AffectedRows
+17.03.2020 11:43:41	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1856 AffectedRows
+17.03.2020 11:43:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2020 AffectedRows
+17.03.2020 11:43:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2185 AffectedRows
+17.03.2020 11:43:56	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2351 AffectedRows
+17.03.2020 11:44:01	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2516 AffectedRows
+17.03.2020 11:44:06	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2680 AffectedRows
+17.03.2020 11:44:11	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2843 AffectedRows
+17.03.2020 11:44:16	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3005 AffectedRows
+17.03.2020 11:44:21	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3169 AffectedRows
+17.03.2020 11:44:26	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3334 AffectedRows
+17.03.2020 11:44:31	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3499 AffectedRows
+17.03.2020 11:44:36	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3664 AffectedRows
+17.03.2020 11:44:41	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3827 AffectedRows
+17.03.2020 11:44:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3991 AffectedRows
+17.03.2020 11:44:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4154 AffectedRows
+17.03.2020 11:44:56	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4317 AffectedRows
+17.03.2020 11:45:01	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4480 AffectedRows
+17.03.2020 11:45:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4591 AffectedRows
+17.03.2020 11:45:05	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 12:26:58	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 12:26:58	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 12:26:58	Wokflow	Отчистка списка объектов в задании bonusD
+17.03.2020 12:26:58	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+17.03.2020 12:26:58	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 12:27:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 104 AffectedRows
+17.03.2020 12:27:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 256 AffectedRows
+17.03.2020 12:27:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 407 AffectedRows
+17.03.2020 12:27:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 562 AffectedRows
+17.03.2020 12:27:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 714 AffectedRows
+17.03.2020 12:27:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 865 AffectedRows
+17.03.2020 12:27:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1016 AffectedRows
+17.03.2020 12:27:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1169 AffectedRows
+17.03.2020 12:27:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1324 AffectedRows
+17.03.2020 12:27:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1477 AffectedRows
+17.03.2020 12:27:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1631 AffectedRows
+17.03.2020 12:27:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1783 AffectedRows
+17.03.2020 12:28:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1935 AffectedRows
+17.03.2020 12:28:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2086 AffectedRows
+17.03.2020 12:28:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2238 AffectedRows
+17.03.2020 12:28:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2389 AffectedRows
+17.03.2020 12:28:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2541 AffectedRows
+17.03.2020 12:28:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2689 AffectedRows
+17.03.2020 12:28:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2841 AffectedRows
+17.03.2020 12:28:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2991 AffectedRows
+17.03.2020 12:28:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3140 AffectedRows
+17.03.2020 12:28:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3288 AffectedRows
+17.03.2020 12:28:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3437 AffectedRows
+17.03.2020 12:28:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3586 AffectedRows
+17.03.2020 12:29:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3736 AffectedRows
+17.03.2020 12:29:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3889 AffectedRows
+17.03.2020 12:29:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4042 AffectedRows
+17.03.2020 12:29:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4194 AffectedRows
+17.03.2020 12:29:25	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4345 AffectedRows
+17.03.2020 12:29:30	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4499 AffectedRows
+17.03.2020 12:29:35	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4652 AffectedRows
+17.03.2020 12:29:36	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4707 AffectedRows
+17.03.2020 12:29:37	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 12:36:52	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 12:36:52	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 12:36:52	Wokflow	Отчистка списка объектов в задании bonus
+17.03.2020 12:36:52	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+17.03.2020 12:36:52	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 12:36:57	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 67 AffectedRows
+17.03.2020 12:37:02	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 162 AffectedRows
+17.03.2020 12:37:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 259 AffectedRows
+17.03.2020 12:37:12	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 357 AffectedRows
+17.03.2020 12:37:17	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 459 AffectedRows
+17.03.2020 12:37:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 560 AffectedRows
+17.03.2020 12:37:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 659 AffectedRows
+17.03.2020 12:37:33	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 759 AffectedRows
+17.03.2020 12:37:38	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 860 AffectedRows
+17.03.2020 12:37:43	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 961 AffectedRows
+17.03.2020 12:37:48	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1062 AffectedRows
+17.03.2020 12:37:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1121 AffectedRows
+17.03.2020 12:37:51	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 13:31:56	Stopping	Закрытие программы
+17.03.2020 13:32:13	Stаrting	Старт программы
+17.03.2020 13:32:13	Com_Provider	Загрузка провайдера
+17.03.2020 13:32:13	DocXmlConfig	Обработка конфигурационного файла
+17.03.2020 13:32:13	Com_Provider	Загрузка провайдера: Oracle
+17.03.2020 13:32:13	Com_Provider	Строка подключения корректна
+17.03.2020 13:32:13	SprWorkflow	Добавление задачи bonus в список заданий 
+17.03.2020 13:32:13	SprWorkflow	Добавление задачи bonusD в список заданий 
+17.03.2020 13:32:28	Stopping	Закрытие программы
+17.03.2020 21:45:26	Stаrting	Старт программы
+17.03.2020 21:45:26	Com_Provider	Загрузка провайдера
+17.03.2020 21:45:26	DocXmlConfig	Обработка конфигурационного файла
+17.03.2020 21:45:26	Com_Provider	Загрузка провайдера: Oracle
+17.03.2020 21:45:27	Com_Provider	Строка подключения корректна
+17.03.2020 21:45:27	SprWorkflow	Добавление задачи bonus в список заданий 
+17.03.2020 21:45:27	SprWorkflow	Добавление задачи bonusD в список заданий 
+17.03.2020 21:46:05	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 21:46:05	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 21:46:05	Wokflow	Отчистка списка объектов в задании bonusD
+17.03.2020 21:46:05	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+17.03.2020 21:46:05	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 21:46:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+17.03.2020 21:46:07	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 21:52:54	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 21:52:54	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 21:52:54	Wokflow	Отчистка списка объектов в задании bonusD
+17.03.2020 21:52:54	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+17.03.2020 21:52:54	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 21:52:56	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+17.03.2020 21:52:56	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 22:00:23	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.03.2020 22:00:23	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.03.2020 22:00:23	Wokflow	Отчистка списка объектов в задании bonus
+17.03.2020 22:00:23	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+17.03.2020 22:00:23	Com_Thread	Изменился статус обработчика заданий на: Running
+17.03.2020 22:00:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 41 AffectedRows
+17.03.2020 22:00:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 111 AffectedRows
+17.03.2020 22:00:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 183 AffectedRows
+17.03.2020 22:00:40	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 194 AffectedRows
+17.03.2020 22:00:40	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.03.2020 23:55:59	Stopping	Закрытие программы
+30.03.2020 22:33:08	Stаrting	Старт программы
+30.03.2020 22:33:08	Com_Provider	Загрузка провайдера
+30.03.2020 22:33:08	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:33:08	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:33:09	Com_Provider	Строка подключения корректна
+30.03.2020 22:33:09	SprWorkflow	Добавление задачи bonus в список заданий 
+30.03.2020 22:33:09	SprWorkflow	Добавление задачи bonusD в список заданий 
+30.03.2020 22:33:18	Stopping	Закрытие программы
+30.03.2020 22:48:41	Stаrting	Старт программы
+30.03.2020 22:48:41	Com_Provider	Загрузка провайдера
+30.03.2020 22:48:41	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:48:41	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:48:41	Com_Provider	Строка подключения корректна
+30.03.2020 22:48:41	SprWorkflow	Добавление задачи bonus в список заданий 
+30.03.2020 22:48:41	SprWorkflow	Добавление задачи bonusD в список заданий 
+30.03.2020 22:49:00	Com_Thread	Изменился статус обработчика заданий на: Starting
+30.03.2020 22:49:00	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+30.03.2020 22:49:00	Wokflow	Отчистка списка объектов в задании bonusD
+30.03.2020 22:49:00	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+30.03.2020 22:49:00	Com_Thread	Изменился статус обработчика заданий на: Running
+30.03.2020 22:49:02	ERROR	AlgoritmExportCom_Thread: Процесс не может получить доступ к файлу "D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx", так как этот файл используется другим процессом.
+<<<<<<<<<<---------- Dump Sql ---------------------
+Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID),
+    R As (Select 
+            C.FIRST_NAME, C.LAST_NAME, T.CASH, D.SC_PERC, T.BONUS, D.POST_DATE, D.INVC_NO,
+            Round((T.CASH*D.SC_PERC/100) * Case When I.INVC_TYPE=0 Then 1 else -1 end,2) As NACH_BON, D.CUST_SID
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+            inner join AL On C.CUST_SID=AL.CUST_SID
+        Where D.POST_DATE < To_Date(''30.03.2020'',''DD.MM.YYYY'')
+                and C.CUST_SID = Case when ''1064810686''=''-1'' Then C.CUST_SID else to_number(''1064810686'') end),
+    W As (Select R.FIRST_NAME ||'' ''|| R.LAST_NAME As "Имя клиента",
+            Round(Sum (R.CASH) over (partition By R.CUST_SID),2) As "Использовано денег",
+            R.SC_PERC As "Бонусный %",
+            Round(Sum (R.NACH_BON) over (partition By R.CUST_SID),2) As "Начислено бонусов",
+            Round(Sum (R.BONUS) over (partition By R.CUST_SID),2) As "Использовано баллов",
+            Row_number() over (partition By R.CUST_SID Order By R.POST_DATE desc , R.INVC_NO desc) As PRN
+        From R R)
+Select "Имя клиента", "Исполь денег", "Бонусный %", "Начислено бон", "Исп баллов", "Начислено бон" - "Исп баллов" As "Остаток баллов"
+From W
+Where PRN=1 ' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Bonus_rpt.xlsx' As FILE_PATH, 'False' As "APPEND" From Dual
+
+    
+-------------------- Dump Sql ----------->>>>>>>>>>
+30.03.2020 22:49:02	Com_Thread	Изменился статус обработчика заданий на: ERROR
+30.03.2020 22:49:24	Stopping	Закрытие программы
+30.03.2020 22:49:27	Stаrting	Старт программы
+30.03.2020 22:49:27	Com_Provider	Загрузка провайдера
+30.03.2020 22:49:27	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:49:27	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:49:27	Com_Provider	Строка подключения корректна
+30.03.2020 22:49:27	SprWorkflow	Добавление задачи bonus в список заданий 
+30.03.2020 22:49:27	SprWorkflow	Добавление задачи bonusD в список заданий 
+30.03.2020 22:49:40	Com_Thread	Изменился статус обработчика заданий на: Starting
+30.03.2020 22:49:40	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+30.03.2020 22:49:40	Wokflow	Отчистка списка объектов в задании bonusD
+30.03.2020 22:49:40	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+30.03.2020 22:49:40	Com_Thread	Изменился статус обработчика заданий на: Running
+30.03.2020 22:49:41	ERROR	Oracle Data Provider for .NET: ORA-00972: identifier is too long
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID),
+    R As (Select 
+            C.FIRST_NAME, C.LAST_NAME, T.CASH, D.SC_PERC, T.BONUS, D.POST_DATE, D.INVC_NO,
+            Round((T.CASH*D.SC_PERC/100) * Case When I.INVC_TYPE=0 Then 1 else -1 end,2) As NACH_BON, D.CUST_SID
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+            inner join AL On C.CUST_SID=AL.CUST_SID
+        Where D.POST_DATE < To_Date('25.03.2020','DD.MM.YYYY')
+                and C.CUST_SID = Case when '-83464937037950980'='-1' Then C.CUST_SID else to_number('-83464937037950980') end),
+    W As (Select R.FIRST_NAME ||' '|| R.LAST_NAME As "Имя клиента",
+            Round(Sum (R.CASH) over (partition By R.CUST_SID),2) As "Использовано денег",
+            R.SC_PERC As "Бонусный %",
+            Round(Sum (R.NACH_BON) over (partition By R.CUST_SID),2) As "Начислено бонусов",
+            Round(Sum (R.BONUS) over (partition By R.CUST_SID),2) As "Использовано баллов",
+            Row_number() over (partition By R.CUST_SID Order By R.POST_DATE desc , R.INVC_NO desc) As PRN
+        From R R)
+Select "Имя клиента", "Исполь денег", "Бонусный %", "Начислено бон", "Исп баллов", "Начислено бон" - "Исп баллов" As "Остаток баллов"
+From W
+Where PRN=1 
+-------------------- Dump Sql ----------->>>>>>>>>>
+30.03.2020 22:49:41	Com_Thread	Изменился статус обработчика заданий на: ERROR
+30.03.2020 22:49:49	Stopping	Закрытие программы
+30.03.2020 22:51:29	Stаrting	Старт программы
+30.03.2020 22:51:29	Com_Provider	Загрузка провайдера
+30.03.2020 22:51:29	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:51:29	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:51:29	Com_Provider	Строка подключения корректна
+30.03.2020 22:51:29	SprWorkflow	Добавление задачи bonus в список заданий 
+30.03.2020 22:51:29	SprWorkflow	Добавление задачи bonusD в список заданий 
+30.03.2020 22:51:52	Com_Thread	Изменился статус обработчика заданий на: Starting
+30.03.2020 22:51:52	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+30.03.2020 22:51:52	Wokflow	Отчистка списка объектов в задании bonusD
+30.03.2020 22:51:52	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+30.03.2020 22:51:52	Com_Thread	Изменился статус обработчика заданий на: Running
+30.03.2020 22:51:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2 AffectedRows
+30.03.2020 22:51:54	Com_Thread	Изменился статус обработчика заданий на: Completed
+30.03.2020 22:51:56	Stopping	Закрытие программы
+30.03.2020 22:52:14	Stаrting	Старт программы
+30.03.2020 22:52:14	Com_Provider	Загрузка провайдера
+30.03.2020 22:52:14	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:52:14	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:52:15	Com_Provider	Строка подключения корректна
+30.03.2020 22:52:15	SprWorkflow	Добавление задачи bonus в список заданий 
+30.03.2020 22:52:15	SprWorkflow	Добавление задачи bonusD в список заданий 
+30.03.2020 22:52:28	Com_Thread	Изменился статус обработчика заданий на: Starting
+30.03.2020 22:52:28	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+30.03.2020 22:52:28	Wokflow	Отчистка списка объектов в задании bonusD
+30.03.2020 22:52:28	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+30.03.2020 22:52:28	Com_Thread	Изменился статус обработчика заданий на: Running
+30.03.2020 22:52:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 41 AffectedRows
+30.03.2020 22:52:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 186 AffectedRows
+30.03.2020 22:52:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 333 AffectedRows
+30.03.2020 22:52:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 478 AffectedRows
+30.03.2020 22:52:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 621 AffectedRows
+30.03.2020 22:52:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 764 AffectedRows
+30.03.2020 22:53:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 909 AffectedRows
+30.03.2020 22:53:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1054 AffectedRows
+30.03.2020 22:53:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1200 AffectedRows
+30.03.2020 22:53:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1347 AffectedRows
+30.03.2020 22:53:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1494 AffectedRows
+30.03.2020 22:53:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1642 AffectedRows
+30.03.2020 22:53:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1789 AffectedRows
+30.03.2020 22:53:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1935 AffectedRows
+30.03.2020 22:53:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2083 AffectedRows
+30.03.2020 22:53:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2230 AffectedRows
+30.03.2020 22:53:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2377 AffectedRows
+30.03.2020 22:53:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2523 AffectedRows
+30.03.2020 22:54:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2670 AffectedRows
+30.03.2020 22:54:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2817 AffectedRows
+30.03.2020 22:54:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2964 AffectedRows
+30.03.2020 22:54:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3112 AffectedRows
+30.03.2020 22:54:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3260 AffectedRows
+30.03.2020 22:54:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3408 AffectedRows
+30.03.2020 22:54:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3555 AffectedRows
+30.03.2020 22:54:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3703 AffectedRows
+30.03.2020 22:54:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3849 AffectedRows
+30.03.2020 22:54:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3995 AffectedRows
+30.03.2020 22:54:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4142 AffectedRows
+30.03.2020 22:54:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4290 AffectedRows
+30.03.2020 22:55:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4437 AffectedRows
+30.03.2020 22:55:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4583 AffectedRows
+30.03.2020 22:55:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4729 AffectedRows
+30.03.2020 22:55:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4876 AffectedRows
+30.03.2020 22:55:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5024 AffectedRows
+30.03.2020 22:55:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5172 AffectedRows
+30.03.2020 22:55:35	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5319 AffectedRows
+30.03.2020 22:55:40	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5466 AffectedRows
+30.03.2020 22:55:45	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5613 AffectedRows
+30.03.2020 22:55:50	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5761 AffectedRows
+30.03.2020 22:55:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5907 AffectedRows
+30.03.2020 22:56:00	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 6054 AffectedRows
+30.03.2020 22:56:02	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 6107 AffectedRows
+30.03.2020 22:56:02	Com_Thread	Изменился статус обработчика заданий на: Completed
+30.03.2020 22:56:13	Stopping	Закрытие программы

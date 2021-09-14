@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Algoritm_Export Version="3" DefColSpan="\t" DefRowSpan="\r\n" ProviderTyp="Oracle" ConnectionString="USER ID=reportuser;DATA SOURCE=rproods;PASSWORD=report">
+  <Lic>
+    <Key MachineName="DEMO-1" UserName="user" ValidToYYYYMMDD="20181231" LicKey="39O-3B8-3B9-3B5-3BB-3B1-3BJ-3CR-3CP-3CV-3CW-3CO-3D2-3CT-3BN-3D3-3CY-3CV-3CW-3CZ-3B3-3B6-3B2-3B4-3BE-3B5-3B4-3B6-3B7-3B1-3BN-3D1-3CN-3CY-3D3-3CU-3CW-3CL" ActivNumber="67P-69D-698-698-699" Info="тест инфо" HashUserOS="False" />
+    <Key MachineName="DESKTOP-U90R055" UserName="AKS_Admin" ValidToYYYYMMDD="20190405" LicKey="7HZ-7JP-7JL-7JF-7JR-7JH-7JZ-7L0-7L3-7LB-7LC-7KX-7LG-7L9-7K3-7LC-7LC-7LB-7LC-7L8-7JH-7JM-7JI-7JD-7JT-7JK-7JM-7JC-7JP-7JH-7K3-7LA-7L1-7LE-7LJ-7L3-7LA-7L1" HashUserOS="False" />
+    <Key MachineName="DESKTOP-U90R055" UserName="AKS_Admin" ValidToYYYYMMDD="20200205" LicKey="4CX-4EJ-4EI-4EG-4EP-4EB-4EW-4G1-4G1-4G5-4G9-4FY-4GE-4G3-4F0-4GD-4GA-4G5-4G9-4G9-4EF-4EG-4EF-4EF-4EI-4EE-4EH-4ED-4EN-4EB-4F0-4GB-4FZ-4G8-4GG-4G4-4G8-4FV" HashUserOS="False" />
+    <Key MachineName="DESKTOP-U90R055" UserName="AKS_Admin" ValidToYYYYMMDD="20210202" LicKey="603-61R-61P-61P-61V-61J-623-63A-637-63D-63G-637-63K-63B-627-63M-63G-63D-63G-63I-61L-61O-61M-61O-61P-61M-61O-61M-61Q-61J-627-63K-635-63G-63N-63D-63E-633" HashUserOS="False" />
+  </Lic>
+  <Params>
+    <Param Name="From" Caption="C" Typ="Calendar" Format="DD.MM.YYYY" Default="Select Sysdate As ID from dual" />
+    <Param Name="To" Caption="По" Typ="Calendar" Format="DD.MM.YYYY" Default="Select Sysdate As ID from dual" />
+    <Param Name="At" Caption="На" Typ="Calendar" Format="DD.MM.YYYY" Default="Select Sysdate As ID from dual" />
+    <Param Name="Customer" Caption="Клиент" Typ="ComboBox" Default="Select '-1' As ID from dual">With T As (Select 1 as Ord, '-1' As ID, 'Все клиенты' As TXT From Dual
+        Union
+        Select 2 as Ord, To_Char(CUST_SID) As ID, To_Char(LAST_NAME || ' ' || FIRST_NAME) As TXT
+        From CMS.Customer
+        Where CUST_SID in (Select Distinct CUST_SID From AKS.CUST_SC_PARAM))
+Select ID, TXT
+From T
+Order By Ord</Param>
+  </Params>
+  <Workflows>
+    <Workflow LongName="Отчетпо бонусам за период" ShortName="bonus" FILE_PATH_FOR_EXEL="@CurrentFolder\Export\Bonus_rpt.xlsx" HachColName="True">Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||'' ''|| C.LAST_NAME As "Имя клиента", 
+	D.SC_PERC As "Бонусный %",
+	T.CASH As "Исполь денег", 
+	Round((T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end,2) As "Начислено бон",
+	round (T.BONUS,2) As "Исп баллов",	
+	Round(D.STORE_CREDIT,2) As "Остаток Баллов",
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека",
+	--D.TOTAL_SUM As "Нарастающий", 
+	Case When I.INVC_TYPE=0 Then ''Продажа'' else ''Возврат'' end As "Тип чека"
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+       -- Sum(Case When I.INVC_TYPE&lt;&gt;0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date(''@From'',''DD.MM.YYYY'')
+                                            and To_Date(''@To'',''DD.MM.YYYY'')
+            and C.CUST_SID = Case when ''@Customer''=''-1'' Then C.CUST_SID else to_number(''@Customer'') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Bonus_rpt.xlsx' As FILE_PATH, 'True' As "APPEND" From Dual
+
+    </Workflow>
+    <Workflow LongName="Отчетпо бонусам на дату" ShortName="bonusD" FILE_PATH_FOR_EXEL="@CurrentFolder\Export\Bonus_Date_rpt.xlsx" HachColName="True">Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As "CASH", 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As "BONUS"
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (
+    Select C.FIRST_NAME, C.LAST_NAME, D.SC_PERC, D.TOTAL_SUM,
+            Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS NarNachBon,
+           Sum(Case When I.INVC_TYPE&lt;&gt;0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS IspNachBon,
+           Round(D.STORE_CREDIT,2) As OstBal,
+           row_number() over (Partition By D.CUST_SID Order By D.POST_DATE desc, D.INVC_NO desc) As PRN
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID 
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID 
+        Where D.POST_DATE &lt; To_Date(''@At'',''DD.MM.YYYY'')
+            and D.CUST_SID = Case when ''@Customer''=''-1'' Then D.CUST_SID else to_number(''@Customer'') end
+        )
+     Select FIRST_NAME ||'' ''|| LAST_NAME As "Имя клиента", 
+	 round(TOTAL_SUM,2) As "Исп денег",
+	 SC_PERC As "Бонусный %", 
+	 round(NarNachBon,2) "Нараст нач бонус", 
+	 round(IspNachBon,2) "Исп нач бонус",
+	 round(OstBal,2) "Остаток Баллов"
+     From F 
+     Where PRN=1
+     Order BY FIRST_NAME, LAST_NAME ' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Bonus_rpt.xlsx' As FILE_PATH, 'False' As "APPEND" From Dual
+
+    </Workflow>
+  </Workflows>
+</Algoritm_Export>

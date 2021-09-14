@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EED4D0AE-BB59-437B-83F9-D36F91515A45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlgoritmDM</RootNamespace>
+    <AssemblyName>AlgoritmDM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5E4F86714CF3E3F561FD0022B59630E08C2C5A1E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AlgoritmDM_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Com\Config.cs" />
+    <Compile Include="Com\ConfigReg.cs" />
+    <Compile Include="Com\ConfigurationFarm.cs" />
+    <Compile Include="Com\CustomerFarm.cs" />
+    <Compile Include="Com\Data\Check.cs" />
+    <Compile Include="Com\Data\Customer.cs" />
+    <Compile Include="Com\Data\Lib\CustomerBase.cs" />
+    <Compile Include="Com\Data\Lib\CustomerI.cs" />
+    <Compile Include="Com\Data\Lib\CustomerList.cs" />
+    <Compile Include="Com\DiscReasonFarm.cs" />
+    <Compile Include="Com\Lic.cs" />
+    <Compile Include="Com\LicLib\CChar.cs" />
+    <Compile Include="Com\LicLib\onLicEventKey.cs" />
+    <Compile Include="Com\LicLib\onLicItem.cs" />
+    <Compile Include="Com\LicLib\Osnova.cs" />
+    <Compile Include="Com\LicLib\SistemaSchislenia.cs" />
+    <Compile Include="Com\ProviderFarm.cs" />
+    <Compile Include="Com\Provider\Lib\ProviderBase.cs" />
+    <Compile Include="Com\Provider\Lib\ProviderI.cs" />
+    <Compile Include="Com\Provider\Lib\ProviderTransferI.cs" />
+    <Compile Include="Com\Provider\ODBCprv.cs" />
+    <Compile Include="Com\Provider\ODBC\FSetupConnectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Provider\ODBC\FSetupConnectDB.Designer.cs">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Provider\ODBC\FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Provider\ODBC\FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Provider\RPRO8prv.cs" />
+    <Compile Include="Com\Provider\RPRO8\FSetupConnectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Provider\RPRO8\FSetupConnectDB.Designer.cs">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\ScenariyFarm.cs" />
+    <Compile Include="Com\Scenariy\BonusDMscn.cs" />
+    <Compile Include="Com\Scenariy\BonusDM\BonusDMData.cs" />
+    <Compile Include="Com\Scenariy\BonusDM\FConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Scenariy\BonusDM\FConfig.Designer.cs">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Scenariy\BonusDM\FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Scenariy\BonusDM\FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Scenariy\BonusDM\PorogPoint.cs" />
+    <Compile Include="Com\Scenariy\Lib\ScenariyBase.cs" />
+    <Compile Include="Com\Scenariy\Lib\ScenariyDataBase.cs" />
+    <Compile Include="Com\Scenariy\Lib\ScenariyI.cs" />
+    <Compile Include="Com\Scenariy\Lib\ScenariyTransferI.cs" />
+    <Compile Include="Com\Scenariy\NakopDMscn.cs" />
+    <Compile Include="Com\Scenariy\NakopDM\FConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Scenariy\NakopDM\FConfig.Designer.cs">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Scenariy\NakopDM\FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\Scenariy\NakopDM\FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Com\Scenariy\NakopDM\NakopDMData.cs" />
+    <Compile Include="Com\Scenariy\NakopDM\PorogPoint.cs" />
+    <Compile Include="Com\UserFarm.cs" />
+    <Compile Include="FCustDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCustDetail.Designer.cs">
+      <DependentUpon>FCustDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogon.Designer.cs">
+      <DependentUpon>FLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLic.Designer.cs">
+      <DependentUpon>FLic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMerge.Designer.cs">
+      <DependentUpon>FMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPar.Designer.cs">
+      <DependentUpon>FPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FScenary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FScenary.Designer.cs">
+      <DependentUpon>FScenary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUsers.Designer.cs">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Lib\Configuration.cs" />
+    <Compile Include="Lib\ConfigurationBase.cs" />
+    <Compile Include="Lib\ConfigurationList.cs" />
+    <Compile Include="Lib\ConfigurationParams.cs" />
+    <Compile Include="Lib\CongigurationActionSaleEn.cs" />
+    <Compile Include="Lib\DiscReason.cs" />
+    <Compile Include="Lib\DiscReasonBase.cs" />
+    <Compile Include="Lib\DiscReasonList.cs" />
+    <Compile Include="Lib\EventConfiguration.cs" />
+    <Compile Include="Lib\EventConfigurationList.cs" />
+    <Compile Include="Lib\EventConfigurationListAsicRez.cs" />
+    <Compile Include="Lib\EventConfigurationListProcessingProgerssBar.cs" />
+    <Compile Include="Lib\EventCustDetailCheck.cs" />
+    <Compile Include="Lib\EventCustDetailCheckAsicRez.cs" />
+    <Compile Include="Lib\EventCustDetailCheckProgerssBar.cs" />
+    <Compile Include="Lib\EventCustomerList.cs" />
+    <Compile Include="Lib\EventCustomerListAsicRez.cs" />
+    <Compile Include="Lib\EventCustomerListProcessingProgerssBar.cs" />
+    <Compile Include="Lib\EventDiscReasonList.cs" />
+    <Compile Include="Lib\EventDiscReasonListAsicRez.cs" />
+    <Compile Include="Lib\EventScenariy.cs" />
+    <Compile Include="Lib\EventSharedConfigurations.cs" />
+    <Compile Include="Lib\EventUser.cs" />
+    <Compile Include="Lib\ModeEn.cs" />
+    <Compile Include="Lib\Reg\Reg.cs" />
+    <Compile Include="Lib\Reg\RegAttribute.cs" />
+    <Compile Include="Lib\Reg\RootReg.cs" />
+    <Compile Include="Lib\ScenariyList.cs" />
+    <Compile Include="Lib\SharedConfigurations.cs" />
+    <Compile Include="Lib\UScenariy.cs" />
+    <Compile Include="Lib\UserList.cs" />
+    <Compile Include="FConnetSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConnetSetup.Designer.cs">
+      <DependentUpon>FConnetSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\EventProviderFarm.cs" />
+    <Compile Include="Lib\RoleEn.cs" />
+    <Compile Include="Lib\UProvider.cs" />
+    <Compile Include="Lib\EventConverter.cs" />
+    <Compile Include="Lib\EventEn.cs" />
+    <Compile Include="Com\Log.cs" />
+    <Compile Include="Lib\EventLog.cs" />
+    <Compile Include="FStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FStart.Designer.cs">
+      <DependentUpon>FStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\User.cs" />
+    <Compile Include="Lib\UserBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Com\Provider\ODBC\FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Provider\ODBC\FSetupConnectDB.resx">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Provider\RPRO8\FSetupConnectDB.resx">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Scenariy\BonusDM\FConfig.resx">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Scenariy\BonusDM\FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Scenariy\NakopDM\FConfig.resx">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Com\Scenariy\NakopDM\FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConnetSetup.resx">
+      <DependentUpon>FConnetSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCustDetail.resx">
+      <DependentUpon>FCustDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogon.resx">
+      <DependentUpon>FLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLic.resx">
+      <DependentUpon>FLic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMerge.resx">
+      <DependentUpon>FMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPar.resx">
+      <DependentUpon>FPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FScenary.resx">
+      <DependentUpon>FScenary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUsers.resx">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FStart.resx">
+      <DependentUpon>FStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pic\AKS.jpg" />
+    <Content Include="pic\Cinema-Detective-icon.png" />
+    <Content Include="pic\Clock.jpg" />
+    <Content Include="pic\DB.jpg" />
+    <Content Include="pic\LL.jpg" />
+    <Content Include="pic\RR.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

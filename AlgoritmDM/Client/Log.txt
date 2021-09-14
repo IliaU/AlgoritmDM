@@ -1,0 +1,561 @@
+12.12.2018 15:06:28	Stаrting	Старт программы
+12.12.2018 15:06:28	Com_Provider	Загрузка провайдера
+12.12.2018 15:06:29	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:06:29	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:07:06	ERROR	AlgoritmExportCom_Provider: ORA-12154: TNS:could not resolve the connect identifier specified
+12.12.2018 15:07:06	SprWorkflow	Добавление задачи tst в список заданий 
+12.12.2018 15:07:06	SprWorkflow	Добавление задачи tst2 в список заданий 
+12.12.2018 15:07:06	SprWorkflow	Добавление задачи tst3 в список заданий 
+12.12.2018 15:07:06	SprWorkflow	Добавление задачи tst4 в список заданий 
+12.12.2018 15:07:06	SprWorkflow	Добавление задачи tst5 в список заданий 
+12.12.2018 15:14:53	Stopping	Закрытие программы
+12.12.2018 15:14:55	Stаrting	Старт программы
+12.12.2018 15:14:55	Com_Provider	Загрузка провайдера
+12.12.2018 15:14:55	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:14:56	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:15:32	ERROR	AlgoritmExportCom_Provider: ORA-12154: TNS:could not resolve the connect identifier specified
+12.12.2018 15:15:32	SprWorkflow	Добавление задачи tst в список заданий 
+12.12.2018 15:15:32	SprWorkflow	Добавление задачи tst2 в список заданий 
+12.12.2018 15:15:32	SprWorkflow	Добавление задачи tst3 в список заданий 
+12.12.2018 15:15:32	SprWorkflow	Добавление задачи tst4 в список заданий 
+12.12.2018 15:15:32	SprWorkflow	Добавление задачи tst5 в список заданий 
+12.12.2018 15:15:43	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:15:43	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:15:43	Wokflow	Отчистка списка объектов в задании tst2
+12.12.2018 15:15:43	ERROR	AlgoritmExportCom_Thread: Ссылка на объект не указывает на экземпляр объекта.
+<<<<<<<<<<---------- Dump Sql ---------------------
+Select 'Select 1 ID, ''Ford Galaxy'' As MODEL From dual union Select 2, ''Ford Fusion'' From dual union Select 3, ''Dewo Matiz'' From dual union Select 4, ''Иж Ода'' From dual' As QUERY, 'Product' As LIST_NAME,  '@CurrentFolder\Export\Product.txt' As FILE_PATH, 'True' As "APPEND" From Dual
+union 
+Select 'Select 1 ID, To_Date(''01.01.2018'',''DD.MM.YYYY'') D, 4 As MODEL From dual union Select 2, To_Date(''01.02.2018'',''DD.MM.YYYY''), 2 From dual union Select 3, To_Date(''01.03.2018'',''DD.MM.YYYY''), 1 From dual union Select 4, To_Date(''01.03.2018'',''DD.MM.YYYY''), 3 From dual', 'Journal' As LIST_NAME,  '@CurrentFolder\Export\Journal.txt', 'False' As "APPEND" From Dual
+-------------------- Dump Sql ----------->>>>>>>>>>
+12.12.2018 15:15:43	Com_Thread	Изменился статус обработчика заданий на: ERROR
+12.12.2018 15:15:51	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:16:10	Com_Provider	Строка подключения корректна
+12.12.2018 15:16:15	Stopping	Закрытие программы
+12.12.2018 15:18:37	Stаrting	Старт программы
+12.12.2018 15:18:37	Com_Provider	Загрузка провайдера
+12.12.2018 15:18:38	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:18:38	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:18:38	Com_Provider	Строка подключения корректна
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи tst в список заданий 
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи tst2 в список заданий 
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи tst3 в список заданий 
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи tst4 в список заданий 
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи tst5 в список заданий 
+12.12.2018 15:18:38	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:18:45	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:18:45	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:18:45	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:18:45	ERROR	Oracle Data Provider for .NET: ORA-00911: invalid character
+<<<<<<<<<<---------- Dump Sql ---------------------
+ Select 'select 
+c.cust_id as номер_клиента,
+c.last_name as Фамилия, 
+c.first_name as Имя, 
+ca.PHONE1 as Телефон,
+ak.VIP as VIP,
+ca.ADDRESS4 as Бонус_процент,
+c.FST_SALE_DATE as первая_продажа,
+c.LST_SALE_DATE as послед_покупка,
+c.CUST_SID as SID_клиента,
+c.CREATED_DATE  as дата_созд,
+ak.CALL_OFF_SC as Бонусный_счет
+From cms.customer c 
+inner join cms.cust_address ca on c.CUST_SID = ca.cust_sid 
+inner join AKS.CUST_SC_PARAM ak on c.CUST_SID = ak.CUST_SID
+ where  c.ACTIVE=1 and ca.PHONE1 like '%+7%' and ca.address4 is not null
+ order by c.last_name' As QUERY, 'c:\docs\clients_list.dat'As FILE_PATH, 'true'  as "Append", '\t' As COL_SPAN, '\r\n' As ROW_SPAN 
+From dual 
+-------------------- Dump Sql ----------->>>>>>>>>>
+12.12.2018 15:18:45	Com_Thread	Изменился статус обработчика заданий на: ERROR
+12.12.2018 15:18:48	Stopping	Закрытие программы
+12.12.2018 15:26:51	Stаrting	Старт программы
+12.12.2018 15:26:51	Com_Provider	Загрузка провайдера
+12.12.2018 15:26:51	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:26:51	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:26:51	Com_Provider	Строка подключения корректна
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи tst в список заданий 
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи tst2 в список заданий 
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи tst3 в список заданий 
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи tst4 в список заданий 
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи tst5 в список заданий 
+12.12.2018 15:26:51	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:26:56	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:26:56	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:26:56	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:26:56	ERROR	AlgoritmExportCom_Thread: В запросе задачи (Покупатели) не указано имя листа под которым результат будет сохранён в ехел файле.
+<<<<<<<<<<---------- Dump Sql ---------------------
+ Select 'select 
+c.cust_id as номер_клиента,
+c.last_name as Фамилия, 
+c.first_name as Имя, 
+ca.PHONE1 as Телефон,
+ak.VIP as VIP,
+ca.ADDRESS4 as Бонус_процент,
+c.FST_SALE_DATE as первая_продажа,
+c.LST_SALE_DATE as послед_покупка,
+c.CUST_SID as SID_клиента,
+c.CREATED_DATE  as дата_созд,
+ak.CALL_OFF_SC as Бонусный_счет
+From cms.customer c 
+inner join cms.cust_address ca on c.CUST_SID = ca.cust_sid 
+inner join AKS.CUST_SC_PARAM ak on c.CUST_SID = ak.CUST_SID
+ where  c.ACTIVE=1 and ca.PHONE1 like ''%+7%'' and ca.address4 is not null
+ order by c.last_name' As QUERY, 'c:\docs\clients_list.dat'As FILE_PATH, 'true'  as "Append", '\t' As COL_SPAN, '\r\n' As ROW_SPAN 
+From dual 
+-------------------- Dump Sql ----------->>>>>>>>>>
+12.12.2018 15:26:56	Com_Thread	Изменился статус обработчика заданий на: ERROR
+12.12.2018 15:27:07	Stopping	Закрытие программы
+12.12.2018 15:29:13	Stаrting	Старт программы
+12.12.2018 15:29:13	Com_Provider	Загрузка провайдера
+12.12.2018 15:29:13	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:29:13	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:29:13	Com_Provider	Строка подключения корректна
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи tst в список заданий 
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи tst2 в список заданий 
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи tst3 в список заданий 
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи tst4 в список заданий 
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи tst5 в список заданий 
+12.12.2018 15:29:13	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:29:19	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:29:19	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:29:19	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:29:19	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+12.12.2018 15:29:19	Com_Thread	Изменился статус обработчика заданий на: Running
+12.12.2018 15:29:26	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 93 AffectedRows
+12.12.2018 15:29:31	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 214 AffectedRows
+12.12.2018 15:29:36	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 334 AffectedRows
+12.12.2018 15:29:41	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 455 AffectedRows
+12.12.2018 15:29:46	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 576 AffectedRows
+12.12.2018 15:29:51	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 690 AffectedRows
+12.12.2018 15:29:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 801 AffectedRows
+12.12.2018 15:30:01	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 911 AffectedRows
+12.12.2018 15:30:06	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1019 AffectedRows
+12.12.2018 15:30:11	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1137 AffectedRows
+12.12.2018 15:30:16	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1247 AffectedRows
+12.12.2018 15:30:21	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1358 AffectedRows
+12.12.2018 15:30:26	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1475 AffectedRows
+12.12.2018 15:30:31	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1589 AffectedRows
+12.12.2018 15:30:36	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1706 AffectedRows
+12.12.2018 15:30:41	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1823 AffectedRows
+12.12.2018 15:30:47	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1940 AffectedRows
+12.12.2018 15:30:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2060 AffectedRows
+12.12.2018 15:30:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2177 AffectedRows
+12.12.2018 15:31:02	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2294 AffectedRows
+12.12.2018 15:31:07	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2410 AffectedRows
+12.12.2018 15:31:07	Com_Thread	Изменился статус обработчика заданий на: Completed
+12.12.2018 15:31:49	Stopping	Закрытие программы
+12.12.2018 15:40:14	Stаrting	Старт программы
+12.12.2018 15:40:14	Com_Provider	Загрузка провайдера
+12.12.2018 15:40:14	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:40:14	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:40:14	Com_Provider	Строка подключения корректна
+12.12.2018 15:40:14	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:40:19	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:40:19	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:40:19	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:40:19	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+12.12.2018 15:40:19	Com_Thread	Изменился статус обработчика заданий на: Running
+12.12.2018 15:40:24	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 103 AffectedRows
+12.12.2018 15:40:29	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 225 AffectedRows
+12.12.2018 15:40:34	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 347 AffectedRows
+12.12.2018 15:40:39	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 465 AffectedRows
+12.12.2018 15:40:44	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 586 AffectedRows
+12.12.2018 15:40:49	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 709 AffectedRows
+12.12.2018 15:40:54	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 831 AffectedRows
+12.12.2018 15:40:59	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 953 AffectedRows
+12.12.2018 15:41:04	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1072 AffectedRows
+12.12.2018 15:41:09	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1195 AffectedRows
+12.12.2018 15:41:14	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1317 AffectedRows
+12.12.2018 15:41:19	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1440 AffectedRows
+12.12.2018 15:41:25	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1562 AffectedRows
+12.12.2018 15:41:28	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1635 AffectedRows
+12.12.2018 15:41:28	Com_Thread	Изменился статус обработчика заданий на: Completed
+12.12.2018 15:42:32	Stopping	Закрытие программы
+12.12.2018 15:44:19	Stаrting	Старт программы
+12.12.2018 15:44:19	Com_Provider	Загрузка провайдера
+12.12.2018 15:44:19	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:44:19	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:44:19	Com_Provider	Строка подключения корректна
+12.12.2018 15:44:19	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:44:24	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:44:24	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:44:24	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:44:24	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+12.12.2018 15:44:24	Com_Thread	Изменился статус обработчика заданий на: Running
+12.12.2018 15:44:29	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 92 AffectedRows
+12.12.2018 15:44:34	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 190 AffectedRows
+12.12.2018 15:44:39	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 301 AffectedRows
+12.12.2018 15:44:45	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 408 AffectedRows
+12.12.2018 15:44:50	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 515 AffectedRows
+12.12.2018 15:44:55	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 640 AffectedRows
+12.12.2018 15:45:00	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 761 AffectedRows
+12.12.2018 15:45:05	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 885 AffectedRows
+12.12.2018 15:45:10	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1008 AffectedRows
+12.12.2018 15:45:15	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1132 AffectedRows
+12.12.2018 15:45:20	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1256 AffectedRows
+12.12.2018 15:45:25	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1376 AffectedRows
+12.12.2018 15:45:30	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1472 AffectedRows
+12.12.2018 15:45:35	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1583 AffectedRows
+12.12.2018 15:45:37	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1635 AffectedRows
+12.12.2018 15:45:38	Com_Thread	Изменился статус обработчика заданий на: Completed
+12.12.2018 15:46:08	Stopping	Закрытие программы
+12.12.2018 15:48:33	Stаrting	Старт программы
+12.12.2018 15:48:33	Com_Provider	Загрузка провайдера
+12.12.2018 15:48:33	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:48:33	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:48:33	Com_Provider	Строка подключения корректна
+12.12.2018 15:48:33	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:48:51	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:48:51	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:48:51	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:48:51	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+12.12.2018 15:48:51	Com_Thread	Изменился статус обработчика заданий на: Running
+12.12.2018 15:48:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 109 AffectedRows
+12.12.2018 15:49:01	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 236 AffectedRows
+12.12.2018 15:49:06	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 360 AffectedRows
+12.12.2018 15:49:11	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 488 AffectedRows
+12.12.2018 15:49:16	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 615 AffectedRows
+12.12.2018 15:49:21	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 739 AffectedRows
+12.12.2018 15:49:26	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 866 AffectedRows
+12.12.2018 15:49:31	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 990 AffectedRows
+12.12.2018 15:49:36	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1117 AffectedRows
+12.12.2018 15:49:41	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1243 AffectedRows
+12.12.2018 15:49:46	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1367 AffectedRows
+12.12.2018 15:49:51	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1492 AffectedRows
+12.12.2018 15:49:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1615 AffectedRows
+12.12.2018 15:49:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1635 AffectedRows
+12.12.2018 15:49:58	Com_Thread	Изменился статус обработчика заданий на: Completed
+12.12.2018 15:50:18	Stopping	Закрытие программы
+12.12.2018 15:53:45	Stаrting	Старт программы
+12.12.2018 15:53:45	Com_Provider	Загрузка провайдера
+12.12.2018 15:53:45	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:53:45	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:53:46	Com_Provider	Строка подключения корректна
+12.12.2018 15:53:46	SprWorkflow	Добавление задачи customer в список заданий 
+12.12.2018 15:54:35	Com_Thread	Изменился статус обработчика заданий на: Starting
+12.12.2018 15:54:35	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+12.12.2018 15:54:35	Wokflow	Отчистка списка объектов в задании customer
+12.12.2018 15:54:35	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+12.12.2018 15:54:35	Com_Thread	Изменился статус обработчика заданий на: Running
+12.12.2018 15:54:37	ERROR	AlgoritmExportCom_Thread: Процесс не может получить доступ к файлу "c:\docs\clients_list.xlsx", так как этот файл используется другим процессом.
+<<<<<<<<<<---------- Dump Sql ---------------------
+ Select 'select 
+c.cust_id as номер_клиента,
+c.last_name as Фамилия, 
+c.first_name as Имя, 
+ca.PHONE1 as Телефон,
+ak.VIP as VIP,
+ca.ADDRESS4 as Бонус_процент,
+c.FST_SALE_DATE as первая_продажа,
+c.LST_SALE_DATE as послед_покупка,
+c.CUST_SID as SID_клиента,
+c.CREATED_DATE  as дата_созд,
+ak.CALL_OFF_SC as Бонусный_счет
+From cms.customer c 
+inner join cms.cust_address ca on c.CUST_SID = ca.cust_sid 
+inner join AKS.CUST_SC_PARAM ak on c.CUST_SID = ak.CUST_SID
+ where  c.ACTIVE=1 and ca.PHONE1 like ''%+7%'' and ca.address4 is not null
+  group by c.CUST_ID, c.last_name, c.first_name, ca.PHONE1, ak.VIP, ca.ADDRESS4, c.FST_SALE_DATE , c.LST_SALE_DATE, c.CUST_SID, c.CREATED_DATE, ak.CALL_OFF_SC
+ order by c.last_name' As QUERY, 'Clients' As LIST_NAME, 'c:\docs\clients_list.dat'As FILE_PATH, 'true'  as "Append", '\t' As COL_SPAN, '\r\n' As ROW_SPAN 
+From dual 
+-------------------- Dump Sql ----------->>>>>>>>>>
+12.12.2018 15:54:37	Com_Thread	Изменился статус обработчика заданий на: ERROR
+12.12.2018 15:54:52	Stopping	Закрытие программы
+12.12.2018 15:54:55	Stаrting	Старт программы
+12.12.2018 15:54:55	Com_Provider	Загрузка провайдера
+12.12.2018 15:54:55	DocXmlConfig	Обработка конфигурационного файла
+12.12.2018 15:54:55	Com_Provider	Загрузка провайдера: Oracle
+12.12.2018 15:54:55	Com_Provider	Строка подключения корректна
+12.12.2018 15:54:55	SprWorkflow	Добавление задачи customer в список заданий 
+14.12.2018 15:17:39	Stopping	Закрытие программы
+10.01.2019 15:55:46	Stаrting	Старт программы
+10.01.2019 15:55:46	Com_Provider	Загрузка провайдера
+10.01.2019 15:55:47	DocXmlConfig	Обработка конфигурационного файла
+10.01.2019 15:55:47	Com_Provider	Загрузка провайдера: Oracle
+10.01.2019 15:55:57	Com_Provider	Строка подключения корректна
+10.01.2019 15:55:57	SprWorkflow	Добавление задачи customer в список заданий 
+10.01.2019 15:56:05	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.01.2019 15:56:05	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.01.2019 15:56:05	Wokflow	Отчистка списка объектов в задании customer
+10.01.2019 15:56:05	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+10.01.2019 15:56:05	Com_Thread	Изменился статус обработчика заданий на: Running
+10.01.2019 15:56:09	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 51 AffectedRows
+10.01.2019 15:56:10	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.01.2019 15:56:17	Stopping	Закрытие программы
+31.01.2019 14:45:34	Stаrting	Старт программы
+31.01.2019 14:45:34	Com_Provider	Загрузка провайдера
+31.01.2019 14:45:34	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 14:45:34	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 14:45:36	Com_Provider	Строка подключения корректна
+31.01.2019 14:45:36	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 14:45:45	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 14:45:45	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 14:45:45	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 14:45:45	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 14:45:45	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 14:45:50	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3 AffectedRows
+31.01.2019 14:45:55	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 139 AffectedRows
+31.01.2019 14:46:00	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 286 AffectedRows
+31.01.2019 14:46:04	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 409 AffectedRows
+31.01.2019 14:46:05	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 14:48:12	Stopping	Закрытие программы
+31.01.2019 14:52:34	Stаrting	Старт программы
+31.01.2019 14:52:34	Com_Provider	Загрузка провайдера
+31.01.2019 14:52:34	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 14:52:34	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 14:52:34	Com_Provider	Строка подключения корректна
+31.01.2019 14:52:34	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 14:52:40	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 14:52:40	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 14:52:40	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 14:52:40	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 14:52:40	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 14:52:46	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 121 AffectedRows
+31.01.2019 14:52:51	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 263 AffectedRows
+31.01.2019 14:52:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 403 AffectedRows
+31.01.2019 14:52:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 409 AffectedRows
+31.01.2019 14:52:56	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 16:10:34	Stopping	Закрытие программы
+31.01.2019 16:10:37	Stаrting	Старт программы
+31.01.2019 16:10:37	Com_Provider	Загрузка провайдера
+31.01.2019 16:10:37	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 16:10:37	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 16:10:37	Com_Provider	Строка подключения корректна
+31.01.2019 16:10:37	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 16:10:42	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 16:10:42	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 16:10:42	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 16:10:42	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 16:10:42	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 16:10:44	ERROR	AlgoritmExportCom_Thread: Процесс не может получить доступ к файлу "c:\docs\clients_list.xlsx", так как этот файл используется другим процессом.
+<<<<<<<<<<---------- Dump Sql ---------------------
+ Select 'select 
+c.cust_id as номер_клиента,
+c.last_name as Фамилия, 
+c.first_name as Имя, 
+ca.PHONE1 as Телефон,
+ak.VIP as VIP,
+ca.ADDRESS4 as Бонус_процент,
+c.FST_SALE_DATE as первая_продажа,
+c.LST_SALE_DATE as послед_покупка,
+c.CUST_SID as SID_клиента,
+c.CREATED_DATE  as дата_созд,
+ak.CALL_OFF_SC as Бонусный_счет
+From cms.customer c 
+inner join cms.cust_address ca on c.CUST_SID = ca.cust_sid 
+inner join AKS.CUST_SC_PARAM ak on c.CUST_SID = ak.CUST_SID
+ where  c.ACTIVE=1 and ca.PHONE1 like ''%+7%'' and ca.address4 is not null
+  group by c.CUST_ID, c.last_name, c.first_name, ca.PHONE1, ak.VIP, ca.ADDRESS4, c.FST_SALE_DATE , c.LST_SALE_DATE, c.CUST_SID, c.CREATED_DATE, ak.CALL_OFF_SC
+ order by c.last_name' As QUERY, 'Clients' As LIST_NAME, 'c:\docs\clients_list.dat'As FILE_PATH, 'true'  as "Append", '\t' As COL_SPAN, '\r\n' As ROW_SPAN 
+From dual 
+-------------------- Dump Sql ----------->>>>>>>>>>
+31.01.2019 16:10:44	Com_Thread	Изменился статус обработчика заданий на: ERROR
+31.01.2019 16:10:52	Stopping	Закрытие программы
+31.01.2019 16:10:54	Stаrting	Старт программы
+31.01.2019 16:10:54	Com_Provider	Загрузка провайдера
+31.01.2019 16:10:54	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 16:10:54	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 16:10:54	Com_Provider	Строка подключения корректна
+31.01.2019 16:10:54	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 16:11:01	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 16:11:01	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 16:11:01	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 16:11:01	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 16:11:01	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 16:11:06	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 132 AffectedRows
+31.01.2019 16:11:11	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 287 AffectedRows
+31.01.2019 16:11:15	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 409 AffectedRows
+31.01.2019 16:11:16	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 16:11:20	Stopping	Закрытие программы
+31.01.2019 17:17:41	Stаrting	Старт программы
+31.01.2019 17:17:41	Com_Provider	Загрузка провайдера
+31.01.2019 17:17:42	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 17:17:42	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 17:17:42	Com_Provider	Строка подключения корректна
+31.01.2019 17:17:42	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 17:17:47	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 17:17:47	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 17:17:47	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 17:17:47	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 17:17:47	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 17:17:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 116 AffectedRows
+31.01.2019 17:17:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 254 AffectedRows
+31.01.2019 17:18:02	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 392 AffectedRows
+31.01.2019 17:18:03	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 409 AffectedRows
+31.01.2019 17:18:04	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 17:18:05	Stopping	Закрытие программы
+31.01.2019 17:42:08	Stаrting	Старт программы
+31.01.2019 17:42:08	Com_Provider	Загрузка провайдера
+31.01.2019 17:42:08	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 17:42:08	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 17:42:09	Com_Provider	Строка подключения корректна
+31.01.2019 17:42:09	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 17:42:13	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 17:42:13	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 17:42:13	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 17:42:13	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 17:42:13	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 17:42:18	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 102 AffectedRows
+31.01.2019 17:42:23	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 217 AffectedRows
+31.01.2019 17:42:28	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 324 AffectedRows
+31.01.2019 17:42:32	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 409 AffectedRows
+31.01.2019 17:42:33	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 18:09:59	Stopping	Закрытие программы
+31.01.2019 18:10:02	Stаrting	Старт программы
+31.01.2019 18:10:02	Com_Provider	Загрузка провайдера
+31.01.2019 18:10:02	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 18:10:02	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 18:10:03	Com_Provider	Строка подключения корректна
+31.01.2019 18:10:03	SprWorkflow	Добавление задачи customer в список заданий 
+31.01.2019 18:10:06	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 18:10:06	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 18:10:06	Wokflow	Отчистка списка объектов в задании customer
+31.01.2019 18:10:06	Wokflow	Добавление объекта c:\docs\clients_list.dat в задание customer
+31.01.2019 18:10:06	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 18:10:11	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 72 AffectedRows
+31.01.2019 18:10:16	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 167 AffectedRows
+31.01.2019 18:10:21	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 259 AffectedRows
+31.01.2019 18:10:26	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 352 AffectedRows
+31.01.2019 18:10:31	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 446 AffectedRows
+31.01.2019 18:10:36	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 541 AffectedRows
+31.01.2019 18:10:41	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 633 AffectedRows
+31.01.2019 18:10:47	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 727 AffectedRows
+31.01.2019 18:10:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 814 AffectedRows
+31.01.2019 18:10:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 907 AffectedRows
+31.01.2019 18:11:02	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1013 AffectedRows
+31.01.2019 18:11:07	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1121 AffectedRows
+31.01.2019 18:11:12	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1223 AffectedRows
+31.01.2019 18:11:17	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1326 AffectedRows
+31.01.2019 18:11:22	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1438 AffectedRows
+31.01.2019 18:11:27	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1547 AffectedRows
+31.01.2019 18:11:32	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1651 AffectedRows
+31.01.2019 18:11:37	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1771 AffectedRows
+31.01.2019 18:11:42	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 1890 AffectedRows
+31.01.2019 18:11:47	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2011 AffectedRows
+31.01.2019 18:11:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2131 AffectedRows
+31.01.2019 18:11:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2253 AffectedRows
+31.01.2019 18:12:02	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2373 AffectedRows
+31.01.2019 18:12:07	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2496 AffectedRows
+31.01.2019 18:12:12	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2614 AffectedRows
+31.01.2019 18:12:17	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2716 AffectedRows
+31.01.2019 18:12:22	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2819 AffectedRows
+31.01.2019 18:12:27	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 2916 AffectedRows
+31.01.2019 18:12:32	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3049 AffectedRows
+31.01.2019 18:12:37	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3186 AffectedRows
+31.01.2019 18:12:42	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3323 AffectedRows
+31.01.2019 18:12:47	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3461 AffectedRows
+31.01.2019 18:12:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3598 AffectedRows
+31.01.2019 18:12:57	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3736 AffectedRows
+31.01.2019 18:13:02	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 3873 AffectedRows
+31.01.2019 18:13:07	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4013 AffectedRows
+31.01.2019 18:13:12	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4151 AffectedRows
+31.01.2019 18:13:17	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4288 AffectedRows
+31.01.2019 18:13:22	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4424 AffectedRows
+31.01.2019 18:13:27	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4562 AffectedRows
+31.01.2019 18:13:32	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4700 AffectedRows
+31.01.2019 18:13:37	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4837 AffectedRows
+31.01.2019 18:13:42	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 4975 AffectedRows
+31.01.2019 18:13:47	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 5113 AffectedRows
+31.01.2019 18:13:52	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 5250 AffectedRows
+31.01.2019 18:13:56	Com_Thread	Статус выгрузки по объекту c:\docs\clients_list.dat: 5354 AffectedRows
+31.01.2019 18:13:57	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 18:14:00	Stopping	Закрытие программы
+14.03.2019 16:10:05	Stаrting	Старт программы
+14.03.2019 16:10:05	Com_Provider	Загрузка провайдера
+14.03.2019 16:10:06	DocXmlConfig	Обработка конфигурационного файла
+14.03.2019 16:10:06	Com_Provider	Загрузка провайдера: Oracle
+14.03.2019 16:10:09	Com_Provider	Строка подключения корректна
+14.03.2019 16:10:09	SprWorkflow	Добавление задачи customer в список заданий 
+14.03.2019 16:10:18	Stopping	Закрытие программы
+04.04.2019 16:29:40	Stаrting	Старт программы
+04.04.2019 16:29:40	Com_Provider	Загрузка провайдера
+04.04.2019 16:29:41	DocXmlConfig	Обработка конфигурационного файла
+04.04.2019 16:29:41	Com_Provider	Загрузка провайдера: Oracle
+04.04.2019 16:29:41	Com_Provider	Строка подключения корректна
+04.04.2019 16:29:41	SprWorkflow	Добавление задачи customer в список заданий 
+04.04.2019 16:30:17	Stopping	Закрытие программы
+10.01.2020 11:09:48	Stаrting	Старт программы
+10.01.2020 11:09:48	Com_Provider	Загрузка провайдера
+10.01.2020 11:09:48	DocXmlConfig	Обработка конфигурационного файла
+10.01.2020 11:09:48	Com_Provider	Загрузка провайдера: Oracle
+10.01.2020 11:09:49	Com_Provider	Строка подключения корректна
+10.01.2020 11:09:49	SprWorkflow	Добавление задачи customer в список заданий 
+10.01.2020 11:09:56	Stopping	Закрытие программы
+05.02.2020 12:18:44	Stаrting	Старт программы
+05.02.2020 12:18:44	Com_Provider	Загрузка провайдера
+05.02.2020 12:18:45	DocXmlConfig	Обработка конфигурационного файла
+05.02.2020 12:18:45	Com_Provider	Загрузка провайдера: Oracle
+05.02.2020 12:18:46	Com_Provider	Строка подключения корректна
+05.02.2020 12:18:46	SprWorkflow	Добавление задачи customer в список заданий 
+05.02.2020 12:20:03	Stopping	Закрытие программы
+05.02.2020 17:41:24	Stаrting	Старт программы
+05.02.2020 17:41:24	Com_Provider	Загрузка провайдера
+05.02.2020 17:41:24	DocXmlConfig	Обработка конфигурационного файла
+05.02.2020 17:41:24	Com_Provider	Загрузка провайдера: Oracle
+05.02.2020 17:41:25	Com_Provider	Строка подключения корректна
+05.02.2020 17:41:25	SprWorkflow	Добавление задачи customer в список заданий 
+05.02.2020 17:42:00	Stopping	Закрытие программы
+05.02.2020 17:44:56	Stаrting	Старт программы
+05.02.2020 17:44:56	Com_Provider	Загрузка провайдера
+05.02.2020 17:44:56	DocXmlConfig	Обработка конфигурационного файла
+05.02.2020 17:44:56	Com_Provider	Загрузка провайдера: Oracle
+05.02.2020 17:44:56	Com_Provider	Строка подключения корректна
+05.02.2020 17:44:56	SprWorkflow	Добавление задачи customer в список заданий 
+05.02.2020 17:45:04	Stopping	Закрытие программы
+05.02.2020 17:45:23	Stаrting	Старт программы
+05.02.2020 17:45:23	Com_Provider	Загрузка провайдера
+05.02.2020 17:45:23	DocXmlConfig	Обработка конфигурационного файла
+05.02.2020 17:45:23	Com_Provider	Загрузка провайдера: Oracle
+05.02.2020 17:45:23	Com_Provider	Строка подключения корректна
+05.02.2020 17:45:23	SprWorkflow	Добавление задачи customer в список заданий 
+05.02.2020 17:45:31	Stopping	Закрытие программы
+05.02.2020 17:59:51	Stаrting	Старт программы
+05.02.2020 17:59:51	Com_Provider	Загрузка провайдера
+05.02.2020 17:59:51	DocXmlConfig	Обработка конфигурационного файла
+05.02.2020 17:59:51	Com_Provider	Загрузка провайдера: Oracle
+05.02.2020 17:59:52	Com_Provider	Строка подключения корректна
+05.02.2020 17:59:52	SprWorkflow	Добавление задачи customer в список заданий 
+05.02.2020 17:59:57	Stopping	Закрытие программы
+16.03.2020 16:20:52	Stаrting	Старт программы
+16.03.2020 16:20:52	Com_Provider	Загрузка провайдера
+16.03.2020 16:20:52	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 16:20:52	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 16:20:52	Com_Provider	Строка подключения корректна
+16.03.2020 16:20:52	SprWorkflow	Добавление задачи customer в список заданий 
+16.03.2020 16:20:56	Stopping	Закрытие программы
+16.03.2020 17:45:38	Stаrting	Старт программы
+16.03.2020 17:45:38	Com_Provider	Загрузка провайдера
+16.03.2020 17:45:38	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 17:45:38	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 17:45:39	Com_Provider	Строка подключения корректна
+16.03.2020 17:45:39	SprWorkflow	Добавление задачи customer в список заданий 
+16.03.2020 17:45:45	Stopping	Закрытие программы
+16.03.2020 22:49:10	Stаrting	Старт программы
+16.03.2020 22:49:10	Com_Provider	Загрузка провайдера
+16.03.2020 22:49:10	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:49:10	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:49:10	Com_Provider	Строка подключения корректна
+16.03.2020 22:49:10	SprWorkflow	Добавление задачи customer в список заданий 
+16.03.2020 22:49:15	Stopping	Закрытие программы
+16.03.2020 22:59:02	Stаrting	Старт программы
+16.03.2020 22:59:02	Com_Provider	Загрузка провайдера
+16.03.2020 22:59:02	DocXmlConfig	Обработка конфигурационного файла
+16.03.2020 22:59:02	Com_Provider	Загрузка провайдера: Oracle
+16.03.2020 22:59:02	Com_Provider	Строка подключения корректна
+16.03.2020 22:59:02	SprWorkflow	Добавление задачи customer в список заданий 
+16.03.2020 22:59:06	Stopping	Закрытие программы
+24.03.2020 15:33:14	Stаrting	Старт программы
+24.03.2020 15:33:14	Com_Provider	Загрузка провайдера
+24.03.2020 15:33:14	DocXmlConfig	Обработка конфигурационного файла
+24.03.2020 15:33:14	Com_Provider	Загрузка провайдера: Oracle
+24.03.2020 15:33:15	Com_Provider	Строка подключения корректна
+24.03.2020 15:33:15	SprWorkflow	Добавление задачи customer в список заданий 
+24.03.2020 15:33:18	Stopping	Закрытие программы
+30.03.2020 22:32:59	Stаrting	Старт программы
+30.03.2020 22:32:59	Com_Provider	Загрузка провайдера
+30.03.2020 22:33:00	DocXmlConfig	Обработка конфигурационного файла
+30.03.2020 22:33:00	Com_Provider	Загрузка провайдера: Oracle
+30.03.2020 22:33:00	Com_Provider	Строка подключения корректна
+30.03.2020 22:33:00	SprWorkflow	Добавление задачи customer в список заданий 
+30.03.2020 22:33:07	Stopping	Закрытие программы

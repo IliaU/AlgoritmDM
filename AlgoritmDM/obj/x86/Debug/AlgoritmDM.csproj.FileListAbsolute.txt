@@ -1,0 +1,137 @@
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojResolveAssemblyReference.cache
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\U_M0BVP\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\Admin\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FMerge.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojResolveAssemblyReference.cache
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FMerge.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\AKS_Admin\Documents\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FMerge.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FMerge.resources
+C:\Users\Admin\Documents\Visual Studio 2010\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources

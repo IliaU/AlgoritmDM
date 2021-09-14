@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Algoritm_Export Version="3" DefColSpan="\t" DefRowSpan="\r\n" ProviderTyp="Oracle" ConnectionString="USER ID=REPORTUSER;DATA SOURCE=RPROODS;PASSWORD=REPORT">
+  <Workflows>
+     <Workflow LongName="Покупатели" ShortName="customer" FILE_PATH_FOR_EXEL="@CurrentFolder\Export\clients_list.xlsx" HachColName="True"> Select 'select 
+c.cust_id as номер_клиента,
+c.last_name as Фамилия, 
+c.first_name as Имя, 
+ca.PHONE1 as Телефон,
+ak.VIP as VIP,
+ca.ADDRESS4 as Бонус_процент,
+c.FST_SALE_DATE as первая_продажа,
+c.LST_SALE_DATE as послед_покупка,
+c.CUST_SID as SID_клиента,
+c.CREATED_DATE  as дата_созд,
+ak.CALL_OFF_SC as Бонусный_счет
+From cms.customer c 
+inner join cms.cust_address ca on c.CUST_SID = ca.cust_sid 
+inner join AKS.CUST_SC_PARAM ak on c.CUST_SID = ak.CUST_SID
+ where  c.ACTIVE=1 and ca.PHONE1 like '%+7%' and ca.address4 is not null
+ order by c.last_name' As QUERY, 'c:\docs\clients_list.dat'As FILE_PATH, 'true'  as "Append", '\t' As COL_SPAN, '\r\n' As ROW_SPAN 
+From dual </Workflow>
+
+</Workflows>
+  <Lic>
+    <Key MachineName="BILCROCUS" UserName="store" ValidToYYYYMMDD="20180210" LicKey="1K7-1LQ-1LJ-1LP-1LV-1LI-1M0-1N9-1N5-1NC-1ND-1N6-1NI-1NA-1M4-1NL-1NE-1NC-1ND-1NH-1LJ-1LN-1LJ-1LM-1LU-1LL-1LL-1LM-1LM-1LI-1M4-1NJ-1N3-1NF-1NK-1NC-1NC-1N2" HashUserOS="False" />
+  </Lic>
+</Algoritm_Export>
+

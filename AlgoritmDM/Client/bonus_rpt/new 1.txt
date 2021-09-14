@@ -1,0 +1,82 @@
+--- из базы ---
+Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (Select D.CUST_SID, Max(D.POST_DATE) AS POST_DATE, Max(INVC_SID) As INVC_SID, Max(INVC_NO) As INVC_NO, Max(ITEM_POS) As ITEM_POS
+        From AKS.INVC_SC_DOWN D  
+        Where D.POST_DATE &lt; To_Date(''29.01.2019'',''DD.MM.YYYY'')
+            and D.CUST_SID = Case when ''-1''=''-1'' Then D.CUST_SID else to_number(''-1'') end
+        Group By D.CUST_SID)       
+Select 
+	C.FIRST_NAME ||'' ''|| C.LAST_NAME As "Имя клиента", 
+	D.SC_PERC As "Бонусный %",
+	T.CASH As "Исполь денег", 
+	Round((T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end,2) As "Начислено бон",
+	T.BONUS As "Исп баллов",	
+	Round(D.STORE_CREDIT,2) As "Остаток Баллов"--,
+	--D.INVC_NO As "Номер чека", 
+    --D.POST_DATE As "Дата чека",
+	--D.TOTAL_SUM As "Нарастающий", 
+	--Case When I.INVC_TYPE=0 Then ''Продажа'' else ''Возврат'' end As "Тип чека"
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+       -- Sum(Case When I.INVC_TYPE&lt;&gt;0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join F On D.CUST_SID=F.CUST_SID and D.POST_DATE=F.POST_DATE and D.INVC_SID=F.INVC_SID and D.INVC_NO=F.INVC_NO and D.ITEM_POS=F.ITEM_POS
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Order BY C.FIRST_NAME, C.LAST_NAME' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Bonus_rpt.xlsx' As FILE_PATH, 'True' As "APPEND" From Dual
+	
+	
+	--- из конфига--- 
+	
+	<Workflow LongName="Отчетпо бонусам на дату" ShortName="bonusD" FILE_PATH_FOR_EXEL="@CurrentFolder\Export\Bonus_Date_rpt.xlsx" HachColName="True">Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (
+    Select C.FIRST_NAME, C.LAST_NAME, D.SC_PERC,
+            Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS NarNachBon,
+           Sum(Case When I.INVC_TYPE&lt;&gt;0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS IspNachBon,
+           Round(D.STORE_CREDIT,2) As "Остаток Баллов",
+           row_number() over (Partition By D.CUST_SID Order By D.POST_DATE desc, D.INVC_NO desc) As PRN
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID 
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID 
+        Where D.POST_DATE &lt; To_Date(''@At'',''DD.MM.YYYY'')
+            and D.CUST_SID = Case when ''@Customer''=''-1'' Then D.CUST_SID else to_number(''@Customer'') end
+        )
+     Select FIRST_NAME ||'' ''|| LAST_NAME As "Имя клиента", SC_PERC As "Бонусный %", NarNachBon "Нараст нач бонус", IspNachBon "Исп нач бонус"
+     From F 
+     Where PRN=1
+     Order BY FIRST_NAME, LAST_NAME ' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Bonus_rpt.xlsx' As FILE_PATH, 'True' As "APPEND" From Dual
+
+    </Workflow>	
+  </Workflows>
+</Algoritm_Export>

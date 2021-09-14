@@ -1,0 +1,1370 @@
+09.12.2018 22:03:53	Stаrting	Старт программы
+09.12.2018 22:03:53	Com_Provider	Загрузка провайдера
+09.12.2018 22:03:54	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:03:54	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:04:36	ERROR	AlgoritmExportCom_Provider: ORA-12154: TNS:could not resolve the connect identifier specified
+09.12.2018 22:04:36	SprWorkflow	Добавление задачи tst в список заданий 
+09.12.2018 22:04:36	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:04:36	SprWorkflow	Добавление задачи tst3 в список заданий 
+09.12.2018 22:04:36	SprWorkflow	Добавление задачи tst4 в список заданий 
+09.12.2018 22:04:36	SprWorkflow	Добавление задачи tst5 в список заданий 
+09.12.2018 22:06:09	Stopping	Закрытие программы
+09.12.2018 22:06:17	Stаrting	Старт программы
+09.12.2018 22:06:17	Com_Provider	Загрузка провайдера
+09.12.2018 22:06:17	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:06:17	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:06:58	ERROR	AlgoritmExportCom_Provider: ORA-12154: TNS:could not resolve the connect identifier specified
+09.12.2018 22:06:58	SprWorkflow	Добавление задачи tst в список заданий 
+09.12.2018 22:06:58	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:06:58	SprWorkflow	Добавление задачи tst3 в список заданий 
+09.12.2018 22:06:58	SprWorkflow	Добавление задачи tst4 в список заданий 
+09.12.2018 22:06:58	SprWorkflow	Добавление задачи tst5 в список заданий 
+09.12.2018 22:07:07	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:07:40	Com_Provider	Строка подключения корректна
+09.12.2018 22:07:50	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:07:50	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:07:50	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:07:50	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:07:50	Wokflow	Добавление объекта C:\Tmp\Export\Journal.txt в задание tst2
+09.12.2018 22:07:50	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:07:57	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 5 AffectedRows
+09.12.2018 22:07:58	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Journal.txt: 5 AffectedRows
+09.12.2018 22:07:59	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:08:01	Stopping	Закрытие программы
+09.12.2018 22:20:55	Stаrting	Старт программы
+09.12.2018 22:20:55	Com_Provider	Загрузка провайдера
+09.12.2018 22:20:55	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:20:55	SystemError	Ошибка при загрузке конструктора MyCom: Знак ">", шестнадцатеричное значение 0x3E, не может стоять в начале имени., строка 29, позиция 35.
+09.12.2018 22:20:55	Stаrting	Знак ">", шестнадцатеричное значение 0x3E, не может стоять в начале имени., строка 29, позиция 35.
+09.12.2018 22:20:55	Stopping	Закрытие программы
+09.12.2018 22:24:07	Stаrting	Старт программы
+09.12.2018 22:24:07	Com_Provider	Загрузка провайдера
+09.12.2018 22:24:07	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:24:07	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:24:09	Com_Provider	Строка подключения корректна
+09.12.2018 22:24:09	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:24:15	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:24:15	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:24:15	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:24:15	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:24:15	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:24:16	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 14 AffectedRows
+09.12.2018 22:24:16	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:24:21	Stopping	Закрытие программы
+09.12.2018 22:29:54	Stаrting	Старт программы
+09.12.2018 22:29:54	Com_Provider	Загрузка провайдера
+09.12.2018 22:29:54	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:29:54	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:29:56	Com_Provider	Строка подключения корректна
+09.12.2018 22:29:56	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:30:25	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:30:25	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:30:25	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:30:25	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:30:25	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:30:26	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 4 AffectedRows
+09.12.2018 22:30:26	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:30:39	Stopping	Закрытие программы
+09.12.2018 22:46:40	Stаrting	Старт программы
+09.12.2018 22:46:40	Com_Provider	Загрузка провайдера
+09.12.2018 22:46:40	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:46:40	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:46:41	Com_Provider	Строка подключения корректна
+09.12.2018 22:46:41	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:47:00	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:47:00	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:47:00	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:47:00	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:47:00	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:47:01	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+09.12.2018 22:47:01	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:47:03	Stopping	Закрытие программы
+09.12.2018 22:51:05	Stаrting	Старт программы
+09.12.2018 22:51:05	Com_Provider	Загрузка провайдера
+09.12.2018 22:51:05	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:51:05	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:51:07	Com_Provider	Строка подключения корректна
+09.12.2018 22:51:07	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:51:27	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:51:27	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:51:27	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:51:27	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:51:27	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:51:27	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 2 AffectedRows
+09.12.2018 22:51:28	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:52:04	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:52:04	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:52:04	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:52:04	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:52:04	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:52:05	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 9 AffectedRows
+09.12.2018 22:52:05	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:52:33	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:52:33	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:52:33	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:52:33	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:52:33	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:52:34	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+09.12.2018 22:52:34	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.12.2018 22:56:38	Stopping	Закрытие программы
+09.12.2018 22:56:47	Stаrting	Старт программы
+09.12.2018 22:56:47	Com_Provider	Загрузка провайдера
+09.12.2018 22:56:47	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:56:47	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:56:49	Com_Provider	Строка подключения корректна
+09.12.2018 22:56:49	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:57:06	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:57:06	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:57:06	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:57:06	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:57:06	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:57:08	ERROR	AlgoritmExportCom_Thread: Процесс не может получить доступ к файлу "C:\Tmp\Export\ttt.xlsx", так как этот файл используется другим процессом.
+<<<<<<<<<<---------- Dump Sql ---------------------
+Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select Case When I.INVC_TYPE=0 Then ''Продажа'' else ''Возврат'' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека", 
+        D.INVC_NO As "Номер чека", 
+        D.POST_DATE As "Дата чека",
+        --D.CUST_SID As "Сид покупателя", 
+        D.TOTAL_SUM As "Нарастающий", 
+        D.SC_PERC As "Бонусный %", 
+        D.STORE_CREDIT As "Итоговый Бонус",
+        T.BONUS As "Исполь бонус", 
+        T.CASH As "Исполь денег", 
+        (T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бонусов",
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        C.FIRST_NAME ||'' ''|| C.LAST_NAME As "Имя клиента", 
+        --AL.PHONE1,
+        Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Нараст нач бонус",
+        Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date(''05.11.2018'',''DD.MM.YYYY'')
+                                            and To_Date(''09.12.2018'',''DD.MM.YYYY'')
+            and C.CUST_SID = Case when ''-1''=''-1'' Then C.CUST_SID else to_number(''-1'') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Product.txt' As FILE_PATH, 'True' As "APPEND" From Dual
+
+    
+-------------------- Dump Sql ----------->>>>>>>>>>
+09.12.2018 22:57:08	Com_Thread	Изменился статус обработчика заданий на: ERROR
+09.12.2018 22:57:30	Stopping	Закрытие программы
+09.12.2018 22:57:33	Stаrting	Старт программы
+09.12.2018 22:57:33	Com_Provider	Загрузка провайдера
+09.12.2018 22:57:33	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:57:33	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:57:34	Com_Provider	Строка подключения корректна
+09.12.2018 22:57:34	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:57:53	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:57:53	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:57:53	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:57:53	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:57:53	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:57:53	ERROR	Oracle Data Provider for .NET: ORA-00972: identifier is too long
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека", 
+        D.INVC_NO As "Номер чека", 
+        D.POST_DATE As "Дата чека",
+        --D.CUST_SID As "Сид покупателя", 
+        D.TOTAL_SUM As "Нарастающий", 
+        D.SC_PERC As "Бонусный %", 
+        D.STORE_CREDIT As "Итоговый Бонус",
+        T.BONUS As "Исполь бонус", 
+        T.CASH As "Исполь денег", 
+        (T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бонусов",
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+        --AL.PHONE1,
+        Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Нараст нач бонус",
+        Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('05.11.2018','DD.MM.YYYY')
+                                            and To_Date('09.12.2018','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+09.12.2018 22:57:53	Com_Thread	Изменился статус обработчика заданий на: ERROR
+09.12.2018 22:58:03	Stopping	Закрытие программы
+09.12.2018 22:58:22	Stаrting	Старт программы
+09.12.2018 22:58:22	Com_Provider	Загрузка провайдера
+09.12.2018 22:58:22	DocXmlConfig	Обработка конфигурационного файла
+09.12.2018 22:58:22	Com_Provider	Загрузка провайдера: Oracle
+09.12.2018 22:58:24	Com_Provider	Строка подключения корректна
+09.12.2018 22:58:24	SprWorkflow	Добавление задачи tst2 в список заданий 
+09.12.2018 22:58:38	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.12.2018 22:58:38	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.12.2018 22:58:38	Wokflow	Отчистка списка объектов в задании tst2
+09.12.2018 22:58:38	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание tst2
+09.12.2018 22:58:38	Com_Thread	Изменился статус обработчика заданий на: Running
+09.12.2018 22:58:40	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 50 AffectedRows
+09.12.2018 22:58:40	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 11:45:55	Stopping	Закрытие программы
+10.12.2018 11:45:57	Stаrting	Старт программы
+10.12.2018 11:45:57	Com_Provider	Загрузка провайдера
+10.12.2018 11:45:57	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 11:45:57	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 11:45:58	Com_Provider	Строка подключения корректна
+10.12.2018 11:45:58	SprWorkflow	Добавление задачи tst2 в список заданий 
+10.12.2018 11:46:06	Stopping	Закрытие программы
+10.12.2018 11:46:36	Stаrting	Старт программы
+10.12.2018 11:46:36	Com_Provider	Загрузка провайдера
+10.12.2018 11:46:36	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 11:46:36	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 11:46:38	Com_Provider	Строка подключения корректна
+10.12.2018 11:46:38	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 11:46:55	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 11:46:55	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 11:46:55	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 11:46:55	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 11:46:55	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 11:46:56	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 11:46:56	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 11:46:59	Stopping	Закрытие программы
+10.12.2018 12:05:43	Stаrting	Старт программы
+10.12.2018 12:05:43	Com_Provider	Загрузка провайдера
+10.12.2018 12:05:43	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:05:43	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:05:45	Com_Provider	Строка подключения корректна
+10.12.2018 12:05:45	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:06:01	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:06:01	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:06:01	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:06:01	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:06:01	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:06:03	ERROR	AlgoritmExportCom_Thread: Процесс не может получить доступ к файлу "C:\Tmp\Export\Bonus_rpt.xlsx", так как этот файл используется другим процессом.
+<<<<<<<<<<---------- Dump Sql ---------------------
+Select 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||'' ''|| C.LAST_NAME As "Имя клиента", 
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	D.STORE_CREDIT As "Итоговый Бонус",
+	T.BONUS As "Исполь бонус",	
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека"
+	--D.TOTAL_SUM As "Нарастающий", 
+	--Case When I.INVC_TYPE=0 Then ''Продажа'' else ''Возврат'' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+        --Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date(''01.12.2018'',''DD.MM.YYYY'')
+                                            and To_Date(''10.12.2018'',''DD.MM.YYYY'')
+            and C.CUST_SID = Case when ''-1''=''-1'' Then C.CUST_SID else to_number(''-1'') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos' As QUERY, 'Report' As LIST_NAME,  '@CurrentFolder\Export\Product.txt' As FILE_PATH, 'True' As "APPEND" From Dual
+
+    
+-------------------- Dump Sql ----------->>>>>>>>>>
+10.12.2018 12:06:03	Com_Thread	Изменился статус обработчика заданий на: ERROR
+10.12.2018 12:06:09	Stopping	Закрытие программы
+10.12.2018 12:06:11	Stаrting	Старт программы
+10.12.2018 12:06:11	Com_Provider	Загрузка провайдера
+10.12.2018 12:06:11	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:06:11	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:06:12	Com_Provider	Строка подключения корректна
+10.12.2018 12:06:12	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:06:29	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:06:29	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:06:29	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:06:29	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:06:29	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:06:29	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 12:06:30	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 12:08:38	Stopping	Закрытие программы
+10.12.2018 12:08:40	Stаrting	Старт программы
+10.12.2018 12:08:40	Com_Provider	Загрузка провайдера
+10.12.2018 12:08:40	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:08:40	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:08:41	Com_Provider	Строка подключения корректна
+10.12.2018 12:08:41	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:08:54	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:08:54	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:08:54	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:08:54	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:08:54	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:08:54	ERROR	Oracle Data Provider for .NET: ORA-00923: FROM keyword not found where expected
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	D.STORE_CREDIT As "Итоговый Бонус",
+	T.BONUS As "Исполь бонус",	
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека"
+	--D.TOTAL_SUM As "Нарастающий", 
+	--Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Нараст нач бонус",
+        Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('01.12.2018','DD.MM.YYYY')
+                                            and To_Date('10.12.2018','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+10.12.2018 12:08:54	Com_Thread	Изменился статус обработчика заданий на: ERROR
+10.12.2018 12:09:00	Stopping	Закрытие программы
+10.12.2018 12:12:44	Stаrting	Старт программы
+10.12.2018 12:12:44	Com_Provider	Загрузка провайдера
+10.12.2018 12:12:44	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:12:44	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:12:46	Com_Provider	Строка подключения корректна
+10.12.2018 12:12:46	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:13:02	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:13:02	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:13:02	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:13:02	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:13:02	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:13:03	ERROR	Oracle Data Provider for .NET: ORA-00923: FROM keyword not found where expected
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	D.STORE_CREDIT As "Итоговый Бонус",
+	T.BONUS As "Исполь бонус",	
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека"
+	--D.TOTAL_SUM As "Нарастающий", 
+	Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Нараст нач бонус",
+        Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('01.12.2018','DD.MM.YYYY')
+                                            and To_Date('10.12.2018','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+10.12.2018 12:13:03	Com_Thread	Изменился статус обработчика заданий на: ERROR
+10.12.2018 12:13:11	Stopping	Закрытие программы
+10.12.2018 12:14:19	Stаrting	Старт программы
+10.12.2018 12:14:19	Com_Provider	Загрузка провайдера
+10.12.2018 12:14:19	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:14:19	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:14:20	Com_Provider	Строка подключения корректна
+10.12.2018 12:14:20	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:14:32	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:14:32	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:14:32	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:14:32	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:14:32	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:14:33	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 12:14:34	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 12:14:36	Stopping	Закрытие программы
+10.12.2018 12:16:20	Stаrting	Старт программы
+10.12.2018 12:16:20	Com_Provider	Загрузка провайдера
+10.12.2018 12:16:20	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:16:20	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:16:21	Com_Provider	Строка подключения корректна
+10.12.2018 12:16:21	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:16:34	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:16:34	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:16:34	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:16:34	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:16:34	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:16:34	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 12:16:35	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 12:16:37	Stopping	Закрытие программы
+10.12.2018 12:27:56	Stаrting	Старт программы
+10.12.2018 12:27:56	Com_Provider	Загрузка провайдера
+10.12.2018 12:27:56	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:27:56	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:27:58	Com_Provider	Строка подключения корректна
+10.12.2018 12:27:58	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:28:08	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:28:08	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:28:08	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:28:08	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:28:08	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:28:09	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 12:28:09	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.12.2018 12:30:27	Stopping	Закрытие программы
+10.12.2018 12:30:29	Stаrting	Старт программы
+10.12.2018 12:30:29	Com_Provider	Загрузка провайдера
+10.12.2018 12:30:29	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:30:29	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:30:30	Com_Provider	Строка подключения корректна
+10.12.2018 12:30:30	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:30:42	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:30:42	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:30:42	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:30:42	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:30:42	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:30:42	ERROR	Oracle Data Provider for .NET: ORA-00936: missing expression
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+	D.SC_PERC As "Бонусный %",
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	T.BONUS As "Исп баллов",	
+	D.STORE_CREDIT As "Остаток Баллов",
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека",
+	--D.TOTAL_SUM As "Нарастающий", 
+	Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека", 
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+       -- Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('01.12.2018','DD.MM.YYYY')
+                                            and To_Date('10.12.2018','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+10.12.2018 12:30:42	Com_Thread	Изменился статус обработчика заданий на: ERROR
+10.12.2018 12:30:45	Stopping	Закрытие программы
+10.12.2018 12:31:08	Stаrting	Старт программы
+10.12.2018 12:31:08	Com_Provider	Загрузка провайдера
+10.12.2018 12:31:08	DocXmlConfig	Обработка конфигурационного файла
+10.12.2018 12:31:08	Com_Provider	Загрузка провайдера: Oracle
+10.12.2018 12:31:09	Com_Provider	Строка подключения корректна
+10.12.2018 12:31:09	SprWorkflow	Добавление задачи bonus в список заданий 
+10.12.2018 12:31:22	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.12.2018 12:31:22	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.12.2018 12:31:22	Wokflow	Отчистка списка объектов в задании bonus
+10.12.2018 12:31:22	Wokflow	Добавление объекта C:\Tmp\Export\Product.txt в задание bonus
+10.12.2018 12:31:22	Com_Thread	Изменился статус обработчика заданий на: Running
+10.12.2018 12:31:23	Com_Thread	Статус выгрузки по объекту C:\Tmp\Export\Product.txt: 12 AffectedRows
+10.12.2018 12:31:23	Com_Thread	Изменился статус обработчика заданий на: Completed
+13.12.2018 12:05:27	Stopping	Закрытие программы
+14.12.2018 15:22:50	Stаrting	Старт программы
+14.12.2018 15:22:50	Com_Provider	Загрузка провайдера
+14.12.2018 15:22:50	DocXmlConfig	Обработка конфигурационного файла
+14.12.2018 15:22:50	Com_Provider	Загрузка провайдера: Oracle
+14.12.2018 15:22:51	Com_Provider	Строка подключения корректна
+14.12.2018 15:22:51	SprWorkflow	Добавление задачи bonus в список заданий 
+14.12.2018 15:23:24	Stopping	Закрытие программы
+14.12.2018 15:27:03	Stаrting	Старт программы
+14.12.2018 15:27:03	Com_Provider	Загрузка провайдера
+14.12.2018 15:27:03	DocXmlConfig	Обработка конфигурационного файла
+14.12.2018 15:27:03	Com_Provider	Загрузка провайдера: Oracle
+14.12.2018 15:27:03	Com_Provider	Строка подключения корректна
+14.12.2018 15:27:03	SprWorkflow	Добавление задачи bonus в список заданий 
+14.12.2018 15:27:05	Stopping	Закрытие программы
+29.12.2018 11:56:13	Stаrting	Старт программы
+29.12.2018 11:56:13	Com_Provider	Загрузка провайдера
+29.12.2018 11:56:14	DocXmlConfig	Обработка конфигурационного файла
+29.12.2018 11:56:14	Com_Provider	Загрузка провайдера: Oracle
+29.12.2018 11:56:14	Com_Provider	Строка подключения корректна
+29.12.2018 11:56:14	SprWorkflow	Добавление задачи bonus в список заданий 
+29.12.2018 11:56:18	Stopping	Закрытие программы
+09.01.2019 13:57:20	Stаrting	Старт программы
+09.01.2019 13:57:20	Com_Provider	Загрузка провайдера
+09.01.2019 13:57:21	DocXmlConfig	Обработка конфигурационного файла
+09.01.2019 13:57:21	Com_Provider	Загрузка провайдера: Oracle
+09.01.2019 13:57:21	Com_Provider	Строка подключения корректна
+09.01.2019 13:57:21	SprWorkflow	Добавление задачи bonus в список заданий 
+09.01.2019 13:58:01	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.01.2019 13:58:01	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.01.2019 13:58:01	Wokflow	Отчистка списка объектов в задании bonus
+09.01.2019 13:58:01	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+09.01.2019 13:58:01	Com_Thread	Изменился статус обработчика заданий на: Running
+09.01.2019 13:58:03	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1 AffectedRows
+09.01.2019 13:58:04	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.01.2019 13:58:35	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.01.2019 13:58:35	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.01.2019 13:58:35	Wokflow	Отчистка списка объектов в задании bonus
+09.01.2019 13:58:35	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+09.01.2019 13:58:35	Com_Thread	Изменился статус обработчика заданий на: Running
+09.01.2019 13:58:40	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 67 AffectedRows
+09.01.2019 13:58:40	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.01.2019 13:59:20	Com_Thread	Изменился статус обработчика заданий на: Starting
+09.01.2019 13:59:20	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+09.01.2019 13:59:20	Wokflow	Отчистка списка объектов в задании bonus
+09.01.2019 13:59:20	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+09.01.2019 13:59:20	Com_Thread	Изменился статус обработчика заданий на: Running
+09.01.2019 13:59:24	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 67 AffectedRows
+09.01.2019 13:59:25	Com_Thread	Изменился статус обработчика заданий на: Completed
+09.01.2019 15:43:58	Stopping	Закрытие программы
+10.01.2019 15:56:32	Stаrting	Старт программы
+10.01.2019 15:56:32	Com_Provider	Загрузка провайдера
+10.01.2019 15:56:33	DocXmlConfig	Обработка конфигурационного файла
+10.01.2019 15:56:33	Com_Provider	Загрузка провайдера: Oracle
+10.01.2019 15:56:33	Com_Provider	Строка подключения корректна
+10.01.2019 15:56:33	SprWorkflow	Добавление задачи bonus в список заданий 
+10.01.2019 15:57:06	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.01.2019 15:57:06	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.01.2019 15:57:06	Wokflow	Отчистка списка объектов в задании bonus
+10.01.2019 15:57:06	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+10.01.2019 15:57:06	Com_Thread	Изменился статус обработчика заданий на: Running
+10.01.2019 15:57:07	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 5 AffectedRows
+10.01.2019 15:57:07	Com_Thread	Изменился статус обработчика заданий на: Completed
+10.01.2019 15:58:56	Stopping	Закрытие программы
+10.01.2019 16:02:32	Stаrting	Старт программы
+10.01.2019 16:02:32	Com_Provider	Загрузка провайдера
+10.01.2019 16:02:32	DocXmlConfig	Обработка конфигурационного файла
+10.01.2019 16:02:32	Com_Provider	Загрузка провайдера: Oracle
+10.01.2019 16:02:32	Com_Provider	Строка подключения корректна
+10.01.2019 16:02:32	SprWorkflow	Добавление задачи bonus в список заданий 
+10.01.2019 16:03:16	Com_Thread	Изменился статус обработчика заданий на: Starting
+10.01.2019 16:03:16	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+10.01.2019 16:03:16	Wokflow	Отчистка списка объектов в задании bonus
+10.01.2019 16:03:16	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+10.01.2019 16:03:16	Com_Thread	Изменился статус обработчика заданий на: Running
+10.01.2019 16:03:20	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 73 AffectedRows
+10.01.2019 16:03:21	Com_Thread	Изменился статус обработчика заданий на: Completed
+11.01.2019 9:13:04	Stopping	Закрытие программы
+11.01.2019 9:18:40	Stаrting	Старт программы
+11.01.2019 9:18:40	Com_Provider	Загрузка провайдера
+11.01.2019 9:18:40	DocXmlConfig	Обработка конфигурационного файла
+11.01.2019 9:18:40	Com_Provider	Загрузка провайдера: Oracle
+11.01.2019 9:18:41	Com_Provider	Строка подключения корректна
+11.01.2019 9:18:41	SprWorkflow	Добавление задачи bonus в список заданий 
+11.01.2019 9:19:14	Com_Thread	Изменился статус обработчика заданий на: Starting
+11.01.2019 9:19:14	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+11.01.2019 9:19:14	Wokflow	Отчистка списка объектов в задании bonus
+11.01.2019 9:19:14	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+11.01.2019 9:19:14	Com_Thread	Изменился статус обработчика заданий на: Running
+11.01.2019 9:19:17	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 29 AffectedRows
+11.01.2019 9:19:17	Com_Thread	Изменился статус обработчика заданий на: Completed
+11.01.2019 9:51:15	Stopping	Закрытие программы
+11.01.2019 9:51:17	Stаrting	Старт программы
+11.01.2019 9:51:17	Com_Provider	Загрузка провайдера
+11.01.2019 9:51:17	DocXmlConfig	Обработка конфигурационного файла
+11.01.2019 9:51:17	Com_Provider	Загрузка провайдера: Oracle
+11.01.2019 9:51:17	Com_Provider	Строка подключения корректна
+11.01.2019 9:51:17	SprWorkflow	Добавление задачи bonus в список заданий 
+11.01.2019 9:52:29	Com_Thread	Изменился статус обработчика заданий на: Starting
+11.01.2019 9:52:29	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+11.01.2019 9:52:29	Wokflow	Отчистка списка объектов в задании bonus
+11.01.2019 9:52:29	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+11.01.2019 9:52:29	Com_Thread	Изменился статус обработчика заданий на: Running
+11.01.2019 9:52:30	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 6 AffectedRows
+11.01.2019 9:52:30	Com_Thread	Изменился статус обработчика заданий на: Completed
+11.01.2019 10:04:30	Stopping	Закрытие программы
+11.01.2019 12:36:33	Stаrting	Старт программы
+11.01.2019 12:36:33	Com_Provider	Загрузка провайдера
+11.01.2019 12:36:34	DocXmlConfig	Обработка конфигурационного файла
+11.01.2019 12:36:34	Com_Provider	Загрузка провайдера: Oracle
+11.01.2019 12:36:34	Com_Provider	Строка подключения корректна
+11.01.2019 12:36:34	SprWorkflow	Добавление задачи bonus в список заданий 
+11.01.2019 12:38:32	Com_Thread	Изменился статус обработчика заданий на: Starting
+11.01.2019 12:38:32	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+11.01.2019 12:38:32	Wokflow	Отчистка списка объектов в задании bonus
+11.01.2019 12:38:32	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+11.01.2019 12:38:32	Com_Thread	Изменился статус обработчика заданий на: Running
+11.01.2019 12:38:38	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 73 AffectedRows
+11.01.2019 12:38:38	Com_Thread	Изменился статус обработчика заданий на: Completed
+11.01.2019 13:52:29	Stopping	Закрытие программы
+17.01.2019 17:32:20	Stаrting	Старт программы
+17.01.2019 17:32:20	Com_Provider	Загрузка провайдера
+17.01.2019 17:32:20	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 17:32:20	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 17:32:22	Com_Provider	Строка подключения корректна
+17.01.2019 17:32:22	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 17:32:57	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 17:32:57	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 17:32:57	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 17:32:57	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+17.01.2019 17:32:57	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 17:33:03	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 113 AffectedRows
+17.01.2019 17:33:08	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 253 AffectedRows
+17.01.2019 17:33:13	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 392 AffectedRows
+17.01.2019 17:33:18	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 532 AffectedRows
+17.01.2019 17:33:23	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 673 AffectedRows
+17.01.2019 17:33:28	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 813 AffectedRows
+17.01.2019 17:33:33	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 953 AffectedRows
+17.01.2019 17:33:38	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1091 AffectedRows
+17.01.2019 17:33:43	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1232 AffectedRows
+17.01.2019 17:33:48	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1372 AffectedRows
+17.01.2019 17:33:53	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1514 AffectedRows
+17.01.2019 17:33:58	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1647 AffectedRows
+17.01.2019 17:34:03	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1788 AffectedRows
+17.01.2019 17:34:08	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1928 AffectedRows
+17.01.2019 17:34:13	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 2069 AffectedRows
+17.01.2019 17:34:18	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 2207 AffectedRows
+17.01.2019 17:34:23	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 2345 AffectedRows
+17.01.2019 17:34:25	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 2368 AffectedRows
+17.01.2019 17:34:26	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 17:34:34	Stopping	Закрытие программы
+17.01.2019 17:39:36	Stаrting	Старт программы
+17.01.2019 17:39:36	Com_Provider	Загрузка провайдера
+17.01.2019 17:39:36	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 17:39:36	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 17:39:36	Com_Provider	Строка подключения корректна
+17.01.2019 17:39:36	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 17:39:54	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 17:39:54	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 17:39:54	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 17:39:54	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+17.01.2019 17:39:54	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 17:39:55	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 1 AffectedRows
+17.01.2019 17:39:55	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 17:40:23	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 17:40:23	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 17:40:23	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 17:40:23	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+17.01.2019 17:40:23	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 17:40:28	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 110 AffectedRows
+17.01.2019 17:40:34	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 233 AffectedRows
+17.01.2019 17:40:36	ERROR	mscorlibCom_Thread: Исключение из HRESULT: 0x800AC472
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+	D.SC_PERC As "Бонусный %",
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	T.BONUS As "Исп баллов",	
+	D.STORE_CREDIT As "Остаток Баллов",
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека",
+	--D.TOTAL_SUM As "Нарастающий", 
+	Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека"
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+       -- Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('01.12.2018','DD.MM.YYYY')
+                                            and To_Date('17.01.2019','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+17.01.2019 17:40:36	Com_Thread	Изменился статус обработчика заданий на: ERROR
+17.01.2019 17:47:04	Stopping	Закрытие программы
+17.01.2019 17:47:35	Stаrting	Старт программы
+17.01.2019 17:47:35	Com_Provider	Загрузка провайдера
+17.01.2019 17:47:35	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 17:47:35	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 17:47:35	Com_Provider	Строка подключения корректна
+17.01.2019 17:47:35	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 17:47:54	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 17:47:54	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 17:47:54	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 17:47:54	Wokflow	Добавление объекта C:\Bonus\Export\Product.txt в задание bonus
+17.01.2019 17:47:54	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 17:47:57	Com_Thread	Статус выгрузки по объекту C:\Bonus\Export\Product.txt: 67 AffectedRows
+17.01.2019 17:47:58	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 17:48:04	Stopping	Закрытие программы
+17.01.2019 20:52:49	Stаrting	Старт программы
+17.01.2019 20:52:49	Com_Provider	Загрузка провайдера
+17.01.2019 20:52:49	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 20:52:49	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 20:52:49	Com_Provider	Строка подключения корректна
+17.01.2019 20:52:49	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 20:53:24	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 20:53:24	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 20:53:24	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 20:53:24	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonus
+17.01.2019 20:53:24	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 20:53:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 112 AffectedRows
+17.01.2019 20:53:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 237 AffectedRows
+17.01.2019 20:53:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 361 AffectedRows
+17.01.2019 20:53:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 487 AffectedRows
+17.01.2019 20:53:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 607 AffectedRows
+17.01.2019 20:53:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 689 AffectedRows
+17.01.2019 20:53:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 762 AffectedRows
+17.01.2019 20:54:00	ERROR	Com_Thread: Исключение из HRESULT: 0x800AC472
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select 
+	C.FIRST_NAME ||' '|| C.LAST_NAME As "Имя клиента", 
+	D.SC_PERC As "Бонусный %",
+	T.CASH As "Исполь денег", 
+	(T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислено бон",
+	T.BONUS As "Исп баллов",	
+	D.STORE_CREDIT As "Остаток Баллов",
+	D.INVC_NO As "Номер чека", 
+    D.POST_DATE As "Дата чека",
+	--D.TOTAL_SUM As "Нарастающий", 
+	Case When I.INVC_TYPE=0 Then 'Продажа' else 'Возврат' end As "Тип чека"
+        --D.INVC_SID As "Сид чека",     
+        --D.CUST_SID As "Сид покупателя",         
+        --D.SC_PERC As "Бонусный %",     
+        --C.FIRST_NAME, 
+        --C.LAST_NAME, 
+        --AL.PHONE1,
+        --Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS --"Нараст нач бонус",
+       -- Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) --AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('01.11.2018','DD.MM.YYYY')
+                                            and To_Date('30.12.2018','DD.MM.YYYY')
+            and C.CUST_SID = Case when '-1'='-1' Then C.CUST_SID else to_number('-1') end
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos
+-------------------- Dump Sql ----------->>>>>>>>>>
+17.01.2019 20:54:00	Com_Thread	Изменился статус обработчика заданий на: ERROR
+17.01.2019 20:54:11	Stopping	Закрытие программы
+17.01.2019 20:54:14	Stаrting	Старт программы
+17.01.2019 20:54:14	Com_Provider	Загрузка провайдера
+17.01.2019 20:54:14	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 20:54:14	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 20:54:14	Com_Provider	Строка подключения корректна
+17.01.2019 20:54:14	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 20:54:48	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 20:54:48	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 20:54:48	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 20:54:48	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonus
+17.01.2019 20:54:48	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 20:54:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 113 AffectedRows
+17.01.2019 20:54:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 239 AffectedRows
+17.01.2019 20:55:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 368 AffectedRows
+17.01.2019 20:55:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 496 AffectedRows
+17.01.2019 20:55:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 625 AffectedRows
+17.01.2019 20:55:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 753 AffectedRows
+17.01.2019 20:55:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 881 AffectedRows
+17.01.2019 20:55:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1009 AffectedRows
+17.01.2019 20:55:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1138 AffectedRows
+17.01.2019 20:55:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1268 AffectedRows
+17.01.2019 20:55:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1396 AffectedRows
+17.01.2019 20:55:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1528 AffectedRows
+17.01.2019 20:55:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1658 AffectedRows
+17.01.2019 20:55:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1784 AffectedRows
+17.01.2019 20:56:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1915 AffectedRows
+17.01.2019 20:56:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2046 AffectedRows
+17.01.2019 20:56:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2176 AffectedRows
+17.01.2019 20:56:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2302 AffectedRows
+17.01.2019 20:56:19	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 20:56:24	Stopping	Закрытие программы
+17.01.2019 21:00:17	Stаrting	Старт программы
+17.01.2019 21:00:17	Com_Provider	Загрузка провайдера
+17.01.2019 21:00:17	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 21:00:17	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 21:00:17	Com_Provider	Строка подключения корректна
+17.01.2019 21:00:17	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 21:00:51	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 21:00:51	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 21:00:51	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 21:00:51	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt в задание bonus
+17.01.2019 21:00:51	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 21:00:57	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 107 AffectedRows
+17.01.2019 21:01:02	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 230 AffectedRows
+17.01.2019 21:01:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 353 AffectedRows
+17.01.2019 21:01:12	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 475 AffectedRows
+17.01.2019 21:01:17	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 598 AffectedRows
+17.01.2019 21:01:22	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 718 AffectedRows
+17.01.2019 21:01:27	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 838 AffectedRows
+17.01.2019 21:01:32	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 961 AffectedRows
+17.01.2019 21:01:37	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1080 AffectedRows
+17.01.2019 21:01:42	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1200 AffectedRows
+17.01.2019 21:01:47	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1320 AffectedRows
+17.01.2019 21:01:52	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1437 AffectedRows
+17.01.2019 21:01:57	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1557 AffectedRows
+17.01.2019 21:02:02	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1680 AffectedRows
+17.01.2019 21:02:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1803 AffectedRows
+17.01.2019 21:02:12	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 1926 AffectedRows
+17.01.2019 21:02:17	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2048 AffectedRows
+17.01.2019 21:02:22	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2169 AffectedRows
+17.01.2019 21:02:27	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2288 AffectedRows
+17.01.2019 21:02:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.txt: 2302 AffectedRows
+17.01.2019 21:02:28	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 21:03:53	Stopping	Закрытие программы
+17.01.2019 21:05:17	Stаrting	Старт программы
+17.01.2019 21:05:17	Com_Provider	Загрузка провайдера
+17.01.2019 21:05:17	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 21:05:17	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 21:05:17	Com_Provider	Строка подключения корректна
+17.01.2019 21:05:17	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 21:05:39	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 21:05:39	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 21:05:39	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 21:05:39	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls в задание bonus
+17.01.2019 21:05:39	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 21:05:45	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 109 AffectedRows
+17.01.2019 21:05:50	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 236 AffectedRows
+17.01.2019 21:05:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 365 AffectedRows
+17.01.2019 21:06:00	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 493 AffectedRows
+17.01.2019 21:06:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 622 AffectedRows
+17.01.2019 21:06:10	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 751 AffectedRows
+17.01.2019 21:06:15	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 879 AffectedRows
+17.01.2019 21:06:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1008 AffectedRows
+17.01.2019 21:06:25	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1138 AffectedRows
+17.01.2019 21:06:30	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1267 AffectedRows
+17.01.2019 21:06:35	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1393 AffectedRows
+17.01.2019 21:06:40	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1523 AffectedRows
+17.01.2019 21:06:45	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1652 AffectedRows
+17.01.2019 21:06:50	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1780 AffectedRows
+17.01.2019 21:06:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1911 AffectedRows
+17.01.2019 21:07:00	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2039 AffectedRows
+17.01.2019 21:07:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2168 AffectedRows
+17.01.2019 21:07:10	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2299 AffectedRows
+17.01.2019 21:07:15	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2430 AffectedRows
+17.01.2019 21:07:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2562 AffectedRows
+17.01.2019 21:07:25	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2692 AffectedRows
+17.01.2019 21:07:30	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2821 AffectedRows
+17.01.2019 21:07:35	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2951 AffectedRows
+17.01.2019 21:07:37	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2999 AffectedRows
+17.01.2019 21:07:38	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 21:28:00	Stopping	Закрытие программы
+17.01.2019 21:28:10	Stаrting	Старт программы
+17.01.2019 21:28:10	Com_Provider	Загрузка провайдера
+17.01.2019 21:28:10	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 21:28:10	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 21:28:10	Com_Provider	Строка подключения корректна
+17.01.2019 21:28:10	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 21:28:44	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 21:28:44	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 21:28:44	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 21:28:44	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls в задание bonus
+17.01.2019 21:28:44	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 21:28:50	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 96 AffectedRows
+17.01.2019 21:28:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 208 AffectedRows
+17.01.2019 21:29:00	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 321 AffectedRows
+17.01.2019 21:29:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 432 AffectedRows
+17.01.2019 21:29:10	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 545 AffectedRows
+17.01.2019 21:29:15	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 657 AffectedRows
+17.01.2019 21:29:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 770 AffectedRows
+17.01.2019 21:29:25	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 881 AffectedRows
+17.01.2019 21:29:30	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 992 AffectedRows
+17.01.2019 21:29:35	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1107 AffectedRows
+17.01.2019 21:29:40	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1221 AffectedRows
+17.01.2019 21:29:45	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1337 AffectedRows
+17.01.2019 21:29:50	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1450 AffectedRows
+17.01.2019 21:29:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1562 AffectedRows
+17.01.2019 21:30:00	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1675 AffectedRows
+17.01.2019 21:30:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1786 AffectedRows
+17.01.2019 21:30:10	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1898 AffectedRows
+17.01.2019 21:30:15	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2011 AffectedRows
+17.01.2019 21:30:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2126 AffectedRows
+17.01.2019 21:30:25	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2240 AffectedRows
+17.01.2019 21:30:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2302 AffectedRows
+17.01.2019 21:30:28	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 21:42:11	Stopping	Закрытие программы
+17.01.2019 21:42:13	Stаrting	Старт программы
+17.01.2019 21:42:13	Com_Provider	Загрузка провайдера
+17.01.2019 21:42:13	DocXmlConfig	Обработка конфигурационного файла
+17.01.2019 21:42:13	Com_Provider	Загрузка провайдера: Oracle
+17.01.2019 21:42:13	Com_Provider	Строка подключения корректна
+17.01.2019 21:42:13	SprWorkflow	Добавление задачи bonus в список заданий 
+17.01.2019 21:42:38	Com_Thread	Изменился статус обработчика заданий на: Starting
+17.01.2019 21:42:38	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+17.01.2019 21:42:38	Wokflow	Отчистка списка объектов в задании bonus
+17.01.2019 21:42:38	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls в задание bonus
+17.01.2019 21:42:38	Com_Thread	Изменился статус обработчика заданий на: Running
+17.01.2019 21:42:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 91 AffectedRows
+17.01.2019 21:42:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 199 AffectedRows
+17.01.2019 21:42:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 310 AffectedRows
+17.01.2019 21:42:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 421 AffectedRows
+17.01.2019 21:43:04	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 534 AffectedRows
+17.01.2019 21:43:09	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 643 AffectedRows
+17.01.2019 21:43:14	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 758 AffectedRows
+17.01.2019 21:43:19	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 870 AffectedRows
+17.01.2019 21:43:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 981 AffectedRows
+17.01.2019 21:43:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1090 AffectedRows
+17.01.2019 21:43:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1200 AffectedRows
+17.01.2019 21:43:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1308 AffectedRows
+17.01.2019 21:43:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1420 AffectedRows
+17.01.2019 21:43:49	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1530 AffectedRows
+17.01.2019 21:43:54	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1638 AffectedRows
+17.01.2019 21:43:59	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1751 AffectedRows
+17.01.2019 21:44:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1861 AffectedRows
+17.01.2019 21:44:10	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 1975 AffectedRows
+17.01.2019 21:44:15	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2087 AffectedRows
+17.01.2019 21:44:20	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2195 AffectedRows
+17.01.2019 21:44:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xls: 2302 AffectedRows
+17.01.2019 21:44:25	Com_Thread	Изменился статус обработчика заданий на: Completed
+17.01.2019 21:49:32	Stopping	Закрытие программы
+18.01.2019 11:27:52	Stаrting	Старт программы
+18.01.2019 11:27:52	Com_Provider	Загрузка провайдера
+18.01.2019 11:27:52	DocXmlConfig	Обработка конфигурационного файла
+18.01.2019 11:27:52	Com_Provider	Загрузка провайдера: Oracle
+18.01.2019 11:27:53	Com_Provider	Строка подключения корректна
+18.01.2019 11:27:53	SprWorkflow	Добавление задачи bonus в список заданий 
+18.01.2019 11:28:19	Com_Thread	Изменился статус обработчика заданий на: Starting
+18.01.2019 11:28:19	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+18.01.2019 11:28:19	Wokflow	Отчистка списка объектов в задании bonus
+18.01.2019 11:28:19	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+18.01.2019 11:28:19	Com_Thread	Изменился статус обработчика заданий на: Running
+18.01.2019 11:28:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 103 AffectedRows
+18.01.2019 11:28:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 224 AffectedRows
+18.01.2019 11:28:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 347 AffectedRows
+18.01.2019 11:28:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 470 AffectedRows
+18.01.2019 11:28:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 592 AffectedRows
+18.01.2019 11:28:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 632 AffectedRows
+18.01.2019 11:28:46	Com_Thread	Изменился статус обработчика заданий на: Completed
+18.01.2019 11:32:00	Stopping	Закрытие программы
+18.01.2019 12:21:57	Stаrting	Старт программы
+18.01.2019 12:21:57	Com_Provider	Загрузка провайдера
+18.01.2019 12:21:57	DocXmlConfig	Обработка конфигурационного файла
+18.01.2019 12:21:57	Com_Provider	Загрузка провайдера: Oracle
+18.01.2019 12:21:57	Com_Provider	Строка подключения корректна
+18.01.2019 12:21:57	SprWorkflow	Добавление задачи bonus в список заданий 
+18.01.2019 12:22:37	Com_Thread	Изменился статус обработчика заданий на: Starting
+18.01.2019 12:22:37	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+18.01.2019 12:22:37	Wokflow	Отчистка списка объектов в задании bonus
+18.01.2019 12:22:37	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+18.01.2019 12:22:37	Com_Thread	Изменился статус обработчика заданий на: Running
+18.01.2019 12:22:42	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 99 AffectedRows
+18.01.2019 12:22:47	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 216 AffectedRows
+18.01.2019 12:22:52	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 328 AffectedRows
+18.01.2019 12:22:57	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 436 AffectedRows
+18.01.2019 12:23:02	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 543 AffectedRows
+18.01.2019 12:23:07	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 661 AffectedRows
+18.01.2019 12:23:12	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 782 AffectedRows
+18.01.2019 12:23:17	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 883 AffectedRows
+18.01.2019 12:23:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 978 AffectedRows
+18.01.2019 12:23:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1090 AffectedRows
+18.01.2019 12:23:33	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1198 AffectedRows
+18.01.2019 12:23:38	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1308 AffectedRows
+18.01.2019 12:23:43	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1414 AffectedRows
+18.01.2019 12:23:48	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1521 AffectedRows
+18.01.2019 12:23:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1633 AffectedRows
+18.01.2019 12:23:58	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1744 AffectedRows
+18.01.2019 12:24:03	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1857 AffectedRows
+18.01.2019 12:24:08	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1972 AffectedRows
+18.01.2019 12:24:13	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2080 AffectedRows
+18.01.2019 12:24:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2172 AffectedRows
+18.01.2019 12:24:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2275 AffectedRows
+18.01.2019 12:24:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2384 AffectedRows
+18.01.2019 12:24:33	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2493 AffectedRows
+18.01.2019 12:24:38	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2605 AffectedRows
+18.01.2019 12:24:43	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2720 AffectedRows
+18.01.2019 12:24:48	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2835 AffectedRows
+18.01.2019 12:24:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 2948 AffectedRows
+18.01.2019 12:24:58	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3057 AffectedRows
+18.01.2019 12:25:03	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3167 AffectedRows
+18.01.2019 12:25:08	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3280 AffectedRows
+18.01.2019 12:25:13	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3394 AffectedRows
+18.01.2019 12:25:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3507 AffectedRows
+18.01.2019 12:25:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3621 AffectedRows
+18.01.2019 12:25:28	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3734 AffectedRows
+18.01.2019 12:25:33	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3850 AffectedRows
+18.01.2019 12:25:38	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 3964 AffectedRows
+18.01.2019 12:25:43	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4077 AffectedRows
+18.01.2019 12:25:48	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4188 AffectedRows
+18.01.2019 12:25:53	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4300 AffectedRows
+18.01.2019 12:25:58	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4413 AffectedRows
+18.01.2019 12:26:03	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4524 AffectedRows
+18.01.2019 12:26:08	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4637 AffectedRows
+18.01.2019 12:26:13	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4749 AffectedRows
+18.01.2019 12:26:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4860 AffectedRows
+18.01.2019 12:26:23	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 4971 AffectedRows
+18.01.2019 12:26:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5083 AffectedRows
+18.01.2019 12:26:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5195 AffectedRows
+18.01.2019 12:26:39	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5308 AffectedRows
+18.01.2019 12:26:44	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5421 AffectedRows
+18.01.2019 12:26:47	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 5496 AffectedRows
+18.01.2019 12:26:48	Com_Thread	Изменился статус обработчика заданий на: Completed
+18.01.2019 12:30:27	Stopping	Закрытие программы
+29.01.2019 22:00:30	Stаrting	Старт программы
+29.01.2019 22:00:30	Com_Provider	Загрузка провайдера
+29.01.2019 22:00:31	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 22:00:31	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 22:00:32	Com_Provider	Строка подключения корректна
+29.01.2019 22:00:32	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 22:00:55	Stopping	Закрытие программы
+29.01.2019 22:31:15	Stаrting	Старт программы
+29.01.2019 22:31:15	Com_Provider	Загрузка провайдера
+29.01.2019 22:31:16	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 22:31:16	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 22:31:16	Com_Provider	Строка подключения корректна
+29.01.2019 22:31:16	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 22:31:16	SprWorkflow	Добавление задачи bonusD в список заданий 
+29.01.2019 22:31:23	Com_Thread	Изменился статус обработчика заданий на: Starting
+29.01.2019 22:31:23	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+29.01.2019 22:31:23	Wokflow	Отчистка списка объектов в задании bonusD
+29.01.2019 22:31:23	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx в задание bonusD
+29.01.2019 22:31:23	Com_Thread	Изменился статус обработчика заданий на: Running
+29.01.2019 22:31:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx: 149 AffectedRows
+29.01.2019 22:31:34	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx: 314 AffectedRows
+29.01.2019 22:31:34	Com_Thread	Изменился статус обработчика заданий на: Completed
+29.01.2019 22:33:07	Stopping	Закрытие программы
+29.01.2019 22:35:16	Stаrting	Старт программы
+29.01.2019 22:35:16	Com_Provider	Загрузка провайдера
+29.01.2019 22:35:16	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 22:35:16	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 22:35:17	Com_Provider	Строка подключения корректна
+29.01.2019 22:35:17	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 22:35:17	SprWorkflow	Добавление задачи bonusD в список заданий 
+29.01.2019 22:35:36	Com_Thread	Изменился статус обработчика заданий на: Starting
+29.01.2019 22:35:36	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+29.01.2019 22:35:36	Wokflow	Отчистка списка объектов в задании bonusD
+29.01.2019 22:35:36	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx в задание bonusD
+29.01.2019 22:35:36	Com_Thread	Изменился статус обработчика заданий на: Running
+29.01.2019 22:35:41	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx: 142 AffectedRows
+29.01.2019 22:35:41	Com_Thread	Изменился статус обработчика заданий на: Completed
+29.01.2019 22:35:56	Stopping	Закрытие программы
+29.01.2019 22:35:59	Stаrting	Старт программы
+29.01.2019 22:35:59	Com_Provider	Загрузка провайдера
+29.01.2019 22:35:59	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 22:35:59	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 22:35:59	Com_Provider	Строка подключения корректна
+29.01.2019 22:35:59	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 22:35:59	SprWorkflow	Добавление задачи bonusD в список заданий 
+29.01.2019 22:36:17	Com_Thread	Изменился статус обработчика заданий на: Starting
+29.01.2019 22:36:17	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+29.01.2019 22:36:17	Wokflow	Отчистка списка объектов в задании bonusD
+29.01.2019 22:36:17	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx в задание bonusD
+29.01.2019 22:36:17	Com_Thread	Изменился статус обработчика заданий на: Running
+29.01.2019 22:36:18	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_Date_rpt.xlsx: 2 AffectedRows
+29.01.2019 22:36:18	Com_Thread	Изменился статус обработчика заданий на: Completed
+29.01.2019 23:17:07	Stopping	Закрытие программы
+29.01.2019 23:20:49	Stаrting	Старт программы
+29.01.2019 23:20:49	Com_Provider	Загрузка провайдера
+29.01.2019 23:20:49	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 23:20:49	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 23:20:49	Com_Provider	Строка подключения корректна
+29.01.2019 23:20:49	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 23:20:49	SprWorkflow	Добавление задачи bonusD в список заданий 
+29.01.2019 23:21:15	Com_Thread	Изменился статус обработчика заданий на: Starting
+29.01.2019 23:21:15	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+29.01.2019 23:21:15	Wokflow	Отчистка списка объектов в задании bonusD
+29.01.2019 23:21:15	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+29.01.2019 23:21:15	Com_Thread	Изменился статус обработчика заданий на: Running
+29.01.2019 23:21:16	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1 AffectedRows
+29.01.2019 23:21:16	Com_Thread	Изменился статус обработчика заданий на: Completed
+29.01.2019 23:23:23	Stopping	Закрытие программы
+29.01.2019 23:23:27	Stаrting	Старт программы
+29.01.2019 23:23:27	Com_Provider	Загрузка провайдера
+29.01.2019 23:23:27	DocXmlConfig	Обработка конфигурационного файла
+29.01.2019 23:23:27	Com_Provider	Загрузка провайдера: Oracle
+29.01.2019 23:23:27	Com_Provider	Строка подключения корректна
+29.01.2019 23:23:27	SprWorkflow	Добавление задачи bonus в список заданий 
+29.01.2019 23:23:27	SprWorkflow	Добавление задачи bonusD в список заданий 
+29.01.2019 23:23:50	Com_Thread	Изменился статус обработчика заданий на: Starting
+29.01.2019 23:23:50	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+29.01.2019 23:23:50	Wokflow	Отчистка списка объектов в задании bonusD
+29.01.2019 23:23:50	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+29.01.2019 23:23:50	Com_Thread	Изменился статус обработчика заданий на: Running
+29.01.2019 23:23:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 1 AffectedRows
+29.01.2019 23:23:51	Com_Thread	Изменился статус обработчика заданий на: Completed
+30.01.2019 9:27:49	Stopping	Закрытие программы
+31.01.2019 10:03:45	Stаrting	Старт программы
+31.01.2019 10:03:45	Com_Provider	Загрузка провайдера
+31.01.2019 10:03:45	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 10:03:45	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 10:03:45	Com_Provider	Строка подключения корректна
+31.01.2019 10:03:45	SprWorkflow	Добавление задачи bonus в список заданий 
+31.01.2019 10:03:45	SprWorkflow	Добавление задачи bonusD в список заданий 
+31.01.2019 10:03:55	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:03:55	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:03:55	Wokflow	Отчистка списка объектов в задании bonusD
+31.01.2019 10:03:55	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+31.01.2019 10:03:55	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:03:56	ERROR	Oracle Data Provider for .NET: ORA-00904: "ISPNACHBON": invalid identifier
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As "CASH", 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As "BONUS"
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (
+    Select C.FIRST_NAME, C.LAST_NAME, D.SC_PERC,
+            Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "NarNachBon",
+           Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "IspNachBon",
+           Round(D.STORE_CREDIT,2) As "Остаток Баллов",
+           row_number() over (Partition By D.CUST_SID Order By D.POST_DATE desc, D.INVC_NO desc) As PRN
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID 
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID 
+        Where D.POST_DATE < To_Date('31.01.2019','DD.MM.YYYY')
+            and D.CUST_SID = Case when '-1'='-1' Then D.CUST_SID else to_number('-1') end
+        )
+     Select FIRST_NAME ||' '|| LAST_NAME As "Имя клиента", SC_PERC As "Бонусный %", NarNachBon "Нараст нач бонус", IspNachBon "Исп нач бонус"
+     From F 
+     Where PRN=1
+     Order BY FIRST_NAME, LAST_NAME 
+-------------------- Dump Sql ----------->>>>>>>>>>
+31.01.2019 10:03:56	Com_Thread	Изменился статус обработчика заданий на: ERROR
+31.01.2019 10:05:06	Stopping	Закрытие программы
+31.01.2019 10:05:09	Stаrting	Старт программы
+31.01.2019 10:05:09	Com_Provider	Загрузка провайдера
+31.01.2019 10:05:09	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 10:05:09	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 10:05:09	Com_Provider	Строка подключения корректна
+31.01.2019 10:05:09	SprWorkflow	Добавление задачи bonus в список заданий 
+31.01.2019 10:05:09	SprWorkflow	Добавление задачи bonusD в список заданий 
+31.01.2019 10:05:19	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:05:19	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:05:19	Wokflow	Отчистка списка объектов в задании bonusD
+31.01.2019 10:05:19	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+31.01.2019 10:05:19	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:05:24	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 206 AffectedRows
+31.01.2019 10:05:29	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 407 AffectedRows
+31.01.2019 10:05:29	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 10:08:05	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:08:05	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:08:05	Wokflow	Отчистка списка объектов в задании bonus
+31.01.2019 10:08:05	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonus
+31.01.2019 10:08:05	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:08:11	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 76 AffectedRows
+31.01.2019 10:08:16	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 169 AffectedRows
+31.01.2019 10:08:21	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 264 AffectedRows
+31.01.2019 10:08:26	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 359 AffectedRows
+31.01.2019 10:08:31	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 454 AffectedRows
+31.01.2019 10:08:36	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 544 AffectedRows
+31.01.2019 10:08:41	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 632 AffectedRows
+31.01.2019 10:08:46	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 725 AffectedRows
+31.01.2019 10:08:51	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 813 AffectedRows
+31.01.2019 10:08:55	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 890 AffectedRows
+31.01.2019 10:08:56	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 10:09:17	Stopping	Закрытие программы
+31.01.2019 10:11:44	Stаrting	Старт программы
+31.01.2019 10:11:44	Com_Provider	Загрузка провайдера
+31.01.2019 10:11:44	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 10:11:44	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 10:11:44	Com_Provider	Строка подключения корректна
+31.01.2019 10:11:44	SprWorkflow	Добавление задачи bonus в список заданий 
+31.01.2019 10:11:44	SprWorkflow	Добавление задачи bonusD в список заданий 
+31.01.2019 10:11:55	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:11:55	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:11:55	Wokflow	Отчистка списка объектов в задании bonusD
+31.01.2019 10:11:55	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+31.01.2019 10:11:55	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:12:01	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 206 AffectedRows
+31.01.2019 10:12:05	Com_Thread	Статус выгрузки по объекту D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx: 407 AffectedRows
+31.01.2019 10:12:06	Com_Thread	Изменился статус обработчика заданий на: Completed
+31.01.2019 10:13:38	Stopping	Закрытие программы
+31.01.2019 10:13:44	Stаrting	Старт программы
+31.01.2019 10:13:44	Com_Provider	Загрузка провайдера
+31.01.2019 10:13:44	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 10:13:44	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 10:13:45	Com_Provider	Строка подключения корректна
+31.01.2019 10:13:45	SprWorkflow	Добавление задачи bonus в список заданий 
+31.01.2019 10:13:45	SprWorkflow	Добавление задачи bonusD в список заданий 
+31.01.2019 10:13:56	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:13:56	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:13:57	Wokflow	Отчистка списка объектов в задании bonusD
+31.01.2019 10:13:57	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+31.01.2019 10:13:57	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:13:57	ERROR	Oracle Data Provider for .NET: ORA-00904: "T"."CASH": invalid identifier
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As "CASH", 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As "BONUS"
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (
+    Select C.FIRST_NAME, C.LAST_NAME, D.SC_PERC,
+            Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS NarNachBon,
+           Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS IspNachBon,
+           Round(D.STORE_CREDIT,2) As "Остаток Баллов",
+           row_number() over (Partition By D.CUST_SID Order By D.POST_DATE desc, D.INVC_NO desc) As PRN
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID 
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID 
+        Where D.POST_DATE < To_Date('31.01.2019','DD.MM.YYYY')
+            and D.CUST_SID = Case when '-1'='-1' Then D.CUST_SID else to_number('-1') end
+        )
+     Select FIRST_NAME ||' '|| LAST_NAME As "Имя клиента", 
+	 T.CASH As "Исполь денег",
+	 SC_PERC As "Бонусный %", 
+	 NarNachBon "Нараст нач бонус", 
+	 IspNachBon "Исп нач бонус"
+     From F 
+     Where PRN=1
+     Order BY FIRST_NAME, LAST_NAME 
+-------------------- Dump Sql ----------->>>>>>>>>>
+31.01.2019 10:13:57	Com_Thread	Изменился статус обработчика заданий на: ERROR
+31.01.2019 10:14:02	Stopping	Закрытие программы
+31.01.2019 10:14:30	Stаrting	Старт программы
+31.01.2019 10:14:30	Com_Provider	Загрузка провайдера
+31.01.2019 10:14:30	DocXmlConfig	Обработка конфигурационного файла
+31.01.2019 10:14:30	Com_Provider	Загрузка провайдера: Oracle
+31.01.2019 10:14:30	Com_Provider	Строка подключения корректна
+31.01.2019 10:14:30	SprWorkflow	Добавление задачи bonus в список заданий 
+31.01.2019 10:14:30	SprWorkflow	Добавление задачи bonusD в список заданий 
+31.01.2019 10:14:40	Com_Thread	Изменился статус обработчика заданий на: Starting
+31.01.2019 10:14:40	Com_Thread	Изменился статус обработчика заданий на: CreateObj
+31.01.2019 10:14:40	Wokflow	Отчистка списка объектов в задании bonusD
+31.01.2019 10:14:40	Wokflow	Добавление объекта D:\AlgoritmDM\Client\bonus_rpt\Export\Bonus_rpt.xlsx в задание bonusD
+31.01.2019 10:14:40	Com_Thread	Изменился статус обработчика заданий на: Running
+31.01.2019 10:14:40	ERROR	Oracle Data Provider for .NET: ORA-00904: "CASH": invalid identifier
+<<<<<<<<<<---------- Dump Sql ---------------------
+With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As "CASH", 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As "BONUS"
+            From cms.invc_tender 
+            Group By INVC_SID),
+    F As (
+    Select C.FIRST_NAME, C.LAST_NAME, D.SC_PERC,
+            Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS NarNachBon,
+           Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS IspNachBon,
+           Round(D.STORE_CREDIT,2) As "Остаток Баллов",
+           row_number() over (Partition By D.CUST_SID Order By D.POST_DATE desc, D.INVC_NO desc) As PRN
+        From AKS.INVC_SC_DOWN D
+            inner join T T On D.INVC_SID=T.INVC_SID
+            inner join CMS.invoice I On D.INVC_SID=I.INVC_SID 
+            inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID 
+        Where D.POST_DATE < To_Date('31.01.2019','DD.MM.YYYY')
+            and D.CUST_SID = Case when '-1'='-1' Then D.CUST_SID else to_number('-1') end
+        )
+     Select FIRST_NAME ||' '|| LAST_NAME As "Имя клиента", 
+	 CASH As "Исполь денег",
+	 SC_PERC As "Бонусный %", 
+	 NarNachBon "Нараст нач бонус", 
+	 IspNachBon "Исп нач бонус"
+     From F 
+     Where PRN=1
+     Order BY FIRST_NAME, LAST_NAME 
+-------------------- Dump Sql ----------->>>>>>>>>>
+31.01.2019 10:14:40	Com_Thread	Изменился статус обработчика заданий на: ERROR
+31.01.2019 10:14:42	Stopping	Закрытие программы

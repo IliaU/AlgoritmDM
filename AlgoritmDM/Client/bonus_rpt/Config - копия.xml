@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Algoritm_Export Version="3" DefColSpan="\t" DefRowSpan="\r\n" ProviderTyp="Oracle" ConnectionString="USER ID=reportuser;DATA SOURCE=rproods;PASSWORD=report">
+  <Lic>
+    <Key MachineName="DEMO-1" UserName="user" ValidToYYYYMMDD="20181231" LicKey="39O-3B8-3B9-3B5-3BB-3B1-3BJ-3CR-3CP-3CV-3CW-3CO-3D2-3CT-3BN-3D3-3CY-3CV-3CW-3CZ-3B3-3B6-3B2-3B4-3BE-3B5-3B4-3B6-3B7-3B1-3BN-3D1-3CN-3CY-3D3-3CU-3CW-3CL" ActivNumber="67P-69D-698-698-699" Info="тест инфо" HashUserOS="False" />
+  </Lic>
+  <Params>
+    <Param Name="From" Caption="C" Typ="Calendar" Format="DD.MM.YYYY" Default="Select Sysdate As ID from dual" />
+    <Param Name="To" Caption="По" Typ="Calendar" Format="DD.MM.YYYY" Default="Select Sysdate As ID from dual" />
+    <Param Name="Product" Caption="Продукт" Typ="ComboBox" Default="Select '2' As ID from dual">Select '-1' ID, 'Все модели' As TXT From dual union Select '1', 'Ford Galaxy' From dual union Select '2', 'Ford Fusion' From dual union Select '3', 'Dewo Matiz' From dual union Select '4', 'Иж Ода' From dual</Param>
+    <Param Name="Month" Caption="Месяц" ShablonSelected="in ({''@id''})" ShablonAll="= To_Char(D,''DD.MM.YYYY'')" Typ="Select '= To_Char(D,''''DD.MM.YYYY'''')' As ID from dual">Select '01.01.2018' AS ID, 'Январь' AS TXT from dual
+union Select '01.02.2018' AS ID, 'Февраль' AS TXT from dual
+union Select '01.03.2018' AS ID, 'Март' AS TXT from dual</Param>
+  </Params>
+  <Workflows>
+    <Workflow LongName="Тестовая выгрузка с применением фильтра" ShortName="tst" HachColName="True" CHCP="866">Select 'with T As (Select 1 ID, To_Date(''01.01.2018'',''DD.MM.YYYY'') D, 4 As MODEL_ID, ''Иж Ода'' As MODEL_TXT From dual union Select 2, To_Date(''01.02.2018'',''DD.MM.YYYY''), 2,  ''Ford Fusion'' From dual union Select 3, To_Date(''01.03.2018'',''DD.MM.YYYY''), 1, ''Ford Galaxy'' From dual union Select 4, To_Date(''01.03.2018'',''DD.MM.YYYY''), 3, ''Dewo Matiz'' From dual)
+Select *
+From T
+Where D between To_Date(''@From'',''DD.MM.YYYY'') and To_Date(''@To'',''DD.MM.YYYY'')
+    and MODEL_ID=Case When @Product=''-1'' Then MODEL_ID Else @Product end' As QUERY, '@CurrentFolder\Export\My_Prod_chcp866.txt' As FILE_PATH, '\t' As COL_SPAN, '\r\n' As ROW_SPAN
+From dual</Workflow>
+    <Workflow LongName="Выгружаем всё" ShortName="tst2" FILE_PATH_FOR_EXEL="@CurrentFolder\Export\ttt.xlsx" HachColName="True">Select 'Select 1 ID, ''Ford Galaxy'' As MODEL From dual union Select 2, ''Ford Fusion'' From dual union Select 3, ''Dewo Matiz'' From dual union Select 4, ''Иж Ода'' From dual' As QUERY, 'Product' As LIST_NAME,  '@CurrentFolder\Export\Product.txt' As FILE_PATH, 'True' As "APPEND" From Dual
+union 
+Select 'Select 1 ID, To_Date(''01.01.2018'',''DD.MM.YYYY'') D, 4 As MODEL From dual union Select 2, To_Date(''01.02.2018'',''DD.MM.YYYY''), 2 From dual union Select 3, To_Date(''01.03.2018'',''DD.MM.YYYY''), 1 From dual union Select 4, To_Date(''01.03.2018'',''DD.MM.YYYY''), 3 From dual', 'Journal' As LIST_NAME,  '@CurrentFolder\Export\Journal.txt', 'False' As "APPEND" From Dual</Workflow>
+    <Workflow LongName="Выгружаем всё в специальном формате" ShortName="tst3" HachColName="True">Select 'Select 1 ID, ''Ford Galaxy'' As MODEL union Select 2, ''Ford Fusion'' union Select 3, ''Dewo Matiz'' union Select 4, ''Иж Ода'' union Select 5, null ' As QUERY, 'Product' As LIST_NAME,  '@CurrentFolder\Export\Product.txt' As FILE_PATH, 'XML;&lt;?xml version="1.0" encoding="windows-1251"?&gt;;Товары;Элемент' As SpecificFormat
+union 
+Select 'Select 1 ID, convert(date,''01.01.'' + Convert(varchar,DATEPART(Year,GetDate())), 104) D, 4 As MODEL union Select 2,convert(date,''01.02.'' + Convert(varchar,DATEPART(Year,GetDate())), 104), 2 union Select 3, convert(date,''01.03.'' + Convert(varchar,DATEPART(Year,GetDate())), 104), 1 union Select 4, convert(date,''01.04.'' + Convert(varchar,DATEPART(Year,GetDate())), 104), 3 ', 'Journal' As LIST_NAME,  '@CurrentFolder\Export\Journal.txt', null</Workflow>
+    <Workflow LongName="Выгружаем всё в специальном формате2" ShortName="tst4" HachColName="True" CHCP="UTF-8">With T As (Select  '@CurrentFolder\Export\Specific2.xml' As FILE_PATH, 'XML2;&lt;?xml version="1.0" encoding="UTF-8"?&gt;;&lt;Data&gt;
+    &lt;EcrConfigStoreHdr_T FileVerFormat="256" FileDataType="8" CodePageStr="Windows-1251"/&gt;
+    &lt;box Name="PriceCodes"&gt;;PrItemPriceCode_T;    &lt;/box&gt;
+&lt;/Data&gt;' As SpecificFormat From Dual)
+Select 'Select 1 ID, ''Ford Galaxy'' As MODEL From dual union Select 2, ''Ford Fusion'' From dual union Select 3, ''Dewo Matiz'' From dual union Select 4, ''Иж Ода'' From dual' As QUERY, 'Product' As LIST_NAME,  T.FILE_PATH, T.SpecificFormat, 'Nam1,Nam2' As SpecialColumnName From Dual, T</Workflow>
+    <Workflow LongName="Выгружаем из RPro8 всех клиентов" ShortName="tst5" HachColName="True" CHCP="UTF-8">QUERY|Client.Dat!FILE_PATH|@CurrentFolder\Export\Client.txt!COL_SPAN|\t!ROW_SPAN|\r\n!LIST_NAME|Client^QUERY|INVN.DAT!FILE_PATH|@CurrentFolder\Export\Client2.txt!COL_SPAN|\t!ROW_SPAN|\r\n!LIST_NAME|Client2</Workflow>
+  </Workflows>
+</Algoritm_Export>

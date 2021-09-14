@@ -1,0 +1,99 @@
+GRANT EXECUTE ON CMS.TOKENTABLETYPE TO AKS;
+
+GRANT EXECUTE ON CMS.Pkg_Parser TO AKS;
+
+CREATE OR REPLACE package AKS.REPORT AUTHID CURRENT_USER
+is
+  TYPE summary_cur IS REF CURSOR;
+
+  PROCEDURE RepBonusOfPrihod (SCUR IN OUT SUMMARY_CUR, v_period_date_DRG VARCHAR2/*, v_Clerk VARCHAR2*/);
+
+end REPORT;
+/
+
+
+CREATE OR REPLACE package body AKS.REPORT is
+
+    PROCEDURE RepBonusOfPrihod (SCUR IN OUT SUMMARY_CUR, v_period_date_DRG VARCHAR2/*, v_Clerk VARCHAR2*/) 
+    IS
+        tmpStrSql              CLOB;
+        arrDate	               TOKENTABLETYPE;
+        dateFrom               DATE;
+        dateTill               DATE;
+    BEGIN
+      
+  IF TRIM(v_period_date_DRG) IS NOT NULL THEN
+    arrDate := CMS.Pkg_Parser.GETTOKEN(v_period_date_DRG,',');
+    IF arrDate.LAST = 3 THEN
+            dateFrom := TO_date(TRIM('''' FROM arrDate(2)),CMS.Pkg_Parser.SHORT_DATE_FORMATE);
+            dateTill := TO_date(TRIM('''' FROM arrDate(3)),CMS.Pkg_Parser.SHORT_DATE_FORMATE);
+        ELSE
+            RAISE_APPLICATION_ERROR(-20096,'Please enter date in valid format for Sale Period ((1 Or 0),''MM/DD/YYYY'',''MM/DD/YYYY'')');
+    END IF;
+  END IF;
+    
+
+    --Dbms_output.put_line('I.CMS_POST_DATE=To_Date('''|| To_Char(p_start_date,'YYYY-MM-DD HH24:MM:SS') ||''',''YYYY-MM-DD HH24:MM:SS'')');
+            
+         --execute immediate 'select s.currency_id from subsidiary s where s.sbs_no = :sbs_no' into nCurrencyId using v_dest_sbs_no ;
+      
+         --v_key:= SUBSTR(v_STORE_NO_LOK,1,INSTR(v_STORE_NO_LOK,'_')-1);
+         
+           --Select SUBSTR(v_STORE_NO_LOK,1,INSTR(v_STORE_NO_LOK,'_')-1) into v_key  from DUAL;
+
+--insert into AKS.AAA Values (v_Clerk);
+--commit;
+
+         tmpStrSql := 'With  A As (Select CUST_SID, MAX(ADDR_NO) As ADDR_NO 
+        From CMS.CUST_ADDRESS
+        Where PHONE1 is not null
+            and CUST_SID in (Select CUST_SID From aks.CUST_SC_PARAM)
+        GROUP BY CUST_SID),
+    AL As (Select A1.*
+        From CMS.CUST_ADDRESS A1
+            inner join A A2 On A1.CUST_SID=A2.CUST_SID and A1.ADDR_NO=A2.ADDR_NO),
+    T As (Select INVC_SID, Sum(Case When TENDER_TYPE=5 Then 0 else AMT End) As CASH, 
+                    Sum(Case When TENDER_TYPE=5 Then AMT else 0 End) As BONUS
+            From cms.invc_tender 
+            Group By INVC_SID)
+    Select Case When I.INVC_TYPE=0 Then ''Продажа'' else ''Возврат'' end As "Тип чека", 
+        D.INVC_SID As "Сид чека", D.INVC_NO As "Номер чека", D.POST_DATE As "Дата чека",
+        D.CUST_SID As "Сид покупателя", D.TOTAL_SUM As "Нарастающий", 
+        D.SC_PERC As "Бонусный %", D.STORE_CREDIT As "Итоговый Бонус",
+        T.BONUS As "Исполь бонус", T.CASH As "Исполь денег", 
+        (T.CASH*D.SC_PERC/100)-T.BONUS * Case When I.INVC_TYPE=0 Then 1 else -1 end As "Начислен бон",
+        C.FIRST_NAME, C.LAST_NAME, C.FIRST_NAME ||'' ''|| C.LAST_NAME As FIO, AL.PHONE1,
+        Sum(Case When I.INVC_TYPE=0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Нараст нач бонус",
+        Sum(Case When I.INVC_TYPE<>0 Then (T.CASH*D.SC_PERC/100) else 0 End) Over (Partition By D.CUST_SID Order By D.POST_DATE, D.INVC_NO) AS "Исп нач бонус"
+    From AKS.INVC_SC_DOWN D
+        inner join T T On D.INVC_SID=T.INVC_SID
+        inner join CMS.invoice I On D.INVC_SID=I.INVC_SID
+        inner join CMS.Customer C On D.CUST_SID=C.CUST_SID
+        inner join AL On C.CUST_SID=AL.CUST_SID
+    Where D.POST_DATE between To_Date('''|| To_Char(dateFrom,'YYYY-MM-DD HH24:MI:SS') ||''',''YYYY-MM-DD HH24:MI:SS'')
+                                            and To_Date('''|| To_Char(dateTill+1-1/24/60/60,'YYYY-MM-DD HH24:MI:SS') ||''',''YYYY-MM-DD HH24:MI:SS'')
+            '||/*Case When v_Clerk is not null Then '  and C.CUST_SID in('||v_Clerk||')' else '' end || */'
+    Order BY D.POST_DATE, D.invc_no, D.Item_Pos';
+        
+        -- Left Join OH On D.ITEM_SID=OH.ITEM_SID --and D.SBS_NO=OH.SBS_NO and D.STORE_NO=OH.STORE_NO';
+           
+        Dbms_output.put_line(tmpStrSql);
+         
+        OPEN SCUR FOR tmpStrSql;
+        
+    /*
+    variable refcur REFCURSOR
+    begin
+        --AKS.REPORT.RepBonusOfPrihod(:refcur,'1,''12.01.2018'',''12.25.2018''', '''2317980986251874300''');
+        AKS.REPORT.RepBonusOfPrihod(:refcur,'1,''12.01.2018'',''12.25.2018''');
+    end;
+    /
+
+    print refcur;
+    */    
+       
+    END RepBonusOfPrihod;
+
+
+END REPORT;
+/
