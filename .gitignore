@@ -3,6 +3,8 @@
 /AlgoritmDM/Com/Lic.cs
 /AlgoritmDM/FLic.cs
 /AlgoritmDM/FLic.Designer.cs
-/AlgoritmDM/bin/Debug/AlgoritmDM.exe.config
-/AlgoritmDM/bin/Debug/AlgoritmDM.pdb
-/AlgoritmDM/bin/Debug/AlgoritmDM.exe
+/AlgoritmDM/bin/Debug/*.exe
+/AlgoritmDM/bin/Debug/*.dll
+/AlgoritmDM/bin/Release/*.exe
+/AlgoritmDM/bin/Release/*.dll
+/AlgoritmDM/obj
