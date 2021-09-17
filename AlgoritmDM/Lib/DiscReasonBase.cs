@@ -20,7 +20,7 @@ namespace AlgoritmDM.Lib
         /// <summary>
         /// Идентификатор причины скидки
         /// </summary>
-        public int DiscReasonId { get; private set; }
+        public Int64 DiscReasonId { get; private set; }
 
         /// <summary>
         /// Строковое иписания причины скидки
@@ -40,7 +40,7 @@ namespace AlgoritmDM.Lib
         /// </summary>
         /// <param name="DiscReasonId">Идентификатор причины скидки</param>
         /// <param name="DiscReasonName">Строковое иписания причины скидки</param>
-        protected void InitBaseObject(int DiscReasonId, string DiscReasonName)
+        protected void InitBaseObject(Int64 DiscReasonId, string DiscReasonName)
         {
             this.DiscReasonId = DiscReasonId;
             this.DiscReasonName = DiscReasonName;

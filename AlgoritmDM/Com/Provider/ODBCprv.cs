@@ -168,6 +168,8 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             return getCheckORA(FuncTarget, CnfL, NextScenary, FirstDate, FilCustSid);
+                        case "myodbc8a.dll":
+                            return getCheckMySql(FuncTarget, CnfL, NextScenary, FirstDate, FilCustSid);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
                         //break;
@@ -210,6 +212,8 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             return getCustumersORA(FuncTarget);
+                        case "myodbc8a.dll":
+                            return getCustumersMySql(FuncTarget);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
                         //break;
@@ -1748,6 +1752,17 @@ where ADDR_NO=1
             this.setApplayNextStoreCgreditMySql();
 
 
+            /*
+             select i.`sid` As INVC_SID, i.`tender_type` As invc_type, i.`doc_no` As invc_no, ii.`item_pos` As Item_Pos, i.`created_datetime` As created_date, i.`post_date` As post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
+       inv.`item_size` As siz, ii.qty+"" As QTY, i.`bt_cuid` As cust_sid, i.STORE_NO, #i.disc_reason_id#, 
+       ii.`sid` As ITEM_SID, ii.ORIG_PRICE+"" ORIG_PRICE, ii.PRICE+"" PRICE#, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
+    from `rpsods`.`document` i 
+     inner join `rpsods`.`document_item` ii on i.SID=ii.`doc_sid`
+     inner join `rpsods`.`invn_sbs_item` inv on ii.invn_sbs_item_sid=inv.sid
+     inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
+             */
+
+
             string CommandSql = @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
         inv.siz, To_Char(ii.QTY) QTY, i.cust_sid, i.STORE_NO, i.disc_reason_id, ii.ITEM_SID, To_Char(ii.ORIG_PRICE) ORIG_PRICE, To_Char(ii.PRICE) PRICE, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
     from CMS.invoice i 
@@ -2019,20 +2034,24 @@ Where (CUST_SID={0} and POST_DATE>To_Date('{1}','DD.MM.YYYY'))
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
-    a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
-from CMS.customer s
-    left join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
-    left join AKS.CUST_SC_PARAM p on s.cust_sid=p.cust_sid";
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
+  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+from `rpsods`.`customer` s
+    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid";
                 }
                 else
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
-    a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
-from CMS.customer s
-    left join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
-    left join AKS.CUST_SC_PARAM p on s.cust_sid=p.cust_sid
-Where a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
+  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+from `rpsods`.`customer` s
+    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
+Where ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 }
             }
             else    // Если код региона указан
@@ -2040,22 +2059,26 @@ Where a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
-    a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
-from CMS.customer s
-    inner join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
-    left join AKS.CUST_SC_PARAM p on s.cust_sid=p.cust_sid
-Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")";
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
+  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+from `rpsods`.`customer` s
+    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
+Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")";
                 }
                 else
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
-    a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
-from CMS.customer s
-    inner join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
-    left join AKS.CUST_SC_PARAM p on s.cust_sid=p.cust_sid
-Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
-    and a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
+  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+from `rpsods`.`customer` s
+    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
+Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
+    and ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 }
             }
 
@@ -2353,7 +2376,7 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
         /// <returns>Успех обработки функции</returns>
         private bool getDiscReasonsMySql()
         {
-            string CommandSql = @"Select Distinct DISC_REASON_ID, DISC_REASON_NAME From CMS.DISC_REASON Where SBS_NO=-1";
+            string CommandSql = @"Select Distinct `sid` As DISC_REASON_ID, `name` As DISC_REASON_NAME From `rpsods`.`pref_reason` Where reason_type = 10";
 
             try
             {
@@ -2388,11 +2411,11 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
                                 // пробегаем по строкам
                                 while (dr.Read())
                                 {
-                                    int tmpDscReasId = -1;
+                                    Int64 tmpDscReasId = -1;
                                     string tmpDscReasName = null;
                                     for (int i = 0; i < dr.FieldCount; i++)
                                     {
-                                        try { if (!dr.IsDBNull(i) && dr.GetName(i) == "DISC_REASON_ID") tmpDscReasId = int.Parse(dr.GetValue(i).ToString()); }
+                                        try { if (!dr.IsDBNull(i) && dr.GetName(i) == "DISC_REASON_ID") tmpDscReasId = Int64.Parse(dr.GetValue(i).ToString()); }
                                         catch (Exception) { }
                                         try { if (!dr.IsDBNull(i) && dr.GetName(i) == "DISC_REASON_NAME") tmpDscReasName = dr.GetValue(i).ToString(); }
                                         catch (Exception) { }

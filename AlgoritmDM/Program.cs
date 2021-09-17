@@ -31,6 +31,9 @@ namespace AlgoritmDM
             }
 
 
+  
+
+
             //int iyt = Com.RegFarm.GegUsr.RegItems.Count;
             //Com.RegFarm.GegUsr.RegItems.Add(new Lib.Reg.Reg(
 

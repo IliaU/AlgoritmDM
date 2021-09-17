@@ -15,7 +15,7 @@ namespace AlgoritmDM.Lib
         /// </summary>
         /// <param name="DiscReasonId">Идентификатор причины скидки</param>
         /// <param name="DiscReasonName">Строковое иписания причины скидки</param>
-        public DiscReason(int DiscReasonId, string DiscReasonName)
+        public DiscReason(Int64 DiscReasonId, string DiscReasonName)
         {
             base.InitBaseObject(DiscReasonId, DiscReasonName);
         }

@@ -65,3 +65,41 @@
 17.09.2021 0:57:36	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
 17.09.2021 0:57:37	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
 17.09.2021 0:57:37	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 12:27:23	Message	Log	Запуск программы.
+17.09.2021 12:27:23	Message	Config	Загрузка чтения параметров.
+17.09.2021 12:27:29	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 12:27:29	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 12:27:29	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 12:36:28	Message	Log	Запуск программы.
+17.09.2021 12:36:28	Message	Config	Загрузка чтения параметров.
+17.09.2021 12:36:41	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 12:36:41	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 12:36:41	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 17:35:46	Message	Log	Запуск программы.
+17.09.2021 17:35:46	Message	Config	Загрузка чтения параметров.
+17.09.2021 17:36:05	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 17:36:05	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 17:36:05	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 17:37:15	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+17.09.2021 17:38:10	Message	Log	Запуск программы.
+17.09.2021 17:38:10	Message	Config	Загрузка чтения параметров.
+17.09.2021 17:38:19	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 17:38:19	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 17:38:19	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 17:39:55	Message	Log	Запуск программы.
+17.09.2021 17:39:55	Message	Config	Загрузка чтения параметров.
+17.09.2021 17:40:19	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 17:40:19	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 17:40:19	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 17:41:59	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+17.09.2021 17:41:59	Admin	Error	ODBCprv.getCustumersMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [HY000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Unknown database 'cms'
+17.09.2021 17:42:04	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: False
+17.09.2021 17:42:04	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+17.09.2021 18:54:07	Message	Log	Запуск программы.
+17.09.2021 18:54:07	Message	Config	Загрузка чтения параметров.
+17.09.2021 18:54:24	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+17.09.2021 18:54:24	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+17.09.2021 18:54:24	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+17.09.2021 18:54:48	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+17.09.2021 18:56:34	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+17.09.2021 18:56:34	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'

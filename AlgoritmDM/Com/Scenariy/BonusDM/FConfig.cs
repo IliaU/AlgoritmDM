@@ -148,7 +148,7 @@ namespace AlgoritmDM.Com.Scenariy.BonusDM
         /// </summary>
         /// <param name="DiscReasonId">Тип чека наличие которого нужно проверить.</param>
         /// <returns>Если существует в основном класса то возвращаем true</returns>
-        private bool HashDiscReasonId(int DiscReasonId)
+        private bool HashDiscReasonId(Int64 DiscReasonId)
         {
             bool rez = false;
             foreach (int item in this.MainBDM.NotDiscReasonId)
