@@ -31,9 +31,6 @@ namespace AlgoritmDM
             }
 
 
-  
-
-
             //int iyt = Com.RegFarm.GegUsr.RegItems.Count;
             //Com.RegFarm.GegUsr.RegItems.Add(new Lib.Reg.Reg(
 
@@ -67,6 +64,7 @@ namespace AlgoritmDM
                     Com.ConfigReg ConfReg = new Com.ConfigReg();
                     Com.Log Log = new Com.Log("AlgoritmDM.txt");
                     Com.Config Conf = new Com.Config("AlgoritmDM.xml");
+                    
 
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);

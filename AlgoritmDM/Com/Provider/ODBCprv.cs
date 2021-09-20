@@ -21,7 +21,7 @@ namespace AlgoritmDM.Com.Provider
     {
         #region Private Param
         private string ServerVersion;
-        private string Driver;
+        public string DriverOdbc;
         #endregion
 
         #region Puplic Param
@@ -57,7 +57,7 @@ namespace AlgoritmDM.Com.Provider
                     testConnection(ConnectionString, false);
 
                     // Устанавливаем в базовом классе строку подключения (котрая не меняется) и версию источника, чтобы не нужно было делать проверки коннектов
-                    base.SetupConnectionStringAndVersionDB(ConnectionString, this.ServerVersion);
+                    base.SetupConnectionStringAndVersionDB(ConnectionString, this.ServerVersion, this.DriverOdbc);
                 }
             }
             catch (Exception ex) { base.UPovider.EventSave(ex.Message, "ODBCprv", EventEn.Error); }
@@ -101,7 +101,7 @@ namespace AlgoritmDM.Com.Provider
                 // Если пользователь сохраняет новую строку подключения то сохраняем её в нашем объекте
                 if (drez == DialogResult.Yes)
                 {
-                    base.SetupConnectionStringAndVersionDB(Frm.ConnectionString, this.ServerVersion);
+                    base.SetupConnectionStringAndVersionDB(Frm.ConnectionString, this.ServerVersion, this.DriverOdbc);
                     rez = true;
                 }
             }
@@ -536,7 +536,7 @@ namespace AlgoritmDM.Com.Provider
                 }
 
                 // Если не упали значит можно сохранить текущую версию
-                this.Driver = tmpDriver;
+                this.DriverOdbc = tmpDriver;
                 this.ServerVersion = tmpServerVersion; // Сохраняем версию базы
 
                 return true;
@@ -1942,10 +1942,10 @@ where ADDR_NO=1
                 }
             }
 
-            string CommandSql = string.Format(@"Select INVC_SID, CUST_SID, POST_DATE, INVC_NO, ITEM_POS, To_Char(NEXT_STORE_CREDIT) As NEXT_STORE_CREDIT
-From AKS.INVC_SC_DOWN
+            string CommandSql = string.Format(@"Select INVC_SID, CUST_SID, POST_DATE, INVC_NO, ITEM_POS, NEXT_STORE_CREDIT+'' As NEXT_STORE_CREDIT
+From `aks`.`invc_sc_down`
 Where (APPLAY_NEXT_STORE_CREDIT is null or APPLAY_NEXT_STORE_CREDIT=0)
-    and POST_DATE<=Trunc(sysdate-{0})", Delay_Period);
+    and POST_DATE<=date(sysdate()-{0})", Delay_Period);
 
 
             try
@@ -1985,15 +1985,16 @@ Where (APPLAY_NEXT_STORE_CREDIT is null or APPLAY_NEXT_STORE_CREDIT=0)
                                         if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("NEXT_STORE_CREDIT").ToUpper()) tmpNextStoreCredit = dr.GetValue(i).ToString().Replace(",", ".");
                                     }
 
-                                    string CommandSql2 = String.Format(@"--Select 
-Update AKS.INVC_SC_DOWN Set 
+                                    string CommandSql2 = String.Format(@"#SELECT STR_TO_DATE('2014,2,28 19,30,05', '%Y,%m,%d %H,%i,%s');
+#Select *
+Update `aks`.`invc_sc_down` Set 
     STORE_CREDIT = STORE_CREDIT+{4}, 
     NEXT_STORE_CREDIT = Case When NEXT_STORE_CREDIT is null then 0 else NEXT_STORE_CREDIT end,
     APPLAY_NEXT_STORE_CREDIT = Case When INVC_SID = {5} Then 1 else APPLAY_NEXT_STORE_CREDIT End 
---From AKS.INVC_SC_DOWN 
-Where (CUST_SID={0} and POST_DATE>To_Date('{1}','DD.MM.YYYY'))
-    or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY') and invc_no>{2})
-    or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY') and invc_no={2} and Item_Pos>={3})", tmpCustSid, tmpPosDate.Day.ToString().PadLeft(2, '0') + "." + tmpPosDate.Month.ToString().PadLeft(2, '0') + "." + tmpPosDate.Year.ToString(), tmpInvcNo, tmpItemPos, tmpNextStoreCredit, tmpInvcSid);
+From `aks`.`invc_sc_down` 
+Where (CUST_SID={0} and POST_DATE>STR_TO_DATE(('{1}','%d.%m.%Y'))
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE(('{1}','%d.%m.%Y') and invc_no>{2})
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE(('{1}','%d.%m.%Y') and invc_no={2} and Item_Pos>={3}) ", tmpCustSid, tmpPosDate.Day.ToString().PadLeft(2, '0') + "." + tmpPosDate.Month.ToString().PadLeft(2, '0') + "." + tmpPosDate.Year.ToString(), tmpInvcNo, tmpItemPos, tmpNextStoreCredit, tmpInvcSid);
 
                                     // обновляем информацию по этому чеку и по всем последующим
                                     using (OdbcCommand com2 = new OdbcCommand(CommandSql2, con))
@@ -2222,7 +2223,7 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
         {
             if (Cst.Active == 0)
             {
-                string CommandSql = string.Format("Update CMS.customer Set ACTIVE=1 Where cust_sid={0} and ACTIVE=0", Cst.CustSid);
+                string CommandSql = string.Format("Update `rpsods`.`customer` Set ACTIVE=1 Where sid={0} and ACTIVE=0", Cst.CustSid);
 
                 try
                 {
@@ -2264,7 +2265,10 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
         {
             bool rez = false;
 
-            string CommandSql = string.Format("Select CUST_SID, FIRST_NAME, LAST_NAME, PHONE From AKS.CUSTOMER Where CUST_SID={0}", Cst.CustSid);
+            string CommandSql = string.Format(@"Select C.cust_sid As CUST_SID, C.FIRST_NAME, C.LAST_NAME, P.phone_no As PHONE 
+From `aks`.`customer` C
+  inner join `rpsods`.`customer_phone` P On C.cust_sid = P.cust_sid
+Where C.sid={0}", Cst.CustSid);
 
             try
             {
@@ -2335,7 +2339,7 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
                             {
                                 if (Cst.CustSid != -1 && !string.IsNullOrWhiteSpace(Cst.FirstName) && !string.IsNullOrWhiteSpace(Cst.LastName) && !string.IsNullOrWhiteSpace(Cst.Phone1))
                                 {
-                                    CommandSql = string.Format(@"Insert into AKS.CUSTOMER (CUST_SID, FIRST_NAME, LAST_NAME, PHONE)
+                                    CommandSql = string.Format(@"Insert into `aks`.`customer` (CUST_SID, FIRST_NAME, LAST_NAME, PHONE)
 Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), Cst.LastName.Replace("'", "''"), Cst.Phone1.Replace("'", "''"));
 
                                     if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".GetValidCustomerMySql", EventEn.Dump);
@@ -2605,8 +2609,8 @@ where CUST_SID={1}", MergeClientMain.CustSid, item.CustSid);
 
 
                 // Правим таблицу CMS.customer 
-                SQL = string.Format(@"update CMS.customer set ACTIVE=1
-where CUST_SID={0}", item.CustSid);
+                SQL = string.Format(@"update `rpsods`.`customer` set ACTIVE=1
+where sid={0}", item.CustSid);
                 try
                 {
                     if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientMySql", EventEn.Dump);
@@ -2638,9 +2642,9 @@ where CUST_SID={0}", item.CustSid);
 
 
                 // Правим таблицу CMS.cust_address
-                SQL = string.Format(@"update CMS.cust_address set phone1='+0'
-where ADDR_NO=1 
-    and CUST_SID={0}", item.CustSid);
+                SQL = string.Format(@"update `rpsods`.`customer_phone` set phone_no='+0'
+where `seq_no`=1 
+    and cust_sid={0}", item.CustSid);
                 try
                 {
                     if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientMySql", EventEn.Dump);
@@ -2672,10 +2676,10 @@ where ADDR_NO=1
             }
 
             List<string> trankT = new List<string>();
-            trankT.Add("AKS.CUSTOMER");
-            trankT.Add("AKS.CUST_SC_PARAM");
-            trankT.Add("AKS.INVC_SC_DOWN");
-            trankT.Add("AKS.SMTP_EVENTS");
+            trankT.Add("`aks`.`customer`");
+            trankT.Add("`aks`.`cust_sc_param`");
+            trankT.Add("`aks`.`invc_sc_down`");
+            trankT.Add("`aks`.`smtp_events`");
 
             foreach (string item in trankT)
             {
@@ -2904,7 +2908,7 @@ where ADDR_NO=1
                 // Если параметр найден, то необходимо сохранить инфу в ещё одну таблицу
                 if (Com.Config.SaveSmtpEvent && CalkStoreCredit != OldCalkStoreCredit)
                 {
-                    string CommandSql3 = string.Format("Insert into AKS.SMTP_EVENTS(CUST_SID,EVENT_VALUE,EVENT_NAME) VALUES({0},{1},'AployDMCalkMaxDiscPerc')", Cst.CustSid, (CalkStoreCredit - OldCalkStoreCredit).ToString().Replace(",", "."));
+                    string CommandSql3 = string.Format("Insert into `aks`.`smtp_events`(CUST_SID,EVENT_VALUE,EVENT_NAME) VALUES({0},{1},'AployDMCalkMaxDiscPerc')", Cst.CustSid, (CalkStoreCredit - OldCalkStoreCredit).ToString().Replace(",", "."));
                     rez = false;
 
                     // Закрывать конект не нужно он будет закрыт деструктором

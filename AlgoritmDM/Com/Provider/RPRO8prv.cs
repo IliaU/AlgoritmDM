@@ -57,7 +57,7 @@ namespace AlgoritmDM.Com.Provider
                         if (testConnection(ConnectionString, false))
                         {
                             // Устанавливаем в базовом классе строку подключения (котрая не меняется) и версию источника, чтобы не нужно было делать проверки коннектов
-                            base.SetupConnectionStringAndVersionDB(ConnectionString, this.ServerVersion);
+                            base.SetupConnectionStringAndVersionDB(ConnectionString, this.ServerVersion, null);
                         }
                     }
                 }
@@ -94,7 +94,7 @@ namespace AlgoritmDM.Com.Provider
                     // Если пользователь сохраняет новую строку подключения то сохраняем её в нашем объекте
                     if (drez == DialogResult.Yes)
                     {
-                        base.SetupConnectionStringAndVersionDB(Frm.ConnectionString, this.ServerVersion);
+                        base.SetupConnectionStringAndVersionDB(Frm.ConnectionString, this.ServerVersion, null);
                         rez = true;
                     }
                 }
@@ -115,7 +115,7 @@ namespace AlgoritmDM.Com.Provider
                 {
                     if (testConnection(PatchDB, VisibleError))
                     {
-                        if (InstalConnect) base.SetupConnectionStringAndVersionDB(PatchDB, this.ServerVersion);
+                        if (InstalConnect) base.SetupConnectionStringAndVersionDB(PatchDB, this.ServerVersion, null);
                         return PatchDB;
                     }
                     else return null;

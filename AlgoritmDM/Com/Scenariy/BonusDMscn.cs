@@ -240,6 +240,7 @@ namespace AlgoritmDM.Com.Scenariy
             try
             {
                 bool rez = false;
+                string GeteroSQL = null;
 
                 // Так можно получить любые данные из источника
                 //System.Data.DataTable dt = Com.ProviderFarm.CurrentPrv.getData("Select ' GGG' A from dual");
@@ -321,8 +322,55 @@ end;");*/
                         }
 
                         // Проверяем метку ТЗ пункт V.2.ii Если у чека есть метка 
-                        DataTable tmpCustScParam = Com.ProviderFarm.CurrentPrv.getData(String.Format(@"Select CUST_SID, SC_PERC, VIP, To_Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From AKS.CUST_SC_PARAM Where CUST_SID={0}", Chk.CustSid));
-                        DataTable tmpInvcScDown = Com.ProviderFarm.CurrentPrv.getData(String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From AKS.INVC_SC_DOWN Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid));
+                        GeteroSQL = "";
+                        switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                        {
+                            case "ODBCprv":
+                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                {
+                                    switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                    {
+                                        case "SQORA32.DLL":
+                                        case "SQORA64.DLL":
+                                            GeteroSQL = String.Format(@"Select CUST_SID, SC_PERC, VIP, To_Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From AKS.CUST_SC_PARAM Where CUST_SID={0}", Chk.CustSid);
+                                            break;
+                                        case "myodbc8a.dll":
+                                            GeteroSQL = String.Format(@"Select CUST_SID, SC_PERC, VIP, To_Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From `aks`.`cust_sc_param` Where CUST_SID={0}", Chk.CustSid);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        DataTable tmpCustScParam = Com.ProviderFarm.CurrentPrv.getData(GeteroSQL);
+                        //
+                        GeteroSQL = "";
+                        switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                        {
+                            case "ODBCprv":
+                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                {
+                                    switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                    {
+                                        case "SQORA32.DLL":
+                                        case "SQORA64.DLL":
+                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From AKS.INVC_SC_DOWN Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
+                                            break;
+                                        case "myodbc8a.dll":
+                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From `aks`.`invc_sc_down` Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        DataTable tmpInvcScDown = Com.ProviderFarm.CurrentPrv.getData(GeteroSQL);
                         if (tmpInvcScDown != null && tmpInvcScDown.Rows.Count > 0)
                         {
                             try
@@ -347,10 +395,36 @@ end;");*/
                         }
                         else  // Если этого чека ещё не обрабатывали то и последующие чеки нужно пересчитать, а для этого нужно удалить все последующие чеки
                         {
-                            Com.ProviderFarm.CurrentPrv.setData(String.Format(@"Delete From AKS.INVC_SC_DOWN 
+                            GeteroSQL = "";
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                GeteroSQL = String.Format(@"Delete From AKS.INVC_SC_DOWN 
 Where (CUST_SID={0} and POST_DATE>To_Date('{1}','DD.MM.YYYY HH24:MI:SS'))
     or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY HH24:MI:SS') and invc_no>{2})
-    or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY HH24:MI:SS') and invc_no={2} and Item_Pos>{3})", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() + " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos));
+    or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY HH24:MI:SS') and invc_no={2} and Item_Pos>{3})", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() + " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+                                                break;
+                                            case "myodbc8a.dll":
+                                                GeteroSQL = String.Format(@"Delete From `aks`.`invc_sc_down` 
+Where (CUST_SID={0} and POST_DATE>STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s'))
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s') and invc_no>{2})
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s') and invc_no={2} and Item_Pos>{3})", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() + " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            Com.ProviderFarm.CurrentPrv.setData(GeteroSQL);
                         }
 
                         if (Chk.CustSid == 2834063479242428412 && Chk.InvcNo == 3070)
@@ -358,21 +432,76 @@ Where (CUST_SID={0} and POST_DATE>To_Date('{1}','DD.MM.YYYY HH24:MI:SS'))
                         }
 
                         // Проверяем метку ТЗ пункт V.2.iv Проверяем тип чека 
-                        string ComandManualSCPerc = (this.Manual_SC_Perc.IndexOf("ADDRERSS") > -1
-
-                            ? String.Format(@"Select C.CUST_SID, {1} AS UDF_VALUE
+                        string ComandManualSCPerc = null;
+                        //
+                        if (this.Manual_SC_Perc.IndexOf("ADDRERSS") > -1)
+                        {
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                ComandManualSCPerc = String.Format(@"Select C.CUST_SID, {1} AS UDF_VALUE
 From CMS.CUSTOMER C
     left join CMS.cust_address a on c.cust_sid=a.cust_sid
-Where C.CUST_SID={0}", Chk.CustSid, this.Manual_SC_Perc)
-                            : String.Format(@"Select C.CUST_SID, S.UDF_ID, U.UDF_NO, S.UDF_VAL_ID, V.UDF_VALUE
+Where C.CUST_SID={0}", Chk.CustSid, this.Manual_SC_Perc);
+                                                break;
+                                            case "myodbc8a.dll":
+                                                ComandManualSCPerc = String.Format(@"Select C.CUST_SID, {1} AS UDF_VALUE
+From CMS.CUSTOMER C
+    left join CMS.cust_address a on c.cust_sid=a.cust_sid
+Where C.CUST_SID={0}", Chk.CustSid, this.Manual_SC_Perc);
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                ComandManualSCPerc = String.Format(@"Select C.CUST_SID, S.UDF_ID, U.UDF_NO, S.UDF_VAL_ID, V.UDF_VALUE
 From CMS.CUSTOMER C
     Inner Join CMS.UDF U On C.SBS_NO=U.SBS_NO and U.UDF_TYPE=1 and U.UDF_NO={1}
     Inner Join CMS.CUST_SUPPL S On C.CUST_SID=S.CUST_SID and U.UDF_ID=S.UDF_ID
     Inner Join CMS.UDF_VAL V On U.UDF_ID=V.UDF_ID and S.UDF_VAL_ID=V.UDF_VAL_ID
 Where C.CUST_SID={0}
-", Chk.CustSid, this.Manual_SC_Perc.Replace("UDF", "")));
-
-
+", Chk.CustSid, this.Manual_SC_Perc.Replace("UDF", ""));
+                                                break;
+                                            case "myodbc8a.dll":
+                                                ComandManualSCPerc = String.Format(@"Select C.CUST_SID, S.UDF_ID, U.UDF_NO, S.UDF_VAL_ID, V.UDF_VALUE
+From CMS.CUSTOMER C
+    Inner Join CMS.UDF U On C.SBS_NO=U.SBS_NO and U.UDF_TYPE=1 and U.UDF_NO={1}
+    Inner Join CMS.CUST_SUPPL S On C.CUST_SID=S.CUST_SID and U.UDF_ID=S.UDF_ID
+    Inner Join CMS.UDF_VAL V On U.UDF_ID=V.UDF_ID and S.UDF_VAL_ID=V.UDF_VAL_ID
+Where C.CUST_SID={0}
+", Chk.CustSid, this.Manual_SC_Perc.Replace("UDF", ""));
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
                         DataTable tmpUdfValVIP = Com.ProviderFarm.CurrentPrv.getData(ComandManualSCPerc);
                         if (tmpCustScParam != null && tmpCustScParam.Rows.Count > 0 && tmpCustScParam.Rows[0]["CALL_OFF_SC"] != null)
                         {
@@ -401,7 +530,17 @@ Where C.CUST_SID={0}
                         // Если сейчас там 0, то нам нужно получить инфу из нашей таблицы сумму с предыдущего чека от этого клиента
                         if (tmpScnDb.TotalBuy == 0)
                         {
-                            DataTable tmpLactCheck = Com.ProviderFarm.CurrentPrv.getData(String.Format(@"With  T As (Select CUST_SID,Max(POST_DATE) As POST_DATE
+                            GeteroSQL = "";
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                GeteroSQL = String.Format(@"With  T As (Select CUST_SID,Max(POST_DATE) As POST_DATE
             From AKS.INVC_SC_DOWN
             Where (CUST_SID={0} and POST_DATE<To_Date('{1}','DD.MM.YYYY HH24:MI:SS'))
                 or (CUST_SID={0} and POST_DATE=To_Date('{1}','DD.MM.YYYY HH24:MI:SS') and invc_no<{2})
@@ -416,7 +555,35 @@ Where C.CUST_SID={0}
 Select *
 From R
 Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos));
+           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+                                                break;
+                                            case "myodbc8a.dll":
+                                                GeteroSQL = String.Format(@"With  T As (Select CUST_SID,Max(POST_DATE) As POST_DATE
+            From `aks`.`invc_sc_down`
+            Where (CUST_SID={0} and To_Date<To_Date('{1}','%d.%m.%Y %H:%i:%s'))
+                or (CUST_SID={0} and To_Date=To_Date('{1}','%d.%m.%Y %H:%i:%s') and invc_no<{2})
+                or (CUST_SID={0} and To_Date=To_Date('{1}','%d.%m.%Y %H:%i:%s') and invc_no={2} and Item_Pos<{3})
+            Group By CUST_SID), 
+    R As (Select C.INVC_SID, C.INVC_NO, C.ITEM_POS, C.POST_DATE, C.CUST_SID, To_Char(C.TOTAL_SUM) as TOTAL_SUM, 
+            To_Char(C.SC_PERC) As SC_PERC, To_Char(C.STORE_CREDIT) As STORE_CREDIT, 
+            To_Char(C.NEXT_STORE_CREDIT) As NEXT_STORE_CREDIT, C.APPLAY_NEXT_STORE_CREDIT, 
+            row_number() Over(Order by INVC_SID desc, INVC_NO desc) As RN
+        From `aks`.`invc_sc_down` C
+            inner Join T On C.CUST_SID=T.CUST_SID and C.POST_DATE=T.POST_DATE)
+Select *
+From R
+Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
+           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            DataTable tmpLactCheck = Com.ProviderFarm.CurrentPrv.getData(GeteroSQL);
                             if (tmpLactCheck != null && tmpLactCheck.Rows.Count > 0)
                             {
                                 try
@@ -661,25 +828,118 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                             // Если информация по этому клиенту уже есть, то нужно проверить дату
                             if (tmpCustScParam.Rows[0]["LAST_POST_DATE"] != null && (DateTime)tmpCustScParam.Rows[0]["LAST_POST_DATE"] <= Chk.PostDate)
                             {
-                                Com.ProviderFarm.CurrentPrv.setData(String.Format("Update AKS.CUST_SC_PARAM Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=To_Date('{4}','DD.MM.YYYY') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString()));
+                                GeteroSQL = "";
+                                switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                                {
+                                    case "ODBCprv":
+                                        if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                        {
+                                            switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                            {
+                                                case "SQORA32.DLL":
+                                                case "SQORA64.DLL":
+                                                    GeteroSQL = String.Format("Update AKS.CUST_SC_PARAM Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=To_Date('{4}','DD.MM.YYYY') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
+                                                    break;
+                                                case "myodbc8a.dll":
+                                                    GeteroSQL = String.Format("Update `aks`.`cust_sc_param` Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=STR_TO_DATE(('{4}','%d.%m.%Y') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                Com.ProviderFarm.CurrentPrv.setData(GeteroSQL);
                             }
                         }
                         else
                         {
                             if (Com.Config.Trace) base.UScenariy.EventSave(String.Format("\r\nПромежуточная записи по клиенту не существует"), GetType().Name + ".transfCheck", EventEn.Dump);
-                            Com.ProviderFarm.CurrentPrv.setData(String.Format("Insert into AKS.CUST_SC_PARAM(CUST_SID, SC_PERC, VIP, CALL_OFF_SC, LAST_POST_DATE) Values({0},{1},{2},{3}, To_Date('{4}','DD.MM.YYYY'))", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString()));
+                            GeteroSQL = "";
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                GeteroSQL = String.Format("Insert into AKS.CUST_SC_PARAM(CUST_SID, SC_PERC, VIP, CALL_OFF_SC, LAST_POST_DATE) Values({0},{1},{2},{3}, To_Date('{4}','DD.MM.YYYY'))", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
+                                                break;
+                                            case "myodbc8a.dll":
+                                                GeteroSQL = String.Format("Insert into `aks`.`cust_sc_param`(CUST_SID, SC_PERC, VIP, CALL_OFF_SC, LAST_POST_DATE) Values({0},{1},{2},{3}, STR_TO_DATE('{4}','%d.%m.%Y'))", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            Com.ProviderFarm.CurrentPrv.setData(GeteroSQL);
                         }
 
                         // Сохраним инфу по чеку в нашу табличку
                         if (Com.Config.Trace) base.UScenariy.EventSave(String.Format("\r\nСохраним инфу по чеку в нашу табличку"), GetType().Name + ".transfCheck", EventEn.Dump);
                         if (tmpInvcScDown != null && tmpInvcScDown.Rows.Count > 0)
                         {
-                            Com.ProviderFarm.CurrentPrv.setData(String.Format("Update AKS.INVC_SC_DOWN Set POST_DATE=To_Date('{3}','DD.MM.YYYY'), CUST_SID={4}, TOTAL_SUM={5}, SC_PERC={6}, STORE_CREDIT={7} Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString(), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", ".")));
+                            GeteroSQL = "";
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                GeteroSQL = String.Format("Update AKS.INVC_SC_DOWN Set POST_DATE=To_Date('{3}','DD.MM.YYYY'), CUST_SID={4}, TOTAL_SUM={5}, SC_PERC={6}, STORE_CREDIT={7} Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString(), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."));
+                                                break;
+                                            case "myodbc8a.dll":
+                                                GeteroSQL = String.Format("Update `aks`.`invc_sc_down` Set POST_DATE=STR_TO_DATE('{3}','%d.%m.%Y'), CUST_SID={4}, TOTAL_SUM={5}, SC_PERC={6}, STORE_CREDIT={7} Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString(), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."));
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            Com.ProviderFarm.CurrentPrv.setData(GeteroSQL);
                         }
                         else
                         {
-                            Com.ProviderFarm.CurrentPrv.setData(String.Format("Insert into AKS.INVC_SC_DOWN(INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT, NEXT_STORE_CREDIT, APPLAY_NEXT_STORE_CREDIT) Values({0},{1}, {2}, To_Date('{3}','DD.MM.YYYY HH24:MI:SS'), {4}, {5}, {6}, {7}, {8}, {9})", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", ".")));
+                            GeteroSQL = "";
+                            switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                            {
+                                case "ODBCprv":
+                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    {
+                                        switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                        {
+                                            case "SQORA32.DLL":
+                                            case "SQORA64.DLL":
+                                                GeteroSQL = String.Format("Insert into AKS.INVC_SC_DOWN(INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT, NEXT_STORE_CREDIT, APPLAY_NEXT_STORE_CREDIT) Values({0},{1}, {2}, To_Date('{3}','DD.MM.YYYY HH24:MI:SS'), {4}, {5}, {6}, {7}, {8}, {9})", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
+" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
+                                                break;
+                                            case "myodbc8a.dll":
+                                                GeteroSQL = String.Format("Insert into `aks`.`invc_sc_down`(INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT, NEXT_STORE_CREDIT, APPLAY_NEXT_STORE_CREDIT) Values({0},{1}, {2}, STR_TO_DATE('{3}','%d.%m.%Y %H:%i:%s'), {4}, {5}, {6}, {7}, {8}, {9})", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
+" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            Com.ProviderFarm.CurrentPrv.setData(GeteroSQL);
                         }
                     }
 

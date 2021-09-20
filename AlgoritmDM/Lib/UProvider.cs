@@ -57,6 +57,16 @@ namespace AlgoritmDM.Lib
         }
 
         /// <summary>
+        /// Возвращаем версию драйвера
+        /// </summary>
+        /// <returns></returns>
+        public string Driver
+        {
+            get { return this.PrvB.Driver; }
+            private set { }
+        }
+
+        /// <summary>
         /// Доступно ли подключение или нет
         /// </summary>
         /// <returns>true Если смогли подключиться к базе данных</returns>
@@ -277,7 +287,6 @@ namespace AlgoritmDM.Lib
         {
             this.PrvI.MergeClient(MergeClientMain, MergeClientDonors);
         }
-
 
         /// <summary>
         /// Класс для выкачивания или закачивания денных из провайдера

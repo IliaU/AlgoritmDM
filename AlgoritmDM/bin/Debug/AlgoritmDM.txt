@@ -103,3 +103,5 @@
 17.09.2021 18:54:48	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
 17.09.2021 18:56:34	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
 17.09.2021 18:56:34	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+20.09.2021 23:11:26	Message	Log	Запуск программы.
+20.09.2021 23:11:26	Message	Config	Загрузка чтения параметров.

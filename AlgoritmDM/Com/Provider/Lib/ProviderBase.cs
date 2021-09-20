@@ -24,7 +24,7 @@ namespace AlgoritmDM.Com.Provider.Lib
         public Type PlugInType { get; private set; }
 
         /// <summary>
-        /// Список аргументов при запуске плагина
+        /// Строка подключения
         /// </summary>
         public string ConnectionString { get; private set; }
 
@@ -32,6 +32,11 @@ namespace AlgoritmDM.Com.Provider.Lib
         /// Возвращает версию базы данных в виде строки
         /// </summary>
         public string VersionDB{ get; private set; }
+
+        /// <summary>
+        /// Возвращаем версию драйвера
+        /// </summary>
+        public string Driver { get; private set; }
 
         /// <summary>
         /// Ссылка на универсальный провайдер
@@ -50,11 +55,14 @@ namespace AlgoritmDM.Com.Provider.Lib
         /// <summary>
         /// Установка строки подключения
         /// </summary>
-        /// <param name="ConnectionString"></param>
-        protected void SetupConnectionStringAndVersionDB(string ConnectionString, string VersionDB)
+        /// <param name="ConnectionString">Строка подключения</param>
+        /// <param name="VersionDB">Возвращает версию базы данных в виде строки</param>
+        /// <param name="Driver">Возвращаем версию драйвера</param>
+        protected void SetupConnectionStringAndVersionDB(string ConnectionString, string VersionDB, string Driver)
         {
             this.ConnectionString = ConnectionString;
             this.VersionDB = VersionDB;
+            this.Driver = Driver;
         }
 
         /// <summary>
