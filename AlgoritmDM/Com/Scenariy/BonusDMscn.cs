@@ -622,7 +622,30 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                         if (Com.Config.Trace) base.UScenariy.EventSave(String.Format("\r\nПроверяем метку ТЗ пункт V.2.iv.b Если это чек 'Продажа' и и количество дней прошло после пробития чека )"), GetType().Name + ".transfCheck", EventEn.Dump);
 
                         // Получаем инфу по чеку из таблицы cms.invc_tender AMT
-                        DataTable tmpTender = Com.ProviderFarm.CurrentPrv.getData(String.Format("Select TENDER_TYPE, To_Char(AMT) AMT from cms.invc_tender Where invc_sid={0}", Chk.InvcSid));
+                        GeteroSQL = "";
+                        switch (Com.ProviderFarm.CurrentPrv.PrvInType)
+                        {
+                            case "ODBCprv":
+                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                {
+                                    switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                    {
+                                        case "SQORA32.DLL":
+                                        case "SQORA64.DLL":
+                                            GeteroSQL = String.Format("Select TENDER_TYPE, To_Char(AMT) AMT from cms.invc_tender Where invc_sid={0}", Chk.InvcSid);
+                                            break;
+                                        case "myodbc8a.dll":
+                                            GeteroSQL = String.Format("Select TENDER_TYPE, To_Char(AMT) AMT from cms.invc_tender Where invc_sid={0}", Chk.InvcSid);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        DataTable tmpTender = Com.ProviderFarm.CurrentPrv.getData(GeteroSQL);
                         if (Com.Config.Trace) base.UScenariy.EventSave(String.Format("\r\nПолучаем инфу по чеку из таблицы cms.invc_tender AMT"), GetType().Name + ".transfCheck", EventEn.Dump);
 
 
