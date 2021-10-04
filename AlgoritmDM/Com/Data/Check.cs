@@ -77,7 +77,7 @@ namespace AlgoritmDM.Com.Data
         /// <summary>
         /// Идентификатор причины распродажи
         /// </summary>
-        public int DiscReasonId { get; private set; }
+        public long DiscReasonId { get; private set; }
 
         /// <summary>
         /// Идентификатор товара
@@ -132,7 +132,7 @@ namespace AlgoritmDM.Com.Data
         /// <param name="OrigPrice">Цена за единицу товара реальная по прайсу за еденицу товара</param>
         /// <param name="Price">Цена за единицу товара с учётом скидки</param>
         /// <param name="UsrDiscPerc">Процент скидки который получил пользователь по этой позиции. например OrigPrice/100*UsrDiscPerc получим Price.</param>
-        public Check(Int64 InvcSid, int InvcType, int InvcNo, int ItemPos, DateTime CreatedDate, DateTime PostDate, string Alu, string Description1, string Description2, string Siz, decimal Qty, long? CustSid, int StoreNo, int DiscReasonId, long ItemSid, decimal OrigPrice, decimal Price, decimal UsrDiscPerc)
+        public Check(Int64 InvcSid, int InvcType, int InvcNo, int ItemPos, DateTime CreatedDate, DateTime PostDate, string Alu, string Description1, string Description2, string Siz, decimal Qty, long? CustSid, int StoreNo, long DiscReasonId, long ItemSid, decimal OrigPrice, decimal Price, decimal UsrDiscPerc)
         {
             this.InvcSid = InvcSid;
             this.InvcType = InvcType;

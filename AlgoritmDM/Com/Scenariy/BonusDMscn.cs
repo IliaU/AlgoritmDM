@@ -326,7 +326,7 @@ end;");*/
                         switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                         {
                             case "ODBCprv":
-                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                 {
                                     switch (Com.ProviderFarm.CurrentPrv.Driver)
                                     {
@@ -335,7 +335,7 @@ end;");*/
                                             GeteroSQL = String.Format(@"Select CUST_SID, SC_PERC, VIP, To_Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From AKS.CUST_SC_PARAM Where CUST_SID={0}", Chk.CustSid);
                                             break;
                                         case "myodbc8a.dll":
-                                            GeteroSQL = String.Format(@"Select CUST_SID, SC_PERC, VIP, To_Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From `aks`.`cust_sc_param` Where CUST_SID={0}", Chk.CustSid);
+                                            GeteroSQL = String.Format(@"Select CUST_SID, SC_PERC, VIP, Char(CALL_OFF_SC) As CALL_OFF_SC, LAST_POST_DATE From `aks`.`cust_sc_param` Where CUST_SID='{0}'", Chk.CustSid);
                                             break;
                                         default:
                                             break;
@@ -351,7 +351,7 @@ end;");*/
                         switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                         {
                             case "ODBCprv":
-                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                 {
                                     switch (Com.ProviderFarm.CurrentPrv.Driver)
                                     {
@@ -360,7 +360,7 @@ end;");*/
                                             GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From AKS.INVC_SC_DOWN Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
                                             break;
                                         case "myodbc8a.dll":
-                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From `aks`.`invc_sc_down` Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
+                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, Char(TOTAL_SUM) As TOTAL_SUM, Char(SC_PERC) As SC_PERC, Char(STORE_CREDIT) As STORE_CREDIT From `aks`.`invc_sc_down` Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
                                             break;
                                         default:
                                             break;
@@ -399,7 +399,7 @@ end;");*/
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -439,7 +439,7 @@ Where (CUST_SID={0} and POST_DATE>STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s'))
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -470,7 +470,7 @@ Where C.CUST_SID={0}", Chk.CustSid, this.Manual_SC_Perc);
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -534,7 +534,7 @@ Where C.CUST_SID={0}
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -626,7 +626,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                         switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                         {
                             case "ODBCprv":
-                                if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                 {
                                     switch (Com.ProviderFarm.CurrentPrv.Driver)
                                     {
@@ -855,7 +855,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                                 switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                                 {
                                     case "ODBCprv":
-                                        if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                        if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                         {
                                             switch (Com.ProviderFarm.CurrentPrv.Driver)
                                             {
@@ -884,7 +884,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -914,7 +914,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {
@@ -941,7 +941,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                             switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                             {
                                 case "ODBCprv":
-                                    if (string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                    if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
                                     {
                                         switch (Com.ProviderFarm.CurrentPrv.Driver)
                                         {

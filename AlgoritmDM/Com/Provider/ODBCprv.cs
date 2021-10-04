@@ -299,6 +299,8 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             return getDataORA(SQL);
+                        case "myodbc8a.dll":
+                            return getDataMySql(SQL);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
                         //break;
@@ -340,6 +342,9 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             setDataORA(SQL);
+                            break;
+                        case "myodbc8a.dll":
+                            setDataMySql(SQL);
                             break;
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
@@ -654,7 +659,7 @@ namespace AlgoritmDM.Com.Provider
                                         decimal tmpQty = -1;
                                         long? tmpCustSid = null;
                                         int tmpStoreNo = -1;
-                                        int tmpDiscReasonId = 0;
+                                        long tmpDiscReasonId = 0;
                                         long tmpItemSid = -1;
                                         decimal tmpOrigPrice = 0;
                                         decimal tmpPrice = 0;
@@ -674,7 +679,7 @@ namespace AlgoritmDM.Com.Provider
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("QTY").ToUpper()) tmpQty = decimal.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("cust_sid").ToUpper()) tmpCustSid = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("STORE_NO").ToUpper()) tmpStoreNo = int.Parse(dr.GetValue(i).ToString());
-                                            if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("disc_reason_id").ToUpper()) tmpDiscReasonId = int.Parse(dr.GetValue(i).ToString());
+                                            if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("disc_reason_id").ToUpper()) tmpDiscReasonId = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ITEM_SID").ToUpper()) tmpItemSid = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ORIG_PRICE").ToUpper()) tmpOrigPrice = decimal.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
@@ -1752,26 +1757,18 @@ where ADDR_NO=1
             this.setApplayNextStoreCgreditMySql();
 
 
-            /*
-             select i.`sid` As INVC_SID, i.`tender_type` As invc_type, i.`doc_no` As invc_no, ii.`item_pos` As Item_Pos, i.`created_datetime` As created_date, i.`post_date` As post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
-       inv.`item_size` As siz, ii.qty+"" As QTY, i.`bt_cuid` As cust_sid, i.STORE_NO, #i.disc_reason_id#, 
-       ii.`sid` As ITEM_SID, ii.ORIG_PRICE+"" ORIG_PRICE, ii.PRICE+"" PRICE#, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
+            string CommandSql = @"select  i.`sid` As INVC_SID, i.`tender_type` As invc_type, i.`doc_no` As invc_no, ii.`item_pos` As Item_Pos, i.`created_datetime` As created_date, i.`post_date` As post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
+       inv.`item_size` As siz, ii.`qty` As QTY, i.`bt_cuid` As cust_sid, i.`STORE_NO`, r.`sid` as disc_reason_id, 
+       iid.`sid` As ITEM_SID, iid.`prev_price` AS ORIG_PRICE, iid.`new_price` As PRICE, iid.`new_disc_perc` As USR_DISC_PERC
     from `rpsods`.`document` i 
      inner join `rpsods`.`document_item` ii on i.SID=ii.`doc_sid`
      inner join `rpsods`.`invn_sbs_item` inv on ii.invn_sbs_item_sid=inv.sid
+     inner join `rpsods`.`document_item_disc` iid on ii.sid=iid.doc_item_sid
      inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
-             */
-
-
-            string CommandSql = @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
-        inv.siz, To_Char(ii.QTY) QTY, i.cust_sid, i.STORE_NO, i.disc_reason_id, ii.ITEM_SID, To_Char(ii.ORIG_PRICE) ORIG_PRICE, To_Char(ii.PRICE) PRICE, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
-    from CMS.invoice i 
-        inner join CMS.INVC_ITEM ii on i.INVC_SID=ii.INVC_SID
-        inner join invn_sbs inv on ii.ITEM_SID=inv.item_sid
-        inner join customer s on i.cust_sid=s.CUST_SID
-    Where i.cust_sid is not null " + (FilCustSid == null ? "" : @"
-        and i.cust_sid=" + ((long)FilCustSid).ToString() + @"
-    ") + @"Order by i.post_date, i.invc_no, ii.Item_Pos";
+     inner join `rpsods`.`pref_reason` r On iid.`disc_reason`=r.`name` and r.reason_type = 10
+    Where i.`bt_cuid` is not null " + (FilCustSid == null ? "" : @"
+        and i.`bt_cuid`=" + ((long)FilCustSid).ToString() + @"
+    ") + @"Order by i.`post_date`, i.`doc_no`, ii.`item_pos`";
 
             // Если указана какая-то спецефическая обработка чеков
             if (!string.IsNullOrWhiteSpace(Com.Config.SpecificProcessBonus))
@@ -1779,15 +1776,18 @@ where ADDR_NO=1
                 switch (Com.Config.SpecificProcessBonus)
                 {
                     case "BonusDM":
-                        CommandSql = @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
-        inv.siz, To_Char(ii.QTY) QTY, i.cust_sid, i.STORE_NO, i.disc_reason_id, ii.ITEM_SID, To_Char(ii.ORIG_PRICE) ORIG_PRICE, To_Char(ii.PRICE) PRICE, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
-    from CMS.invoice i 
-        left join CMS.INVC_ITEM ii on i.INVC_SID=ii.INVC_SID
-        left join invn_sbs inv on ii.ITEM_SID=inv.item_sid
-        inner join customer s on i.cust_sid=s.CUST_SID
-    Where i.cust_sid is not null " + (FilCustSid == null ? "" : @"
-        and i.cust_sid=" + ((long)FilCustSid).ToString() + @"
-    ") + @"Order by i.post_date, i.invc_no, ii.Item_Pos";
+                        CommandSql = @"select  i.`sid` As INVC_SID, i.`tender_type` As invc_type, i.`doc_no` As invc_no, ii.`item_pos` As Item_Pos, i.`created_datetime` As created_date, i.`post_date` As post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
+       inv.`item_size` As siz, ii.`qty` As QTY, i.`bt_cuid` As cust_sid, i.`STORE_NO`, r.`sid` as disc_reason_id, 
+       iid.`sid` As ITEM_SID, iid.`prev_price` AS ORIG_PRICE, iid.`new_price` As PRICE, iid.`new_disc_perc` As USR_DISC_PERC
+    from `rpsods`.`document` i 
+     left join `rpsods`.`document_item` ii on i.SID=ii.`doc_sid`
+     left join `rpsods`.`invn_sbs_item` inv on ii.invn_sbs_item_sid=inv.sid
+     left join `rpsods`.`document_item_disc` iid on ii.sid=iid.doc_item_sid
+     inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
+     inner join `rpsods`.`pref_reason` r On iid.`disc_reason`=r.`name` and r.reason_type = 10
+    Where i.`bt_cuid` is not null " + (FilCustSid == null ? "" : @"
+        and i.`bt_cuid`=" + ((long)FilCustSid).ToString() + @"
+    ") + @"Order by i.`post_date`, i.`doc_no`, ii.`item_pos`";
                         break;
                     default:
                         break;
@@ -1848,7 +1848,7 @@ where ADDR_NO=1
                                         decimal tmpQty = -1;
                                         long? tmpCustSid = null;
                                         int tmpStoreNo = -1;
-                                        int tmpDiscReasonId = 0;
+                                        long tmpDiscReasonId = 0;
                                         long tmpItemSid = -1;
                                         decimal tmpOrigPrice = 0;
                                         decimal tmpPrice = 0;
@@ -1868,7 +1868,7 @@ where ADDR_NO=1
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("QTY").ToUpper()) tmpQty = decimal.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("cust_sid").ToUpper()) tmpCustSid = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("STORE_NO").ToUpper()) tmpStoreNo = int.Parse(dr.GetValue(i).ToString());
-                                            if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("disc_reason_id").ToUpper()) tmpDiscReasonId = int.Parse(dr.GetValue(i).ToString());
+                                            if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("disc_reason_id").ToUpper()) tmpDiscReasonId = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ITEM_SID").ToUpper()) tmpItemSid = long.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ORIG_PRICE").ToUpper()) tmpOrigPrice = decimal.Parse(dr.GetValue(i).ToString());
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
@@ -2038,9 +2038,9 @@ Where (CUST_SID={0} and POST_DATE>STR_TO_DATE(('{1}','%d.%m.%Y'))
                     CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
   ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
-    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
-    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
-    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.cust_sid and ae.seq_no=1
     left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid";
                 }
                 else
@@ -2048,9 +2048,9 @@ from `rpsods`.`customer` s
                     CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
   ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
-    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
-    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
-    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.cust_sid and ae.seq_no=1
     left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
 Where ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 }
@@ -2063,9 +2063,9 @@ Where ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                     CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
   ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
-    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
-    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
-    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.cust_sid and ae.seq_no=1
     left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
 Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")";
                 }
@@ -2074,9 +2074,9 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")";
                     CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
   ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
-    left join `rpsods`.`customer_address` a on s.sid=a.sid and a.seq_no=1
-    left join `rpsods`.`customer_phone` ap on s.sid=ap.sid and ap.seq_no=1
-    left join `rpsods`.`customer_email` ae on s.sid=ae.sid and ae.seq_no=1
+    left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
+    left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
+    left join `rpsods`.`customer_email` ae on s.sid=ae.cust_sid and ae.seq_no=1
     left join `aks`.`cust_sc_param` p on s.sid=p.cust_sid
 Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
     and ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
@@ -2268,7 +2268,7 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
             string CommandSql = string.Format(@"Select C.cust_sid As CUST_SID, C.FIRST_NAME, C.LAST_NAME, P.phone_no As PHONE 
 From `aks`.`customer` C
   inner join `rpsods`.`customer_phone` P On C.cust_sid = P.cust_sid
-Where C.sid={0}", Cst.CustSid);
+Where C.cust_sid={0}", Cst.CustSid);
 
             try
             {
