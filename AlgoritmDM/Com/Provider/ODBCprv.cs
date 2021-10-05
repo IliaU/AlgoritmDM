@@ -1942,7 +1942,7 @@ where ADDR_NO=1
                 }
             }
 
-            string CommandSql = string.Format(@"Select INVC_SID, CUST_SID, POST_DATE, INVC_NO, ITEM_POS, NEXT_STORE_CREDIT+'' As NEXT_STORE_CREDIT
+            string CommandSql = string.Format(@"Select INVC_SID, CUST_SID, POST_DATE, INVC_NO, ITEM_POS, NEXT_STORE_CREDIT As NEXT_STORE_CREDIT
 From `aks`.`invc_sc_down`
 Where (APPLAY_NEXT_STORE_CREDIT is null or APPLAY_NEXT_STORE_CREDIT=0)
     and POST_DATE<=date(sysdate()-{0})", Delay_Period);
@@ -1991,10 +1991,10 @@ Update `aks`.`invc_sc_down` Set
     STORE_CREDIT = STORE_CREDIT+{4}, 
     NEXT_STORE_CREDIT = Case When NEXT_STORE_CREDIT is null then 0 else NEXT_STORE_CREDIT end,
     APPLAY_NEXT_STORE_CREDIT = Case When INVC_SID = {5} Then 1 else APPLAY_NEXT_STORE_CREDIT End 
-From `aks`.`invc_sc_down` 
-Where (CUST_SID={0} and POST_DATE>STR_TO_DATE(('{1}','%d.%m.%Y'))
-    or (CUST_SID={0} and POST_DATE=STR_TO_DATE(('{1}','%d.%m.%Y') and invc_no>{2})
-    or (CUST_SID={0} and POST_DATE=STR_TO_DATE(('{1}','%d.%m.%Y') and invc_no={2} and Item_Pos>={3}) ", tmpCustSid, tmpPosDate.Day.ToString().PadLeft(2, '0') + "." + tmpPosDate.Month.ToString().PadLeft(2, '0') + "." + tmpPosDate.Year.ToString(), tmpInvcNo, tmpItemPos, tmpNextStoreCredit, tmpInvcSid);
+#From `aks`.`invc_sc_down` 
+Where (CUST_SID={0} and POST_DATE>STR_TO_DATE('{1}','%d.%m.%Y'))
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y') and invc_no>{2})
+    or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y') and invc_no={2} and Item_Pos>={3}) ", tmpCustSid, tmpPosDate.Day.ToString().PadLeft(2, '0') + "." + tmpPosDate.Month.ToString().PadLeft(2, '0') + "." + tmpPosDate.Year.ToString(), tmpInvcNo, tmpItemPos, tmpNextStoreCredit, tmpInvcSid);
 
                                     // обновляем информацию по этому чеку и по всем последующим
                                     using (OdbcCommand com2 = new OdbcCommand(CommandSql2, con))
@@ -2500,6 +2500,8 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
                                     DataRow newr = rez.NewRow();
                                     for (int i = 0; i < tt.Rows.Count; i++)
                                     {
+                                        if (!dr.IsDBNull(i) && tt.Rows[i]["DataType"].ToString() == "System.Int32") { newr[i] = (Int32)dr.GetValue(i); }
+                                        if (!dr.IsDBNull(i) && tt.Rows[i]["DataType"].ToString() == "System.Int64") { newr[i] = (Int64)dr.GetValue(i); }
                                         if (!dr.IsDBNull(i) && tt.Rows[i]["DataType"].ToString() == "System.Double") { newr[i] = (double)dr.GetValue(i); }
                                         if (!dr.IsDBNull(i) && tt.Rows[i]["DataType"].ToString() == "System.Decimal") { newr[i] = (Decimal)dr.GetValue(i); }
                                         if (!dr.IsDBNull(i) && tt.Rows[i]["DataType"].ToString() == "System.String") { newr[i] = (string)dr.GetValue(i); }

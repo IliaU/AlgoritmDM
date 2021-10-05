@@ -360,7 +360,7 @@ end;");*/
                                             GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, To_Char(TOTAL_SUM) As TOTAL_SUM, To_Char(SC_PERC) As SC_PERC, To_Char(STORE_CREDIT) As STORE_CREDIT From AKS.INVC_SC_DOWN Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
                                             break;
                                         case "myodbc8a.dll":
-                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, Char(TOTAL_SUM) As TOTAL_SUM, Char(SC_PERC) As SC_PERC, Char(STORE_CREDIT) As STORE_CREDIT From `aks`.`invc_sc_down` Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
+                                            GeteroSQL = String.Format("Select INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT From `aks`.`invc_sc_down` Where INVC_SID={0} and INVC_NO={1} and ITEM_POS={2} and CUST_SID={3}", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.CustSid);
                                             break;
                                         default:
                                             break;
@@ -485,13 +485,25 @@ Where C.CUST_SID={0}
 ", Chk.CustSid, this.Manual_SC_Perc.Replace("UDF", ""));
                                                 break;
                                             case "myodbc8a.dll":
-                                                ComandManualSCPerc = String.Format(@"Select C.CUST_SID, S.UDF_ID, U.UDF_NO, S.UDF_VAL_ID, V.UDF_VALUE
-From CMS.CUSTOMER C
-    Inner Join CMS.UDF U On C.SBS_NO=U.SBS_NO and U.UDF_TYPE=1 and U.UDF_NO={1}
-    Inner Join CMS.CUST_SUPPL S On C.CUST_SID=S.CUST_SID and U.UDF_ID=S.UDF_ID
-    Inner Join CMS.UDF_VAL V On U.UDF_ID=V.UDF_ID and S.UDF_VAL_ID=V.UDF_VAL_ID
-Where C.CUST_SID={0}
-", Chk.CustSid, this.Manual_SC_Perc.Replace("UDF", ""));
+                                                string namecol = this.Manual_SC_Perc;
+                                                switch ((this.Manual_SC_Perc).ToLower())
+                                                {
+                                                    case "udf1_large_string":
+                                                    case "udf2_large_string":
+                                                        namecol = (this.Manual_SC_Perc + "_large_string").ToLower();
+                                                        break;
+                                                    default:
+                                                        
+                                                        namecol = (this.Manual_SC_Perc + "_string").ToLower();
+                                                        break;
+                                                }
+
+
+                                                ComandManualSCPerc = String.Format(@"Select C.sid As CUST_SID, V.{1} as UDF_VALUE
+From `rpsods`.`customer` C
+  Inner Join `rpsods`.`customer_extend` V On C.sid=V.Cust_sid
+Where C.sid={0}
+", Chk.CustSid, namecol);
                                                 break;
                                             default:
                                                 break;
@@ -513,7 +525,7 @@ Where C.CUST_SID={0}
                         bool HashVip = false;
                         try
                         {
-                            if (tmpUdfValVIP != null && tmpUdfValVIP.Rows.Count > 0 && tmpUdfValVIP.Rows[0]["UDF_VALUE"] != null && decimal.Parse(tmpUdfValVIP.Rows[0]["UDF_VALUE"].ToString()) != 0)
+                            if (tmpUdfValVIP != null && tmpUdfValVIP.Rows.Count > 0 && !String.IsNullOrWhiteSpace(tmpUdfValVIP.Rows[0]["UDF_VALUE"].ToString()) && decimal.Parse(tmpUdfValVIP.Rows[0]["UDF_VALUE"].ToString()) != 0)
                             {
                                 HashVip = true;
                                 tmpScnDb.TotalPrc = decimal.Parse(tmpUdfValVIP.Rows[0]["UDF_VALUE"].ToString());
@@ -555,25 +567,28 @@ Where C.CUST_SID={0}
 Select *
 From R
 Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
                                                 break;
                                             case "myodbc8a.dll":
-                                                GeteroSQL = String.Format(@"With  T As (Select CUST_SID,Max(POST_DATE) As POST_DATE
+                                                GeteroSQL = String.Format(@"With T As (Select CUST_SID,Max(POST_DATE) As POST_DATE
             From `aks`.`invc_sc_down`
-            Where (CUST_SID={0} and To_Date<To_Date('{1}','%d.%m.%Y %H:%i:%s'))
-                or (CUST_SID={0} and To_Date=To_Date('{1}','%d.%m.%Y %H:%i:%s') and invc_no<{2})
-                or (CUST_SID={0} and To_Date=To_Date('{1}','%d.%m.%Y %H:%i:%s') and invc_no={2} and Item_Pos<{3})
-            Group By CUST_SID), 
-    R As (Select C.INVC_SID, C.INVC_NO, C.ITEM_POS, C.POST_DATE, C.CUST_SID, To_Char(C.TOTAL_SUM) as TOTAL_SUM, 
-            To_Char(C.SC_PERC) As SC_PERC, To_Char(C.STORE_CREDIT) As STORE_CREDIT, 
-            To_Char(C.NEXT_STORE_CREDIT) As NEXT_STORE_CREDIT, C.APPLAY_NEXT_STORE_CREDIT, 
-            row_number() Over(Order by INVC_SID desc, INVC_NO desc) As RN
-        From `aks`.`invc_sc_down` C
-            inner Join T On C.CUST_SID=T.CUST_SID and C.POST_DATE=T.POST_DATE)
-Select *
-From R
-Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
+            Where (CUST_SID={0} and POST_DATE<STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s'))
+                or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s') and invc_no<{2})
+                or (CUST_SID={0} and POST_DATE=STR_TO_DATE('{1}','%d.%m.%Y %H:%i:%s') and invc_no={2} and Item_Pos<{3})
+            Group By CUST_SID),
+     R1 As (Select T.CUST_SID, T.POST_DATE, Max(C.INVC_SID) As INVC_SID
+            From `aks`.`invc_sc_down` C
+              inner Join T On C.CUST_SID=T.CUST_SID and C.POST_DATE=T.POST_DATE
+            Group By T.CUST_SID, T.POST_DATE),
+     R2 As (Select R1.CUST_SID, R1.POST_DATE, R1.INVC_SID, Max(C.INVC_NO) As INVC_NO
+            From `aks`.`invc_sc_down` C
+              inner Join R1 On C.CUST_SID=R1.CUST_SID and C.POST_DATE=R1.POST_DATE and C.INVC_SID=R1.INVC_SID
+            Group By R1.CUST_SID, R1.POST_DATE, R1.INVC_SID)
+Select  C.INVC_SID, C.INVC_NO, C.ITEM_POS, C.POST_DATE, C.CUST_SID, C.TOTAL_SUM, 
+            C.SC_PERC, C.STORE_CREDIT, C.NEXT_STORE_CREDIT, C.APPLAY_NEXT_STORE_CREDIT
+From `aks`.`invc_sc_down` C
+   inner Join R2 On C.CUST_SID=R2.CUST_SID and C.POST_DATE=R2.POST_DATE and C.INVC_SID=R2.INVC_SID and C.INVC_NO=R2.INVC_NO", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
+           " " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.InvcNo, Chk.ItemPos);
                                                 break;
                                             default:
                                                 break;
@@ -635,7 +650,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                                             GeteroSQL = String.Format("Select TENDER_TYPE, To_Char(AMT) AMT from cms.invc_tender Where invc_sid={0}", Chk.InvcSid);
                                             break;
                                         case "myodbc8a.dll":
-                                            GeteroSQL = String.Format("Select TENDER_TYPE, To_Char(AMT) AMT from cms.invc_tender Where invc_sid={0}", Chk.InvcSid);
+                                            GeteroSQL = String.Format("Select TENDER_TYPE, amount As AMT from `rpsods`.`tender` Where doc_sid={0}", Chk.InvcSid);
                                             break;
                                         default:
                                             break;
@@ -662,30 +677,81 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                                 if (tmpAmt.IndexOf(',') == 0) tmpAmt = "0" + tmpAmt.Replace(",", Config.TekDelitel);
                                 if (tmpAmt.IndexOf('.') == 0) tmpAmt = "0" + tmpAmt.Replace(".", Config.TekDelitel);
 
-                                // Если это продажа
-                                if (Chk.InvcType == 0)
+
+                                switch (Com.ProviderFarm.CurrentPrv.PrvInType)
                                 {
-                                    if (((decimal)item["TENDER_TYPE"]) == 5)
-                                    {
-                                        tmpScnDb.TotalStoreCredit -= decimal.Parse(tmpAmt);
-                                    }
-                                    else
-                                    {
-                                        tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
-                                        tmpScnDb.TotalBuy += decimal.Parse(tmpAmt);
-                                    }
-                                }
-                                else // Это возврат
-                                {
-                                    if (((decimal)item["TENDER_TYPE"]) == 5)
-                                    {
-                                        tmpScnDb.TotalStoreCredit += decimal.Parse(tmpAmt);
-                                    }
-                                    else
-                                    {
-                                        tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
-                                        tmpScnDb.TotalBuy -= decimal.Parse(tmpAmt);
-                                    }
+                                    case "ODBCprv":
+                                        if (!string.IsNullOrWhiteSpace(Com.ProviderFarm.CurrentPrv.Driver))
+                                        {
+                                            switch (Com.ProviderFarm.CurrentPrv.Driver)
+                                            {
+                                                case "SQORA32.DLL":
+                                                case "SQORA64.DLL":
+
+                                                    // Если это продажа
+                                                    if (Chk.InvcType == 0)
+                                                    {
+                                                        if (((decimal)item["TENDER_TYPE"]) == 5)
+                                                        {
+                                                            tmpScnDb.TotalStoreCredit -= decimal.Parse(tmpAmt);
+                                                        }
+                                                        else
+                                                        {
+                                                            tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
+                                                            tmpScnDb.TotalBuy += decimal.Parse(tmpAmt);
+                                                        }
+                                                    }
+                                                    else // Это возврат
+                                                    {
+                                                        if (((decimal)item["TENDER_TYPE"]) == 5)
+                                                        {
+                                                            tmpScnDb.TotalStoreCredit += decimal.Parse(tmpAmt);
+                                                        }
+                                                        else
+                                                        {
+                                                            tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
+                                                            tmpScnDb.TotalBuy -= decimal.Parse(tmpAmt);
+                                                        }
+                                                    }
+
+
+                                                    break;
+                                                case "myodbc8a.dll":
+
+                                                    // Если это продажа
+                                                    if (Chk.InvcType == 0)
+                                                    {
+                                                        if (((int)item["TENDER_TYPE"]) == 5)
+                                                        {
+                                                            tmpScnDb.TotalStoreCredit -= decimal.Parse(tmpAmt);
+                                                        }
+                                                        else
+                                                        {
+                                                            tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
+                                                            tmpScnDb.TotalBuy += decimal.Parse(tmpAmt);
+                                                        }
+                                                    }
+                                                    else // Это возврат
+                                                    {
+                                                        if (((int)item["TENDER_TYPE"]) == 5)
+                                                        {
+                                                            tmpScnDb.TotalStoreCredit += decimal.Parse(tmpAmt);
+                                                        }
+                                                        else
+                                                        {
+                                                            tmpScnDb.SumCurentChek += decimal.Parse(tmpAmt);
+                                                            tmpScnDb.TotalBuy -= decimal.Parse(tmpAmt);
+                                                        }
+                                                    }
+
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        break;
                                 }
                             }
                         }
@@ -864,7 +930,7 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                                                     GeteroSQL = String.Format("Update AKS.CUST_SC_PARAM Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=To_Date('{4}','DD.MM.YYYY') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
                                                     break;
                                                 case "myodbc8a.dll":
-                                                    GeteroSQL = String.Format("Update `aks`.`cust_sc_param` Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=STR_TO_DATE(('{4}','%d.%m.%Y') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
+                                                    GeteroSQL = String.Format("Update `aks`.`cust_sc_param` Set SC_PERC={1}, VIP={2}, CALL_OFF_SC={3}, LAST_POST_DATE=STR_TO_DATE('{4}','%d.%m.%Y') Where CUST_SID={0}", Chk.CustSid, tmpScnDb.TotalPrc.ToString().Replace(",", "."), (HashVip ? 1 : 0), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString());
                                                     break;
                                                 default:
                                                     break;
@@ -948,11 +1014,11 @@ Where RN=1", Chk.CustSid, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Ch
                                             case "SQORA32.DLL":
                                             case "SQORA64.DLL":
                                                 GeteroSQL = String.Format("Insert into AKS.INVC_SC_DOWN(INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT, NEXT_STORE_CREDIT, APPLAY_NEXT_STORE_CREDIT) Values({0},{1}, {2}, To_Date('{3}','DD.MM.YYYY HH24:MI:SS'), {4}, {5}, {6}, {7}, {8}, {9})", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
+" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
                                                 break;
                                             case "myodbc8a.dll":
                                                 GeteroSQL = String.Format("Insert into `aks`.`invc_sc_down`(INVC_SID, INVC_NO, ITEM_POS, POST_DATE, CUST_SID, TOTAL_SUM, SC_PERC, STORE_CREDIT, NEXT_STORE_CREDIT, APPLAY_NEXT_STORE_CREDIT) Values({0},{1}, {2}, STR_TO_DATE('{3}','%d.%m.%Y %H:%i:%s'), {4}, {5}, {6}, {7}, {8}, {9})", Chk.InvcSid, Chk.InvcNo, Chk.ItemPos, Chk.PostDate.Day.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Month.ToString().PadLeft(2, '0') + "." + Chk.PostDate.Year.ToString() +
-" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
+" " + Chk.PostDate.Hour.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Minute.ToString().PadLeft(2, '0') + ":" + Chk.PostDate.Second.ToString().PadLeft(2, '0'), Chk.CustSid, tmpScnDb.TotalBuy.ToString().Replace(",", "."), tmpScnDb.TotalPrc.ToString().Replace(",", "."), tmpScnDb.TotalStoreCredit.ToString().Replace(",", "."), NextStoreCredid.ToString().Replace(",", "."), ApplayNextStoreCredit.ToString().Replace(",", "."));
                                                 break;
                                             default:
                                                 break;

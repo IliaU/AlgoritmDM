@@ -280,3 +280,235 @@
 05.10.2021 1:11:08	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
 05.10.2021 1:11:08	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
 05.10.2021 1:11:08	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:10:05	Message	Log	Запуск программы.
+05.10.2021 22:10:05	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:10:23	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:10:24	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:10:24	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:10:24	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:10:24	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:10:24	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:12:34	Admin	Error	ODBCprv.getDataMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [42S22] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Unknown column 'V.udf5_string' in 'field list'
+05.10.2021 22:13:03	Admin	Error	ODBCprv.getDataMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [42S22] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Unknown column 'To_Date' in 'where clause'
+05.10.2021 22:13:29	Admin	Error	ODBCprv.getDataMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [HY000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Unknown database 'cms'
+05.10.2021 22:15:39	Message	Log	Запуск программы.
+05.10.2021 22:15:39	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:16:19	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:16:19	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:16:19	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:16:19	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:16:19	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:16:19	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:22:58	Message	Log	Запуск программы.
+05.10.2021 22:22:58	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:23:22	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:23:23	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:23:23	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:23:23	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:23:23	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:23:23	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:24:26	Message	Log	Запуск программы.
+05.10.2021 22:24:26	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:24:44	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:24:44	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:24:44	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:24:44	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:24:44	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:24:44	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:28:35	Message	Log	Запуск программы.
+05.10.2021 22:28:35	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:28:47	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:28:48	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:28:48	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:28:48	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:28:48	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:28:48	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 22:32:32	Message	Log	Запуск программы.
+05.10.2021 22:32:32	Message	Config	Загрузка чтения параметров.
+05.10.2021 22:32:49	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 22:32:50	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 22:32:50	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 22:32:50	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 22:32:50	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 22:32:50	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:29:04	Message	Log	Запуск программы.
+05.10.2021 23:29:04	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:29:24	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:29:24	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:29:24	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:29:24	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:29:24	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:29:24	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:35:04	Message	Log	Запуск программы.
+05.10.2021 23:35:04	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:35:14	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:35:15	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:35:15	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:35:15	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:35:15	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:35:15	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:35:58	Message	Log	Запуск программы.
+05.10.2021 23:35:58	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:36:06	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:36:06	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:36:06	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:36:06	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:36:06	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:36:06	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:38:21	Message	Log	Запуск программы.
+05.10.2021 23:38:21	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:38:37	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:38:37	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:38:37	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:38:37	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:38:37	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:38:37	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:41:19	Message	Log	Запуск программы.
+05.10.2021 23:41:19	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:41:27	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:41:27	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:41:27	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:41:27	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:41:27	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:41:27	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:44:45	Message	Log	Запуск программы.
+05.10.2021 23:44:45	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:45:02	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:45:02	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:45:02	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:45:02	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:45:03	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:45:03	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:51:26	Message	Log	Запуск программы.
+05.10.2021 23:51:26	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:51:33	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:51:33	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:51:33	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:51:33	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:51:34	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:51:34	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:53:42	Message	Log	Запуск программы.
+05.10.2021 23:53:42	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:53:54	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:53:54	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:53:54	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:53:54	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:53:54	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:53:54	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+05.10.2021 23:56:01	Message	Log	Запуск программы.
+05.10.2021 23:56:01	Message	Config	Загрузка чтения параметров.
+05.10.2021 23:56:36	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+05.10.2021 23:56:37	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+05.10.2021 23:56:37	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+05.10.2021 23:56:37	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+05.10.2021 23:56:37	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+05.10.2021 23:56:37	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:00:15	Message	Log	Запуск программы.
+06.10.2021 0:00:15	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:00:26	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:00:26	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:00:26	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:00:26	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:00:26	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:00:26	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:00:26	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'From `aks`.`invc_sc_down` 
+Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
+06.10.2021 0:00:49	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:00:49	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:00:49	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:00:56	Admin	Message	Main	Завершили работу программы.
+06.10.2021 0:01:40	Message	Log	Запуск программы.
+06.10.2021 0:01:40	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:01:53	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:01:53	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:01:53	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:01:53	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:01:53	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:01:53	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:01:53	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'From `aks`.`invc_sc_down` 
+Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
+06.10.2021 0:02:05	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:02:05	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:02:05	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:03:30	Message	Log	Запуск программы.
+06.10.2021 0:03:30	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:03:39	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:03:39	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:03:39	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:03:39	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:03:39	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:03:39	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:03:39	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'From `aks`.`invc_sc_down` 
+Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
+06.10.2021 0:03:44	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:03:44	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:03:44	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:04:02	Message	Log	Запуск программы.
+06.10.2021 0:04:02	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:04:14	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:04:14	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:04:14	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:04:14	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:04:14	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:04:14	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:04:14	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'From `aks`.`invc_sc_down` 
+Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
+06.10.2021 0:04:15	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:04:15	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:04:16	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:04:56	Message	Log	Запуск программы.
+06.10.2021 0:04:56	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:05:05	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:05:05	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:05:05	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:05:05	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:05:06	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:05:06	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:11:11	Message	Log	Запуск программы.
+06.10.2021 0:11:11	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:11:18	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:11:18	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:11:18	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:11:18	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:11:18	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:11:18	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:11:18	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42000] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'From `aks`.`invc_sc_down` 
+Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
+06.10.2021 0:11:39	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:11:39	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:11:39	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:13:57	Message	Log	Запуск программы.
+06.10.2021 0:13:57	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:14:14	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:14:14	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:14:14	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:14:14	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:14:14	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:14:14	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:17:09	Message	Log	Запуск программы.
+06.10.2021 0:17:09	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:17:19	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:17:20	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:17:20	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:17:20	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:17:20	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:17:20	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:18:32	Message	Log	Запуск программы.
+06.10.2021 0:18:32	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:18:49	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:18:49	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:18:49	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:18:49	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:18:49	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:18:49	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:27:50	Message	Log	Запуск программы.
+06.10.2021 0:27:50	Message	Config	Загрузка чтения параметров.
+06.10.2021 0:28:00	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+06.10.2021 0:28:00	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+06.10.2021 0:28:00	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+06.10.2021 0:28:00	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+06.10.2021 0:28:00	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+06.10.2021 0:28:00	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
