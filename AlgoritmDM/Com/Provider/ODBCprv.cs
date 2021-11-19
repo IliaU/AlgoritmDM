@@ -470,6 +470,8 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             return AployDMCalkStoreCreditORA(Cst, CalkStoreCredit, CalcScPerc, OldCalkStoreCredit, OldCalcScPerc);
+                        case "myodbc8a.dll":
+                            return AployDMCalkStoreCreditMySql(Cst, CalkStoreCredit, CalcScPerc, OldCalkStoreCredit, OldCalcScPerc);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
                         //break;
@@ -2728,7 +2730,7 @@ where `seq_no`=1
         /// <returns>Успех обработки функции</returns>
         private bool AployDMCalkMaxDiscPercMySql(CustomerBase Cst, decimal CalkMaxDiscPerc)
         {
-            string CommandSql = string.Format("Update CMS.customer Set MAX_DISC_PERC={0} Where cust_sid={1}", CalkMaxDiscPerc.ToString().Replace(",", "."), Cst.CustSid);
+            string CommandSql = string.Format("Update `rpsods`.`customer` Set `max_disc_perc`={0} Where `sid`={1}", CalkMaxDiscPerc.ToString().Replace(",", "."), Cst.CustSid);
 
             try
             {
@@ -2786,7 +2788,7 @@ where `seq_no`=1
         private bool AployDMCalkStoreCreditMySql(CustomerBase Cst, decimal CalkStoreCredit, decimal CalcScPerc, decimal OldCalkStoreCredit, decimal OldCalcScPerc)
         {
             bool rez = false;
-            string CommandSql = string.Format("Update CMS.customer Set Store_Credit={0} Where cust_sid={1}", CalkStoreCredit.ToString().Replace(",", "."), Cst.CustSid);
+            string CommandSql = string.Format("Update `rpsods`.`customer` Set `store_credit`={0} Where `sid`={1}", CalkStoreCredit.ToString().Replace(",", "."), Cst.CustSid);
 
             try
             {
@@ -2827,6 +2829,7 @@ where `seq_no`=1
                 throw;
             }
 
+            /*
             // Получаем пааметр в котором храниться значение имени поля для плагина BonusDMax
             string SC_Perc = Com.ConfigurationFarm.ParamsOfScenatiy["SC_Perc"];
             // сохранение параметра в базу в таблицу CMS.cust_address
@@ -2901,7 +2904,7 @@ where `seq_no`=1
                 if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".AployDMCalkStoreCreditMySql_2", EventEn.Dump);
                 throw;
             }
-
+            */
             try
             {
                 if (Cst.CustSid == 2417549001015889916)

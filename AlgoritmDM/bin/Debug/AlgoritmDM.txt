@@ -512,3 +512,32 @@ Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
 06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
 06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
 06.10.2021 0:28:36	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 22:41:47	Message	Log	Запуск программы.
+19.11.2021 22:41:47	Message	Config	Загрузка чтения параметров.
+19.11.2021 22:41:57	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+19.11.2021 22:41:58	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+19.11.2021 22:41:58	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+19.11.2021 22:41:58	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+19.11.2021 22:41:58	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+19.11.2021 22:41:58	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 22:42:24	Admin	Warning	transfCheck (BonusDMscn - Стандартная бонусная программа)	Клиента с сидом 614306930000211644 в системе не существует.
+19.11.2021 22:42:24	Admin	Warning	transfCheck (BonusDMscn - Стандартная бонусная программа)	Клиента с сидом 614306930000211644 в системе не существует.
+19.11.2021 22:42:25	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 22:42:25	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 22:42:25	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 22:43:32	Admin	Message	CustomerList.ProcessAployDMCalkScn	Запуск процесса применения скидок и бонусов.
+19.11.2021 23:02:03	Message	Log	Запуск программы.
+19.11.2021 23:02:03	Message	Config	Загрузка чтения параметров.
+19.11.2021 23:02:09	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+19.11.2021 23:02:09	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+19.11.2021 23:02:09	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+19.11.2021 23:02:09	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+19.11.2021 23:02:10	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: True
+19.11.2021 23:02:10	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 23:02:10	Admin	Warning	transfCheck (BonusDMscn - Стандартная бонусная программа)	Клиента с сидом 614306930000211644 в системе не существует.
+19.11.2021 23:02:10	Admin	Warning	transfCheck (BonusDMscn - Стандартная бонусная программа)	Клиента с сидом 614306930000211644 в системе не существует.
+19.11.2021 23:02:10	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 23:02:10	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 23:02:10	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+19.11.2021 23:02:29	Admin	Message	CustomerList.ProcessAployDMCalkScn	Запуск процесса применения скидок и бонусов.
+19.11.2021 23:02:29	Admin	Message	CustomerList.ProcessAployDMCalkMaxDiscPercRun	Завершён процесс применения скидки и бонусов.
