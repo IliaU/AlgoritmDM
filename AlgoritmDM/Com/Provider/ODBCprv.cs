@@ -169,10 +169,11 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             return getCheckORA(FuncTarget, CnfL, NextScenary, FirstDate, FilCustSid);
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             return getCheckMySql(FuncTarget, CnfL, NextScenary, FirstDate, FilCustSid);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -213,10 +214,11 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             return getCustumersORA(FuncTarget);
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             return getCustumersMySql(FuncTarget);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -256,10 +258,11 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             return getDiscReasonsORA();
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             return getDiscReasonsMySql();
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -300,10 +303,11 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             return getDataORA(SQL);
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             return getDataMySql(SQL);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -344,11 +348,12 @@ namespace AlgoritmDM.Com.Provider
                             setDataORA(SQL);
                             break;
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             setDataMySql(SQL);
                             break;
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -385,9 +390,13 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             MergeClientORA(MergeClientMain, MergeClientDonors);
                             break;
+                        case "myodbc8a.dll":
+                        case "myodbc8w.dll":
+                            MergeClientMySql(MergeClientMain, MergeClientDonors);
+                            break;
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -424,9 +433,12 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA32.DLL":
                         case "SQORA64.DLL":
                             return AployDMCalkMaxDiscPercORA(Cst, CalkMaxDiscPerc);
+                        case "myodbc8a.dll":
+                        case "myodbc8w.dll":
+                            return AployDMCalkMaxDiscPercMySql(Cst, CalkMaxDiscPerc);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -471,10 +483,11 @@ namespace AlgoritmDM.Com.Provider
                         case "SQORA64.DLL":
                             return AployDMCalkStoreCreditORA(Cst, CalkStoreCredit, CalcScPerc, OldCalkStoreCredit, OldCalcScPerc);
                         case "myodbc8a.dll":
+                        case "myodbc8w.dll":
                             return AployDMCalkStoreCreditMySql(Cst, CalkStoreCredit, CalcScPerc, OldCalkStoreCredit, OldCalcScPerc);
                         default:
                             throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
-                        //break;
+                            //break;
                     }
                 }
                 //return true;
@@ -536,6 +549,7 @@ namespace AlgoritmDM.Com.Provider
                         // Оракловая логика
                         break;
                     case "myodbc8a.dll":
+                    case "myodbc8w.dll":
                         // MySql логика
                         break;
                     default:
@@ -576,7 +590,7 @@ namespace AlgoritmDM.Com.Provider
             this.setApplayNextStoreCgreditORA();
 
 
-            string CommandSql= @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
+            string CommandSql = @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
         inv.siz, To_Char(ii.QTY) QTY, i.cust_sid, i.STORE_NO, i.disc_reason_id, ii.ITEM_SID, To_Char(ii.ORIG_PRICE) ORIG_PRICE, To_Char(ii.PRICE) PRICE, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
     from CMS.invoice i 
         inner join CMS.INVC_ITEM ii on i.INVC_SID=ii.INVC_SID
@@ -980,7 +994,7 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
                                             {
                                                 setActiveCustomerORA(nCust);       // Предварительно проверяем активность клиента и если он не активный, принудительно выставляем флаг активности
                                                 // Проверяем на валидность этого пользователя если валиден, то передаём его обработчику
-                                                if (GetValidCustomerORA(nCust))    rez = FuncTarget(nCust);
+                                                if (GetValidCustomerORA(nCust)) rez = FuncTarget(nCust);
                                             }
                                         }
                                     }
@@ -991,7 +1005,7 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
                                         {
                                             setActiveCustomerORA(nCust);           // Предварительно проверяем активность клиента и если он не активный, принудительно выставляем флаг активности
                                             // Проверяем на валидность этого пользователя если валиден, то передаём его обработчику
-                                            if (GetValidCustomerORA(nCust))        rez = FuncTarget(nCust);
+                                            if (GetValidCustomerORA(nCust)) rez = FuncTarget(nCust);
                                         }
                                     }
 
@@ -1150,7 +1164,7 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
                                         com1.CommandTimeout = 900;  // 15 минут
                                         int dr1 = com1.ExecuteNonQuery();
                                     }
-                                    
+
                                     rez = true;
                                 }
                             }
@@ -1375,38 +1389,38 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
         {
             string SQL = null;
             foreach (Customer item in MergeClientDonors)
-	        {
+            {
                 // Правим таблицу CMS.INVOICE 
                 SQL = string.Format(@"update CMS.INVOICE set CUST_SID={0}, SHIPTO_CUST_SID={0}
 where CUST_SID={1}", MergeClientMain.CustSid, item.CustSid);
-                 try
-                 {
-                     if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
+                try
+                {
+                    if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
 
-                     // Закрывать конект не нужно он будет закрыт деструктором
-                     using (OdbcConnection con = new OdbcConnection(base.ConnectionString))
-                     {
-                         con.Open();
+                    // Закрывать конект не нужно он будет закрыт деструктором
+                    using (OdbcConnection con = new OdbcConnection(base.ConnectionString))
+                    {
+                        con.Open();
 
-                         using (OdbcCommand com = new OdbcCommand(SQL, con))
-                         {
-                             com.CommandTimeout = 900;  // 15 минут
-                             com.ExecuteNonQuery();
-                         }
-                     }
-                 }
-                 catch (OdbcException ex)
-                 {
-                     base.EventSave(string.Format("Произожла ошибка при объединениии карточек. {0}", ex.Message), GetType().Name + ".MergeClientORA", EventEn.Error);
-                     if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
-                     throw;
-                 }
-                 catch (Exception ex)
-                 {
-                     base.EventSave(string.Format("Произожла ошибка при объединениии карточек. {0}", ex.Message), GetType().Name + ".MergeClientORA", EventEn.Error);
-                     if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
-                     throw;
-                 }
+                        using (OdbcCommand com = new OdbcCommand(SQL, con))
+                        {
+                            com.CommandTimeout = 900;  // 15 минут
+                            com.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (OdbcException ex)
+                {
+                    base.EventSave(string.Format("Произожла ошибка при объединениии карточек. {0}", ex.Message), GetType().Name + ".MergeClientORA", EventEn.Error);
+                    if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    base.EventSave(string.Format("Произожла ошибка при объединениии карточек. {0}", ex.Message), GetType().Name + ".MergeClientORA", EventEn.Error);
+                    if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".MergeClientORA", EventEn.Dump);
+                    throw;
+                }
 
 
                 // Правим таблицу CMS.customer 
@@ -1766,8 +1780,8 @@ where ADDR_NO=1
      inner join `rpsods`.`document_item` ii on i.SID=ii.`doc_sid`
      inner join `rpsods`.`invn_sbs_item` inv on ii.invn_sbs_item_sid=inv.sid
      inner join `rpsods`.`document_item_disc` iid on ii.sid=iid.doc_item_sid
-     inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
      inner join `rpsods`.`pref_reason` r On iid.`disc_reason`=r.`name` and r.reason_type = 10
+     inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
     Where i.`bt_cuid` is not null " + (FilCustSid == null ? "" : @"
         and i.`bt_cuid`=" + ((long)FilCustSid).ToString() + @"
     ") + @"Order by i.`post_date`, i.`doc_no`, ii.`item_pos`";
@@ -1785,8 +1799,8 @@ where ADDR_NO=1
      left join `rpsods`.`document_item` ii on i.SID=ii.`doc_sid`
      left join `rpsods`.`invn_sbs_item` inv on ii.invn_sbs_item_sid=inv.sid
      left join `rpsods`.`document_item_disc` iid on ii.sid=iid.doc_item_sid
+     left join `rpsods`.`pref_reason` r On iid.`disc_reason`=r.`name` and r.reason_type = 10
      inner join `rpsods`.`customer` s on i.`bt_cuid`=s.`sid`
-     inner join `rpsods`.`pref_reason` r On iid.`disc_reason`=r.`name` and r.reason_type = 10
     Where i.`bt_cuid` is not null " + (FilCustSid == null ? "" : @"
         and i.`bt_cuid`=" + ((long)FilCustSid).ToString() + @"
     ") + @"Order by i.`post_date`, i.`doc_no`, ii.`item_pos`";
@@ -1876,6 +1890,13 @@ where ADDR_NO=1
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("USR_DISC_PERC").ToUpper()) tmpUsrDiscPerc = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                         }
+
+
+                                        if (tmpCustSid == 3572385410575699964)
+                                        {
+
+                                        }
+
                                         Check nChk = new Check(tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
 
                                         // Запоминаем первую дату для коректной работы прогресс бара
@@ -2037,8 +2058,8 @@ Where (CUST_SID={0} and POST_DATE>STR_TO_DATE('{1}','%d.%m.%Y'))
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
-  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+  ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
     left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
@@ -2047,8 +2068,8 @@ from `rpsods`.`customer` s
                 }
                 else
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
-  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+  ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
     left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
@@ -2062,8 +2083,8 @@ Where ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
-  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+  ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
     left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
@@ -2073,8 +2094,8 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")";
                 }
                 else
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, Char(s.`max_disc_perc`) MAX_DISC_PERC, Char(s.`store_credit`) STORE_CREDIT,
-  ap.`phone_no` As phone1, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+  ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
     left join `rpsods`.`customer_phone` ap on s.sid=ap.cust_sid and ap.seq_no=1
@@ -2141,26 +2162,30 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
                                         if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("first_name").ToUpper()) tmpFirstName = dr.GetValue(i).ToString();
                                         if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("last_name").ToUpper()) tmpLastName = dr.GetValue(i).ToString();
                                         if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("cust_id").ToUpper()) tmpCustId = dr.GetValue(i).ToString();
-                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("MAX_DISC_PERC").ToUpper()) tmpMaxDiscPerc = decimal.Parse(dr.GetValue(i).ToString()); }
+                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("MAX_DISC_PERC").ToUpper()) tmpMaxDiscPerc = dr.GetDecimal(i); }
                                         catch { }
-                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("STORE_CREDIT").ToUpper()) tmpStoreCredit = decimal.Parse(dr.GetValue(i).ToString()); }
+                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("STORE_CREDIT").ToUpper()) tmpStoreCredit = dr.GetDecimal(i); }
                                         catch { }
-                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("SC_PERC").ToUpper()) tmpScPerc = decimal.Parse(dr.GetValue(i).ToString()); }
+                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("SC_PERC").ToUpper()) tmpScPerc = dr.GetDecimal(i); }
                                         catch { }
-                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("phone1").ToUpper()) tmpPhone1 = dr.GetValue(i).ToString();
-                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("address1").ToUpper()) tmpAddress1 = dr.GetValue(i).ToString();
+                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("phone").ToUpper()) tmpPhone1 = dr.GetString(i);
+                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("address1").ToUpper()) tmpAddress1 = dr.GetString(i);
                                         try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("FST_SALE_DATE").ToUpper()) tmpFstSaleDate = dr.GetDateTime(i); }
                                         catch { }
                                         try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("lst_sale_date").ToUpper()) tmpLstSaleDate = dr.GetDateTime(i); }
                                         catch { }
-                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("EMAIL_ADDR").ToUpper()) tmpEmailAddr = dr.GetValue(i).ToString();
-                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ACTIVE").ToUpper()) Active = int.Parse(dr.GetValue(i).ToString()); }
+                                        if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("EMAIL_ADDR").ToUpper()) tmpEmailAddr = dr.GetString(i);
+                                        try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ACTIVE").ToUpper()) Active = dr.GetInt32(i); }
                                         catch { }
                                     }
                                     Customer nCust = new Customer(tmpCustSid, tmpFirstName, tmpLastName, tmpCustId, tmpMaxDiscPerc, tmpStoreCredit, tmpScPerc, tmpPhone1, tmpAddress1, tmpFstSaleDate, tmpLstSaleDate, tmpEmailAddr, Active);
 
-                                    if (nCust.CustSid == -3834734573147189252)
+                                    if (nCust.CustSid == 2959986429882994684)
                                     { }
+                                    if (nCust.Phone1 == "+79023529544")
+                                    { }
+
+
 
                                     // Проверяем если в конфиге определено несколько префиксов к телефону то нужно их проверить и передать только если они найдены
                                     if (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)
@@ -2749,14 +2774,14 @@ where `seq_no`=1
                         int dr = com.ExecuteNonQuery();
 
                         // Проверяем кол-во обновлённых строк
-                        if (dr > 0)
-                        {
-                            rez = true;
-                        }
-                        else
-                        {
-                            throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
-                        }
+                        //if (dr > 0)
+                        //{
+                        rez = true;
+                        //}
+                        //else
+                        //{
+                        //    throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
+                        //}
                     }
                 }
 
@@ -2805,14 +2830,14 @@ where `seq_no`=1
                         int dr = com.ExecuteNonQuery();
 
                         // Проверяем кол-во обновлённых строк
-                        if (dr > 0)
-                        {
-                            rez = true;
-                        }
-                        else
-                        {
-                            throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
-                        }
+                        //if (dr > 0)
+                        //{
+                        rez = true;
+                        //}
+                        //else
+                        //{
+                        //    throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
+                        //}
                     }
                 }
             }
@@ -3143,7 +3168,7 @@ where `seq_no`=1
         /// <param name="MergeClientDonors">Клинеты доноры</param>
         private void MergeClientNotDB(Customer MergeClientMain, List<Customer> MergeClientDonors)
         {
-           
+
         }
 
         /// <summary>
