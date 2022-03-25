@@ -932,6 +932,7 @@ namespace AlgoritmDM.Com
                 if (e._LicEventKey.ValidToYYYYMMDD != 0) k.SetAttribute("ValidToYYYYMMDD", e._LicEventKey.ValidToYYYYMMDD.ToString());
                 if (e._LicEventKey.Info != null) k.SetAttribute("Info", e._LicEventKey.Info);
                 k.SetAttribute("HashUserOS", e._LicEventKey.HashUserOS.ToString());
+                k.SetAttribute("HashConnectPrizm", e._LicEventKey.HashConnectPrizm.ToString());
                 k.InnerText = string.Join(",", e._LicEventKey.ScnFullNameList.ToArray());
                 xmlLics.AppendChild(k);
 
