@@ -64,7 +64,8 @@ namespace AlgoritmDM
                     Com.ConfigReg ConfReg = new Com.ConfigReg();
                     Com.Log Log = new Com.Log("AlgoritmDM.txt");
                     Com.Config Conf = new Com.Config("AlgoritmDM.xml");
-                    
+                    Com.ProviderPrizmFarm PrvPrizm = new Com.ProviderPrizmFarm();
+
 
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);

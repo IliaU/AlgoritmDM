@@ -44,6 +44,8 @@
             this.chkBox_VisibleCalculateCustomColumn = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbl_LogNotValidCustomer = new System.Windows.Forms.Label();
+            this.txtBox_LogNotValidCustomer = new System.Windows.Forms.TextBox();
             this.txtBox_CustomerPrefixPhoneList = new System.Windows.Forms.TextBox();
             this.lbl_CustomerPrefixPhoneList = new System.Windows.Forms.Label();
             this.txtBox_CustomerCountryList = new System.Windows.Forms.TextBox();
@@ -55,14 +57,18 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnl_Buttom = new System.Windows.Forms.Panel();
             this.pnl_Fill = new System.Windows.Forms.Panel();
-            this.txtBox_LogNotValidCustomer = new System.Windows.Forms.TextBox();
-            this.lbl_LogNotValidCustomer = new System.Windows.Forms.Label();
+            this.tpIntegrationPrizm = new System.Windows.Forms.TabPage();
+            this.pnltpIntegrationPrizmTop = new System.Windows.Forms.Panel();
+            this.pnltpIntegrationPrizmFill = new System.Windows.Forms.Panel();
+            this.lblIntegrationPrizmTop = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.pnl_Buttom.SuspendLayout();
             this.pnl_Fill.SuspendLayout();
+            this.tpIntegrationPrizm.SuspendLayout();
+            this.pnltpIntegrationPrizmTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_DirAlgoritmSMTP
@@ -195,12 +201,13 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tpIntegrationPrizm);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(630, 318);
+            this.tabControl1.Size = new System.Drawing.Size(668, 381);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
@@ -218,10 +225,28 @@
             this.tabPage1.Location = new System.Drawing.Point(23, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(603, 310);
+            this.tabPage1.Size = new System.Drawing.Size(641, 373);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Глобальные";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_LogNotValidCustomer
+            // 
+            this.lbl_LogNotValidCustomer.AutoSize = true;
+            this.lbl_LogNotValidCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_LogNotValidCustomer.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lbl_LogNotValidCustomer.Location = new System.Drawing.Point(18, 51);
+            this.lbl_LogNotValidCustomer.Name = "lbl_LogNotValidCustomer";
+            this.lbl_LogNotValidCustomer.Size = new System.Drawing.Size(328, 13);
+            this.lbl_LogNotValidCustomer.TabIndex = 21;
+            this.lbl_LogNotValidCustomer.Text = "Имя лог файла для клиентов не прошедших проверку";
+            // 
+            // txtBox_LogNotValidCustomer
+            // 
+            this.txtBox_LogNotValidCustomer.Location = new System.Drawing.Point(346, 48);
+            this.txtBox_LogNotValidCustomer.Name = "txtBox_LogNotValidCustomer";
+            this.txtBox_LogNotValidCustomer.Size = new System.Drawing.Size(176, 20);
+            this.txtBox_LogNotValidCustomer.TabIndex = 20;
             // 
             // txtBox_CustomerPrefixPhoneList
             // 
@@ -301,7 +326,7 @@
             this.tabPage2.Location = new System.Drawing.Point(23, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(603, 310);
+            this.tabPage2.Size = new System.Drawing.Size(641, 373);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Локальные";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -319,7 +344,7 @@
             this.tabPage3.Controls.Add(this.lbl_AlgoritmSmtpQuery);
             this.tabPage3.Location = new System.Drawing.Point(23, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(603, 310);
+            this.tabPage3.Size = new System.Drawing.Size(641, 373);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "AlgoritmSMTP";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -328,9 +353,9 @@
             // 
             this.pnl_Buttom.Controls.Add(this.btnSave);
             this.pnl_Buttom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_Buttom.Location = new System.Drawing.Point(0, 318);
+            this.pnl_Buttom.Location = new System.Drawing.Point(0, 381);
             this.pnl_Buttom.Name = "pnl_Buttom";
-            this.pnl_Buttom.Size = new System.Drawing.Size(630, 31);
+            this.pnl_Buttom.Size = new System.Drawing.Size(668, 31);
             this.pnl_Buttom.TabIndex = 14;
             // 
             // pnl_Fill
@@ -339,32 +364,54 @@
             this.pnl_Fill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Fill.Location = new System.Drawing.Point(0, 0);
             this.pnl_Fill.Name = "pnl_Fill";
-            this.pnl_Fill.Size = new System.Drawing.Size(630, 318);
+            this.pnl_Fill.Size = new System.Drawing.Size(668, 381);
             this.pnl_Fill.TabIndex = 15;
             // 
-            // txtBox_LogNotValidCustomer
+            // tpIntegrationPrizm
             // 
-            this.txtBox_LogNotValidCustomer.Location = new System.Drawing.Point(346, 48);
-            this.txtBox_LogNotValidCustomer.Name = "txtBox_LogNotValidCustomer";
-            this.txtBox_LogNotValidCustomer.Size = new System.Drawing.Size(176, 20);
-            this.txtBox_LogNotValidCustomer.TabIndex = 20;
+            this.tpIntegrationPrizm.Controls.Add(this.pnltpIntegrationPrizmFill);
+            this.tpIntegrationPrizm.Controls.Add(this.pnltpIntegrationPrizmTop);
+            this.tpIntegrationPrizm.Location = new System.Drawing.Point(23, 4);
+            this.tpIntegrationPrizm.Name = "tpIntegrationPrizm";
+            this.tpIntegrationPrizm.Size = new System.Drawing.Size(641, 373);
+            this.tpIntegrationPrizm.TabIndex = 3;
+            this.tpIntegrationPrizm.Text = "Интеграция с Prizm";
+            this.tpIntegrationPrizm.UseVisualStyleBackColor = true;
             // 
-            // lbl_LogNotValidCustomer
+            // pnltpIntegrationPrizmTop
             // 
-            this.lbl_LogNotValidCustomer.AutoSize = true;
-            this.lbl_LogNotValidCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_LogNotValidCustomer.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbl_LogNotValidCustomer.Location = new System.Drawing.Point(18, 51);
-            this.lbl_LogNotValidCustomer.Name = "lbl_LogNotValidCustomer";
-            this.lbl_LogNotValidCustomer.Size = new System.Drawing.Size(328, 13);
-            this.lbl_LogNotValidCustomer.TabIndex = 21;
-            this.lbl_LogNotValidCustomer.Text = "Имя лог файла для клиентов не прошедших проверку";
+            this.pnltpIntegrationPrizmTop.Controls.Add(this.lblIntegrationPrizmTop);
+            this.pnltpIntegrationPrizmTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnltpIntegrationPrizmTop.Location = new System.Drawing.Point(0, 0);
+            this.pnltpIntegrationPrizmTop.Name = "pnltpIntegrationPrizmTop";
+            this.pnltpIntegrationPrizmTop.Size = new System.Drawing.Size(641, 40);
+            this.pnltpIntegrationPrizmTop.TabIndex = 0;
+            // 
+            // pnltpIntegrationPrizmFill
+            // 
+            this.pnltpIntegrationPrizmFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnltpIntegrationPrizmFill.Location = new System.Drawing.Point(0, 40);
+            this.pnltpIntegrationPrizmFill.Name = "pnltpIntegrationPrizmFill";
+            this.pnltpIntegrationPrizmFill.Size = new System.Drawing.Size(641, 333);
+            this.pnltpIntegrationPrizmFill.TabIndex = 1;
+            // 
+            // lblIntegrationPrizmTop
+            // 
+            this.lblIntegrationPrizmTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblIntegrationPrizmTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblIntegrationPrizmTop.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblIntegrationPrizmTop.Location = new System.Drawing.Point(0, 0);
+            this.lblIntegrationPrizmTop.Name = "lblIntegrationPrizmTop";
+            this.lblIntegrationPrizmTop.Size = new System.Drawing.Size(641, 40);
+            this.lblIntegrationPrizmTop.TabIndex = 0;
+            this.lblIntegrationPrizmTop.Text = "Ваша лицензия не позволяет интегрировать Retail с Prizm";
+            this.lblIntegrationPrizmTop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FPar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 349);
+            this.ClientSize = new System.Drawing.Size(668, 412);
             this.Controls.Add(this.pnl_Fill);
             this.Controls.Add(this.pnl_Buttom);
             this.Name = "FPar";
@@ -378,6 +425,8 @@
             this.tabPage3.PerformLayout();
             this.pnl_Buttom.ResumeLayout(false);
             this.pnl_Fill.ResumeLayout(false);
+            this.tpIntegrationPrizm.ResumeLayout(false);
+            this.pnltpIntegrationPrizmTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -413,5 +462,9 @@
         private System.Windows.Forms.Label lbl_CustomerCountryList;
         private System.Windows.Forms.TextBox txtBox_LogNotValidCustomer;
         private System.Windows.Forms.Label lbl_LogNotValidCustomer;
+        private System.Windows.Forms.TabPage tpIntegrationPrizm;
+        private System.Windows.Forms.Panel pnltpIntegrationPrizmFill;
+        private System.Windows.Forms.Panel pnltpIntegrationPrizmTop;
+        private System.Windows.Forms.Label lblIntegrationPrizmTop;
     }
 }

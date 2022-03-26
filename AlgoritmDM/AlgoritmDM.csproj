@@ -101,7 +101,18 @@
     <Compile Include="Com\LicLib\onLicItem.cs" />
     <Compile Include="Com\LicLib\Osnova.cs" />
     <Compile Include="Com\LicLib\SistemaSchislenia.cs" />
+    <Compile Include="Com\PlgProviderPrizm\Lib\ProviderPrizmInterface.cs" />
+    <Compile Include="Com\PlgProviderPrizm\ODBCprvPrz.cs" />
+    <Compile Include="Com\PlgProviderPrizm\ODBC\FSetupConnectDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Com\PlgProviderPrizm\ODBC\FSetupConnectDB.Designer.cs">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Com\ProviderFarm.cs" />
+    <Compile Include="Com\ProviderPrizm.cs" />
+    <Compile Include="Com\PlgProviderPrizm\Lib\ProviderPrizmBase.cs" />
+    <Compile Include="Com\ProviderPrizmFarm.cs" />
     <Compile Include="Com\Provider\Lib\ProviderBase.cs" />
     <Compile Include="Com\Provider\Lib\ProviderI.cs" />
     <Compile Include="Com\Provider\Lib\ProviderTransferI.cs" />

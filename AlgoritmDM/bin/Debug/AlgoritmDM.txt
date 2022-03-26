@@ -609,3 +609,81 @@ Where (CUST_SID=610062083000280352 and POST_DATE>STR' at line 7
 26.03.2022 0:31:16	Message	Log	Запуск программы.
 26.03.2022 0:31:16	Message	Config	Загрузка чтения параметров.
 26.03.2022 0:31:32	Message	Main	Завершили работу программы.
+26.03.2022 20:03:44	Message	Log	Запуск программы.
+26.03.2022 20:03:44	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:03:45	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:04:20	Message	Log	Запуск программы.
+26.03.2022 20:04:20	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:04:20	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:10:41	Message	Log	Запуск программы.
+26.03.2022 20:10:41	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:10:42	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:12:18	Message	Log	Запуск программы.
+26.03.2022 20:12:18	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:12:18	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:14:44	Message	Log	Запуск программы.
+26.03.2022 20:14:44	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:14:44	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:15:53	Message	Log	Запуск программы.
+26.03.2022 20:15:53	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:15:54	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:16:38	Message	Log	Запуск программы.
+26.03.2022 20:16:38	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:16:38	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:16:41	Message	Main	Завершили работу программы.
+26.03.2022 20:16:46	Message	Log	Запуск программы.
+26.03.2022 20:16:46	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:16:46	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:17:12	Message	Log	Запуск программы.
+26.03.2022 20:17:12	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:17:12	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:28:35	Message	Log	Запуск программы.
+26.03.2022 20:28:35	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:28:35	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 20:29:13	Message	Log	Запуск программы.
+26.03.2022 20:29:13	Message	Config	Загрузка чтения параметров.
+26.03.2022 20:29:13	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 22:20:16	Message	Log	Запуск программы.
+26.03.2022 22:20:16	Message	Config	Загрузка чтения параметров.
+26.03.2022 22:20:17	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 22:20:36	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+26.03.2022 22:20:36	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+26.03.2022 22:20:36	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+26.03.2022 22:20:36	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+26.03.2022 22:20:36	Admin	Error	ODBCprv.getCustumersMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.cust_sc_param' doesn't exist
+26.03.2022 22:20:46	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: False
+26.03.2022 22:20:46	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:20:46	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.invc_sc_down' doesn't exist
+26.03.2022 22:20:48	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:20:48	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:20:48	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:21:31	Admin	Message	Main	Завершили работу программы.
+26.03.2022 22:24:16	Message	Log	Запуск программы.
+26.03.2022 22:24:16	Message	Config	Загрузка чтения параметров.
+26.03.2022 22:24:16	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 22:24:26	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+26.03.2022 22:24:27	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+26.03.2022 22:24:27	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+26.03.2022 22:24:27	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+26.03.2022 22:24:27	Admin	Error	ODBCprv.getCustumersMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.cust_sc_param' doesn't exist
+26.03.2022 22:24:31	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: False
+26.03.2022 22:24:31	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:24:31	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.invc_sc_down' doesn't exist
+26.03.2022 22:24:32	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:24:32	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:24:32	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:35:43	Message	Log	Запуск программы.
+26.03.2022 22:35:43	Message	Config	Загрузка чтения параметров.
+26.03.2022 22:35:43	Message	ProviderPrizmFarm	Загружается драйвер для даботы с Prizm
+26.03.2022 22:35:52	Admin	Message	UserFarm.SetupCurrentUser	Пользователь Admin авторизовался успешно.
+26.03.2022 22:35:53	Admin	Message	DiscReasonList.ProcessingDiscReason	Запуск процесса получения причин скидок из базы
+26.03.2022 22:35:53	Admin	Message	CustomerList.ProcessingCustomers	Запуск процесса получения данных о клиентах из базы
+26.03.2022 22:35:53	Admin	Message	DiscReasonList.ProcessingDiscReasonRun	Завершён процесс получения списка причин скидок из базы с результатом: True
+26.03.2022 22:35:53	Admin	Error	ODBCprv.getCustumersMySql (ODBCprv)	Произожла ошибка при получении данных с источника. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.cust_sc_param' doesn't exist
+26.03.2022 22:35:57	Admin	Message	CustomerList.ProcessingCustomersRun	Завершён процесс получения данных о клиентах из базы с результатом: False
+26.03.2022 22:35:57	Admin	Message	ConfigurationList.ProcessingCalculateDM	Запуск процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:35:57	Admin	Error	ODBCprv.setApplayNextStoreCgreditMySql (ODBCprv)	Произожла ошибка по отложенным записям связанным с бонусом, которые ещё не начислились после 14 дней. ERROR [42S02] [MySQL][ODBC 8.0(a) Driver][mysqld-8.0.21]Table 'aks.invc_sc_down' doesn't exist
+26.03.2022 22:35:59	Admin	Message	ConfigurationList.ProcessingCalculateDMRun	Завершён процесса просмотра чеков по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:35:59	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPerc	Запуск процесса подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:35:59	Admin	Message	ConfigurationList.ProcessCalcTotalMaxDiscPercRun	Завершён подсчёта итоговой скидки относительно правил применения сценариев по всем сценариям конфигурации: 'Стандартная конфигурация.'
+26.03.2022 22:36:17	Admin	Message	Main	Завершили работу программы.

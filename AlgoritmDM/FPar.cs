@@ -35,6 +35,18 @@ namespace AlgoritmDM
             this.txtBox_AlgoritmSmtpPar.Text = Com.Config.CurAlgiritmSmtpPar;
             this.chkBox_VisibleCalculateCustomColumn.Checked = Com.Config.VisibleCalculateCustomColumn;
             this.txtBoxShopName.Text = Com.ConfigReg.ShopName;
+
+            // Показываем инфу по интеграции с призмом
+            if(Com.Lic.HashConnectPrizm)
+            {
+                this.pnltpIntegrationPrizmTop.Visible = false;
+                this.pnltpIntegrationPrizmFill.Visible = true;
+            }
+            else
+            {
+                this.pnltpIntegrationPrizmTop.Visible = true;
+                this.pnltpIntegrationPrizmFill.Visible = false;
+            }
         }
 
         // Пользователь выбирает папку
