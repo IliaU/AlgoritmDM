@@ -25,6 +25,11 @@ namespace AlgoritmDM.Com
         public static ProviderPrizm CurProviderPrizm = null;
 
         /// <summary>
+        /// Событие изменения текущего провайдера Prizm
+        /// </summary>
+        public static event EventHandler<EventProviderPrizmFarm> onEventSetup;
+
+        /// <summary>
         /// Конструктор
         /// </summary>
         public ProviderPrizmFarm()
@@ -174,6 +179,32 @@ namespace AlgoritmDM.Com
             }
 
             return rez;
+        }
+
+        /// <summary>
+        /// Сохранение текущего провайдера
+        /// </summary>
+        /// <param name="PrvPrizm">Провайдер который надо установить как текущий</param>
+        public static void SetupCurrentProvider(ProviderPrizm PrvPrizm)
+        {
+            try
+            {
+                // Собственно обработка события
+                EventProviderPrizmFarm myArg = new EventProviderPrizmFarm(PrvPrizm);
+                if (onEventSetup != null)
+                {
+                    onEventSetup.Invoke(PrvPrizm, myArg);
+                }
+
+                // Логируем изменение подключения
+                CurProviderPrizm = PrvPrizm;
+                Log.EventSave(string.Format("Пользователь настроил новое подключениe Prizm: {0} ({1})", PrvPrizm.PrintConnectionString(), PrvPrizm.PlugInType), "ProviderPrizmFarm.SetupCurrentProvider", EventEn.Message, true, false);
+            }
+            catch (Exception ex)
+            {
+                Log.EventSave(string.Format("Ошибка при сохранении подключекния Prizm: {0} ({1} - {2})", ex.Message, PrvPrizm.PrintConnectionString(), PrvPrizm.PlugInType), "ProviderPrizmFarm.SetupCurrentProvider", EventEn.Error, true, true);
+            }
+            
         }
     }
 }

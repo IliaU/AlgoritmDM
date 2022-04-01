@@ -8,3 +8,5 @@
 /AlgoritmDM/bin/Release/*.exe
 /AlgoritmDM/bin/Release/*.dll
 *.7z
+/AlgoritmDM/bin/Debug/AlgoritmDM.txt
+/AlgoritmDM/obj/x86/Debug/AlgoritmDM.exe

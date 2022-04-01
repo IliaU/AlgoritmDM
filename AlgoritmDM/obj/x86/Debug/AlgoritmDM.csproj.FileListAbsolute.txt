@@ -159,3 +159,5 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x8
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetupPrizm.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.PlgProviderPrizm.ODBC.FSetupConnectDB.resources

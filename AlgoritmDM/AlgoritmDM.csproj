@@ -172,6 +172,12 @@
     <Compile Include="Com\Scenariy\NakopDM\NakopDMData.cs" />
     <Compile Include="Com\Scenariy\NakopDM\PorogPoint.cs" />
     <Compile Include="Com\UserFarm.cs" />
+    <Compile Include="FConnetSetupPrizm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConnetSetupPrizm.Designer.cs">
+      <DependentUpon>FConnetSetupPrizm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCustDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,7 @@
     <Compile Include="Lib\EventCustomerListProcessingProgerssBar.cs" />
     <Compile Include="Lib\EventDiscReasonList.cs" />
     <Compile Include="Lib\EventDiscReasonListAsicRez.cs" />
+    <Compile Include="Lib\EventProviderPrizmFarm.cs" />
     <Compile Include="Lib\EventScenariy.cs" />
     <Compile Include="Lib\EventSharedConfigurations.cs" />
     <Compile Include="Lib\EventUser.cs" />
@@ -269,6 +276,9 @@
     <Compile Include="Lib\UserBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Com\PlgProviderPrizm\ODBC\FSetupConnectDB.resx">
+      <DependentUpon>FSetupConnectDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Com\Provider\ODBC\FInfo.resx">
       <DependentUpon>FInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FConnetSetup.resx">
       <DependentUpon>FConnetSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FConnetSetupPrizm.resx">
+      <DependentUpon>FConnetSetupPrizm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCustDetail.resx">
       <DependentUpon>FCustDetail.cs</DependentUpon>

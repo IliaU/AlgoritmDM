@@ -104,6 +104,9 @@ namespace AlgoritmDM
                 //
                 if (Com.Config.Mode == Lib.ModeEn.NotDB) this.TSMItemConfigDB.Visible = false;
                 else this.TSMItemConfigDB.Visible = true;
+                //
+                if (Com.Lic.HashConnectPrizm) TSMItemConfigDbPrizm.Visible = true;
+                else TSMItemConfigDbPrizm.Visible = false;
             }
             //
             // Открываем объекты котороые можно смотреть данному пользователю
@@ -1118,6 +1121,22 @@ namespace AlgoritmDM
             }
         }
 
+        // Пользователь решил поправить подключение к второй базе типа призм
+        private void TSMItemConfigDbPrizm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FConnetSetupPrizm Frm = new FConnetSetupPrizm())
+                {
+                    Frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                Com.Log.EventSave(ex.Message, string.Format("{0}.TSMItemConfigDbPrizm_Click", GetType().FullName), Lib.EventEn.Error);
+            }
+        }
+
         // Пользователь решил настроить список пользователей
         private void TSMItemConfigUsers_Click(object sender, EventArgs e)
         {
@@ -1827,7 +1846,6 @@ namespace AlgoritmDM
             }
             catch (Exception) { }
         }
-
     }
 
     /// <summary>

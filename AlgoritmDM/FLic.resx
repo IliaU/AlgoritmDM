@@ -121,6 +121,7 @@
     <value>Спасибо за использование лицензионной версии 
 Ваша лицензия зарегистрированна успешно и действительна до: @ValiDate
 Вам доступны следующие модули: @Module
+Доступность второй базы типа Prizm: @PrizmAccess
 Если у вас уже есть лицензия для продления, вы её можете использовать:</value>
   </data>
   <metadata name="Module.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

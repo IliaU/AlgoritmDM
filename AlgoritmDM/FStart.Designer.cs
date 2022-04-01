@@ -36,6 +36,7 @@
             this.TSMItemConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMItemConfigPar = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMItemConfigDB = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMItemConfigDbPrizm = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMItemAboutPrv = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMItemAboutScn = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMItemConfigUsers = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,7 +162,7 @@
             // tSSLabel
             // 
             this.tSSLabel.Name = "tSSLabel";
-            this.tSSLabel.Size = new System.Drawing.Size(48, 17);
+            this.tSSLabel.Size = new System.Drawing.Size(51, 17);
             this.tSSLabel.Text = "tSSLabel";
             // 
             // mStrip
@@ -181,18 +182,19 @@
             this.TSMItemConfig.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMItemConfigPar,
             this.TSMItemConfigDB,
+            this.TSMItemConfigDbPrizm,
             this.TSMItemAboutPrv,
             this.TSMItemAboutScn,
             this.TSMItemConfigUsers,
             this.TSMItemConfigScenary});
             this.TSMItemConfig.Name = "TSMItemConfig";
-            this.TSMItemConfig.Size = new System.Drawing.Size(73, 20);
+            this.TSMItemConfig.Size = new System.Drawing.Size(78, 20);
             this.TSMItemConfig.Text = "Настройка";
             // 
             // TSMItemConfigPar
             // 
             this.TSMItemConfigPar.Name = "TSMItemConfigPar";
-            this.TSMItemConfigPar.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemConfigPar.Size = new System.Drawing.Size(351, 22);
             this.TSMItemConfigPar.Text = "Параметры системы";
             this.TSMItemConfigPar.Visible = false;
             this.TSMItemConfigPar.Click += new System.EventHandler(this.TSMItemConfigPar_Click);
@@ -200,28 +202,36 @@
             // TSMItemConfigDB
             // 
             this.TSMItemConfigDB.Name = "TSMItemConfigDB";
-            this.TSMItemConfigDB.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemConfigDB.Size = new System.Drawing.Size(351, 22);
             this.TSMItemConfigDB.Text = "Подключение к базе данных";
             this.TSMItemConfigDB.Visible = false;
             this.TSMItemConfigDB.Click += new System.EventHandler(this.TSMItemConfigDB_Click);
             // 
+            // TSMItemConfigDbPrizm
+            // 
+            this.TSMItemConfigDbPrizm.Name = "TSMItemConfigDbPrizm";
+            this.TSMItemConfigDbPrizm.Size = new System.Drawing.Size(351, 22);
+            this.TSMItemConfigDbPrizm.Text = "Настройка подключения к второй базе типа Prizm";
+            this.TSMItemConfigDbPrizm.Visible = false;
+            this.TSMItemConfigDbPrizm.Click += new System.EventHandler(this.TSMItemConfigDbPrizm_Click);
+            // 
             // TSMItemAboutPrv
             // 
             this.TSMItemAboutPrv.Name = "TSMItemAboutPrv";
-            this.TSMItemAboutPrv.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemAboutPrv.Size = new System.Drawing.Size(351, 22);
             this.TSMItemAboutPrv.Text = "Доступные провайдеры";
             this.TSMItemAboutPrv.Visible = false;
             // 
             // TSMItemAboutScn
             // 
             this.TSMItemAboutScn.Name = "TSMItemAboutScn";
-            this.TSMItemAboutScn.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemAboutScn.Size = new System.Drawing.Size(351, 22);
             this.TSMItemAboutScn.Text = "Доступные сценарии";
             // 
             // TSMItemConfigUsers
             // 
             this.TSMItemConfigUsers.Name = "TSMItemConfigUsers";
-            this.TSMItemConfigUsers.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemConfigUsers.Size = new System.Drawing.Size(351, 22);
             this.TSMItemConfigUsers.Text = "Настройка пользователей";
             this.TSMItemConfigUsers.Visible = false;
             this.TSMItemConfigUsers.Click += new System.EventHandler(this.TSMItemConfigUsers_Click);
@@ -229,7 +239,7 @@
             // TSMItemConfigScenary
             // 
             this.TSMItemConfigScenary.Name = "TSMItemConfigScenary";
-            this.TSMItemConfigScenary.Size = new System.Drawing.Size(222, 22);
+            this.TSMItemConfigScenary.Size = new System.Drawing.Size(351, 22);
             this.TSMItemConfigScenary.Text = "Настройка сценариев";
             this.TSMItemConfigScenary.Visible = false;
             this.TSMItemConfigScenary.Click += new System.EventHandler(this.TSMItemConfigScenary_Click);
@@ -240,13 +250,13 @@
             this.TSMItemProcCustomer,
             this.TSMItemSetupNewCnfL});
             this.TSMItemAction.Name = "TSMItemAction";
-            this.TSMItemAction.Size = new System.Drawing.Size(62, 20);
+            this.TSMItemAction.Size = new System.Drawing.Size(64, 20);
             this.TSMItemAction.Text = "Задания";
             // 
             // TSMItemProcCustomer
             // 
             this.TSMItemProcCustomer.Name = "TSMItemProcCustomer";
-            this.TSMItemProcCustomer.Size = new System.Drawing.Size(327, 22);
+            this.TSMItemProcCustomer.Size = new System.Drawing.Size(350, 22);
             this.TSMItemProcCustomer.Tag = "Пересчитать в текущей конфигурации (@CurCnfl)";
             this.TSMItemProcCustomer.Text = "Пересчитать в текущей конфигурации";
             this.TSMItemProcCustomer.Visible = false;
@@ -255,7 +265,7 @@
             // TSMItemSetupNewCnfL
             // 
             this.TSMItemSetupNewCnfL.Name = "TSMItemSetupNewCnfL";
-            this.TSMItemSetupNewCnfL.Size = new System.Drawing.Size(327, 22);
+            this.TSMItemSetupNewCnfL.Size = new System.Drawing.Size(350, 22);
             this.TSMItemSetupNewCnfL.Tag = "Изменить текущую конфигурацию на: @NewCnfL";
             this.TSMItemSetupNewCnfL.Text = "Изменить текущую конфигурацию на: @NewCnfL";
             this.TSMItemSetupNewCnfL.Visible = false;
@@ -264,7 +274,7 @@
             // TSMItemLic
             // 
             this.TSMItemLic.Name = "TSMItemLic";
-            this.TSMItemLic.Size = new System.Drawing.Size(67, 20);
+            this.TSMItemLic.Size = new System.Drawing.Size(72, 20);
             this.TSMItemLic.Text = "Лицензия";
             this.TSMItemLic.Click += new System.EventHandler(this.TSMItemLic_Click);
             // 
@@ -921,12 +931,12 @@
             this.TSMenuItemMainClient,
             this.TSMItemDonorClient});
             this.cMStripCustomer.Name = "cMStripCustomer";
-            this.cMStripCustomer.Size = new System.Drawing.Size(539, 92);
+            this.cMStripCustomer.Size = new System.Drawing.Size(585, 92);
             // 
             // TlSpMenuItemCustDetail
             // 
             this.TlSpMenuItemCustDetail.Name = "TlSpMenuItemCustDetail";
-            this.TlSpMenuItemCustDetail.Size = new System.Drawing.Size(538, 22);
+            this.TlSpMenuItemCustDetail.Size = new System.Drawing.Size(584, 22);
             this.TlSpMenuItemCustDetail.Text = "Посмотреть детали по клиенту:";
             this.TlSpMenuItemCustDetail.Visible = false;
             this.TlSpMenuItemCustDetail.Click += new System.EventHandler(this.TlSpMenuItemCustDetail_Click);
@@ -934,22 +944,22 @@
             // TlSpMenuItemCustAlgoritmSMTP
             // 
             this.TlSpMenuItemCustAlgoritmSMTP.Name = "TlSpMenuItemCustAlgoritmSMTP";
-            this.TlSpMenuItemCustAlgoritmSMTP.Size = new System.Drawing.Size(538, 22);
+            this.TlSpMenuItemCustAlgoritmSMTP.Size = new System.Drawing.Size(584, 22);
             this.TlSpMenuItemCustAlgoritmSMTP.Text = "Отправить сообщение пользователю с информацией по его текущему бонусу и процентам" +
-                "";
+    "";
             this.TlSpMenuItemCustAlgoritmSMTP.Click += new System.EventHandler(this.TlSpMenuItemCustAlgoritmSMTP_Click);
             // 
             // TSMenuItemMainClient
             // 
             this.TSMenuItemMainClient.Name = "TSMenuItemMainClient";
-            this.TSMenuItemMainClient.Size = new System.Drawing.Size(538, 22);
+            this.TSMenuItemMainClient.Size = new System.Drawing.Size(584, 22);
             this.TSMenuItemMainClient.Text = "Выбрать как основного клиента для объединения карточек";
             this.TSMenuItemMainClient.Click += new System.EventHandler(this.TSMenuItemMainClient_Click);
             // 
             // TSMItemDonorClient
             // 
             this.TSMItemDonorClient.Name = "TSMItemDonorClient";
-            this.TSMItemDonorClient.Size = new System.Drawing.Size(538, 22);
+            this.TSMItemDonorClient.Size = new System.Drawing.Size(584, 22);
             this.TSMItemDonorClient.Text = "Выбрать как клиента для объединения с основным клиентом";
             this.TSMItemDonorClient.Visible = false;
             this.TSMItemDonorClient.Click += new System.EventHandler(this.TSMItemDonorClient_Click);
@@ -1156,6 +1166,7 @@
         private System.Windows.Forms.ToolStripMenuItem TSMenuItemMainClient;
         private System.Windows.Forms.ToolStripMenuItem TSMItemDonorClient;
         private System.Windows.Forms.Button btnMerge;
+        private System.Windows.Forms.ToolStripMenuItem TSMItemConfigDbPrizm;
     }
 }
 

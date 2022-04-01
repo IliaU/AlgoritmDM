@@ -375,6 +375,7 @@ namespace AlgoritmDM.Com
 
                     // Подписываемся на события
                     Com.ProviderFarm.onEventSetup += new EventHandler<EventProviderFarm>(ProviderFarm_onEventSetup);
+                    Com.ProviderPrizmFarm.onEventSetup += new EventHandler<EventProviderPrizmFarm>(ProviderPrizmFarm_onEventSetup);
                     Com.UserFarm.List.onUserListAddedUser += new EventHandler<User>(List_onUserListAddedUser);
                     Com.UserFarm.List.onUserListDeletedUser += new EventHandler<User>(List_onUserListDeletedUser);
                     Com.UserFarm.List.onUserListUpdatedUser += new EventHandler<User>(List_onUserListUpdatedUser);
@@ -466,6 +467,8 @@ namespace AlgoritmDM.Com
                 xmlMain.SetAttribute("LogNotValidCustomer", _LogNotValidCustomer);
                 xmlMain.SetAttribute("PrvFullName", null);
                 xmlMain.SetAttribute("ConnectionString", "");
+                xmlMain.SetAttribute("PrvPrizmFullName", null);
+                xmlMain.SetAttribute("PrvPrizmConnectionString", "");
                 xmlMain.SetAttribute("CurrentConfigurationList", "Стандартная конфигурация.");
                 xmlMain.SetAttribute("CustomerCountryList", "1038,1225");
                 xmlMain.SetAttribute("CustomerPrefixPhoneList", "+7");
@@ -528,6 +531,8 @@ namespace AlgoritmDM.Com
                 // Получаем значения из заголовка
                 string PrvFullName = null;
                 string ConnectionString = null;
+                string PrvPrizmFullName = null;
+                string PrvPrizmConnectionString = null;
                 for (int i = 0; i < xmlRoot.Attributes.Count; i++)
                 {
                     if (xmlRoot.Attributes[i].Name == "Trace") try { _Trace = bool.Parse(xmlRoot.Attributes[i].Value.ToString()); }
@@ -537,6 +542,10 @@ namespace AlgoritmDM.Com
                     if (xmlRoot.Attributes[i].Name == "PrvFullName") PrvFullName = xmlRoot.Attributes[i].Value.ToString();
                     try { if (xmlRoot.Attributes[i].Name == "ConnectionString") ConnectionString = Com.Lic.DeCode(xmlRoot.Attributes[i].Value.ToString()); }
                     catch (Exception) { }
+                    if (xmlRoot.Attributes[i].Name == "PrvPrizmFullName") PrvPrizmFullName = xmlRoot.Attributes[i].Value.ToString();
+                    try { if (xmlRoot.Attributes[i].Name == "PrvPrizmConnectionString") PrvPrizmConnectionString = Com.Lic.DeCode(xmlRoot.Attributes[i].Value.ToString()); }
+                    catch (Exception) { }
+
                     if (xmlRoot.Attributes[i].Name == "CurrentConfigurationList") tmpCurrentConfigurationList = xmlRoot.Attributes[i].Value.ToString();
                     if (xmlRoot.Attributes[i].Name == "CustomerCountryList") _CustomerCountryList = xmlRoot.Attributes[i].Value.ToString();
                     if (xmlRoot.Attributes[i].Name == "CustomerPrefixPhoneList") _CustomerPrefixPhoneList = xmlRoot.Attributes[i].Value.ToString();
@@ -553,6 +562,13 @@ namespace AlgoritmDM.Com
                 try
                 {
                     Com.ProviderFarm.Setup(new UProvider(PrvFullName, ConnectionString), false);
+                }
+                catch (Exception) { }
+
+                // Подгружаем провайдер Prizm
+                try
+                {
+                    Com.ProviderPrizmFarm.SetupCurrentProvider(Com.ProviderPrizmFarm.CreateNewProviderPrizm(PrvPrizmFullName, PrvPrizmConnectionString));
                 }
                 catch (Exception) { }
 
@@ -823,6 +839,34 @@ namespace AlgoritmDM.Com
             {
                 ApplicationException ae = new ApplicationException("Упали при изменении файла конфигурации с ошибкой: " + ex.Message);
                 Log.EventSave(ae.Message, obj.GetType().Name + ".ProviderFarm_onEventSetup()", EventEn.Error);
+                throw ae;
+            }
+        }
+
+        // Событие изменения текщего провайдера Prizm
+        private void ProviderPrizmFarm_onEventSetup(object sender, EventProviderPrizmFarm e)
+        {
+            try
+            {
+                XmlElement root = Document.DocumentElement;
+
+                root.SetAttribute("PrvPrizmFullName", e.PrvPrizm.PlugInType);
+                try { root.SetAttribute("PrvPrizmConnectionString", Com.Lic.InCode(e.PrvPrizm.ConnectionString)); }
+                catch (Exception) { }
+
+
+
+                // Получаем список объектов
+                //foreach (XmlElement item in root.ChildNodes)
+                //{
+                //}
+
+                Save();
+            }
+            catch (Exception ex)
+            {
+                ApplicationException ae = new ApplicationException("Упали при изменении файла конфигурации с ошибкой: " + ex.Message);
+                Log.EventSave(ae.Message, obj.GetType().Name + ".ProviderPrizmFarm_onEventSetup()", EventEn.Error);
                 throw ae;
             }
         }
