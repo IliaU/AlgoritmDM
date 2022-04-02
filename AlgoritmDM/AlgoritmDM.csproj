@@ -229,6 +229,7 @@
     <Compile Include="Lib\DiscReason.cs" />
     <Compile Include="Lib\DiscReasonBase.cs" />
     <Compile Include="Lib\DiscReasonList.cs" />
+    <Compile Include="Lib\EnSourceType.cs" />
     <Compile Include="Lib\EventConfiguration.cs" />
     <Compile Include="Lib\EventConfigurationList.cs" />
     <Compile Include="Lib\EventConfigurationListAsicRez.cs" />

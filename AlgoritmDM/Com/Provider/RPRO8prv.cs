@@ -610,7 +610,7 @@ namespace AlgoritmDM.Com.Provider
                     // Создаём тестовый чеки и передаём их обработчику. Затем проверяем результат если всё ок то не выводим ошибку
                     if (FilCustSid == null || (long)FilCustSid == 1)
                     {
-                        nChk = new Check(100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12345", "Описание 1", "Описаине 2", "XXL", 42, ((long)1), 1, 4, ((long)12344224), 7, 7, 0);
+                        nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12345", "Описание 1", "Описаине 2", "XXL", 42, ((long)1), 1, 4, ((long)12344224), 7, 7, 0);
                         if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                         if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -620,7 +620,7 @@ namespace AlgoritmDM.Com.Provider
 
                     if (FilCustSid == null || (long)FilCustSid == 2)
                     {
-                        nChk = new Check(100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12346", "Описание t 1", "Описаине  2", "XLL", 43, ((long)2), 1, 4, ((long)12344224), 8, 8, 0);
+                        nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12346", "Описание t 1", "Описаине  2", "XLL", 43, ((long)2), 1, 4, ((long)12344224), 8, 8, 0);
                         if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                         if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -629,7 +629,7 @@ namespace AlgoritmDM.Com.Provider
 
                     if (FilCustSid == null || (long)FilCustSid == 2)
                     {
-                        nChk = new Check(100001,1, 1, 1, DateTime.Now.AddDays(-2), DateTime.Now.AddDays(-2), "12347", "Описание t 3", "Описаине  2", "XL", 44, ((long)2), 1, 4, ((long)12344224), 9, 9, 0);
+                        nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-2), DateTime.Now.AddDays(-2), "12347", "Описание t 3", "Описаине  2", "XL", 44, ((long)2), 1, 4, ((long)12344224), 9, 9, 0);
                         if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                         if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -638,7 +638,7 @@ namespace AlgoritmDM.Com.Provider
 
                     if (FilCustSid == null)
                     {
-                        nChk = new Check(100001,1, 1, 1, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "12347", "Описание t 3", "Описаине  2", "XL", 44, null, 1, 4, ((long)12344224), 6, 6, 0);
+                        nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "12347", "Описание t 3", "Описаине  2", "XL", 44, null, 1, 4, ((long)12344224), 6, 6, 0);
                         if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                         if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using AlgoritmDM.Lib;
+
 namespace AlgoritmDM.Com.Data
 {
     /// <summary>
@@ -10,6 +12,11 @@ namespace AlgoritmDM.Com.Data
     /// </summary>
     public class Check
     {
+        /// <summary>
+        /// Тип источника откуда пришли данные
+        /// </summary>
+        EnSourceType SourceType = EnSourceType.Retail;
+
         /// <summary>
         /// Сид чека
         /// </summary>
@@ -114,7 +121,8 @@ namespace AlgoritmDM.Com.Data
         /// <summary>
         /// Конструктор
         /// </summary>
-        /// <param name="InvcSid">SID чека</param>I
+        /// <param name="InvcSid">Тип источника откуда пришли данные</param>
+        /// <param name="InvcSid">SID чека</param>
         /// <param name="InvcType">Тип чека</param>
         /// <param name="InvcNo">Номер чека</param>
         /// <param name="ItemPos">Номер позиции в чеке</param>
@@ -132,8 +140,9 @@ namespace AlgoritmDM.Com.Data
         /// <param name="OrigPrice">Цена за единицу товара реальная по прайсу за еденицу товара</param>
         /// <param name="Price">Цена за единицу товара с учётом скидки</param>
         /// <param name="UsrDiscPerc">Процент скидки который получил пользователь по этой позиции. например OrigPrice/100*UsrDiscPerc получим Price.</param>
-        public Check(Int64 InvcSid, int InvcType, int InvcNo, int ItemPos, DateTime CreatedDate, DateTime PostDate, string Alu, string Description1, string Description2, string Siz, decimal Qty, long? CustSid, int StoreNo, long DiscReasonId, long ItemSid, decimal OrigPrice, decimal Price, decimal UsrDiscPerc)
+        public Check(EnSourceType SourceType, Int64 InvcSid, int InvcType, int InvcNo, int ItemPos, DateTime CreatedDate, DateTime PostDate, string Alu, string Description1, string Description2, string Siz, decimal Qty, long? CustSid, int StoreNo, long DiscReasonId, long ItemSid, decimal OrigPrice, decimal Price, decimal UsrDiscPerc)
         {
+            this.SourceType = SourceType;
             this.InvcSid = InvcSid;
             this.InvcType = InvcType;
             this.InvcNo = InvcNo;

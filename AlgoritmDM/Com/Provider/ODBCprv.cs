@@ -701,7 +701,7 @@ namespace AlgoritmDM.Com.Provider
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("USR_DISC_PERC").ToUpper()) tmpUsrDiscPerc = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                         }
-                                        Check nChk = new Check(tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
+                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
 
                                         // Запоминаем первую дату для коректной работы прогресс бара
                                         if (tmpFirstDate == null) tmpFirstDate = tmpCreatedDate;
@@ -1897,7 +1897,7 @@ where ADDR_NO=1
 
                                         }
 
-                                        Check nChk = new Check(tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
+                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
 
                                         // Запоминаем первую дату для коректной работы прогресс бара
                                         if (tmpFirstDate == null) tmpFirstDate = tmpCreatedDate;
@@ -2993,7 +2993,7 @@ where `seq_no`=1
                 // Создаём тестовый чеки и передаём их обработчику. Затем проверяем результат если всё ок то не выводим ошибку
                 if (FilCustSid == null || (long)FilCustSid == 1)
                 {
-                    nChk = new Check(10001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12345", "Описание 1", "Описаине 2", "XXL", 42, ((long)1), 1, 4, ((long)12344224), 7, 7, 0);
+                    nChk = new Check(EnSourceType.Retail, 10001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12345", "Описание 1", "Описаине 2", "XXL", 42, ((long)1), 1, 4, ((long)12344224), 7, 7, 0);
                     if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -3003,7 +3003,7 @@ where `seq_no`=1
 
                 if (FilCustSid == null || (long)FilCustSid == 2)
                 {
-                    nChk = new Check(100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12346", "Описание t 1", "Описаине  2", "XLL", 43, ((long)2), 1, 4, ((long)12344224), 8, 8, 0);
+                    nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-4), DateTime.Now.AddDays(-4), "12346", "Описание t 1", "Описаине  2", "XLL", 43, ((long)2), 1, 4, ((long)12344224), 8, 8, 0);
                     if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -3012,7 +3012,7 @@ where `seq_no`=1
 
                 if (FilCustSid == null || (long)FilCustSid == 2)
                 {
-                    nChk = new Check(100001, 1, 1, 1, DateTime.Now.AddDays(-2), DateTime.Now.AddDays(-2), "12347", "Описание t 3", "Описаине  2", "XL", 44, ((long)2), 1, 4, ((long)12344224), 9, 9, 0);
+                    nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-2), DateTime.Now.AddDays(-2), "12347", "Описание t 3", "Описаине  2", "XL", 44, ((long)2), 1, 4, ((long)12344224), 9, 9, 0);
                     if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
@@ -3021,7 +3021,7 @@ where `seq_no`=1
 
                 if (FilCustSid == null)
                 {
-                    nChk = new Check(100001, 1, 1, 1, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "12347", "Описание t 3", "Описаине  2", "XL", 44, null, 1, 4, ((long)12344224), 6, 6, 0);
+                    nChk = new Check(EnSourceType.Retail, 100001, 1, 1, 1, DateTime.Now.AddDays(-1), DateTime.Now.AddDays(-1), "12347", "Описание t 3", "Описаине  2", "XL", 44, null, 1, 4, ((long)12344224), 6, 6, 0);
                     if (rez && FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, FirstDate);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи чека продукт {0} обработчику Func<Check, ConfigurationList, int, bool>", nChk.ItemSid));
 
