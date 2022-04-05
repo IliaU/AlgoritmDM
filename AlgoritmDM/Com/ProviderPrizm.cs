@@ -50,5 +50,15 @@ namespace AlgoritmDM.Com
         {
             throw new ApplicationException("Не реализован метод TestConnection");
         }
+
+        /// <summary>
+        /// Выкачивание чеков
+        /// </summary>
+        /// <param name="FilCustSid">Фильтр для получения данных по конкретному клиенту. null значит пользователь выгребает по всем клиентам</param>
+        /// <returns>Список чеков из второго источника</returns>
+        public virtual List<Com.Data.Check> GetCheck(long? FilCustSid)
+        {
+            throw new ApplicationException("Не реализован метод GetCheck");
+        }
     }
 }

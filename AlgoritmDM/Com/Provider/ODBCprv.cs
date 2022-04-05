@@ -586,9 +586,19 @@ namespace AlgoritmDM.Com.Provider
         /// <returns>Успех обработки функции</returns>
         private bool getCheckORA(Func<Check, ConfigurationList, int, DateTime?, bool> FuncTarget, ConfigurationList CnfL, int NextScenary, DateTime? FirstDate, long? FilCustSid)
         {
+            // Если есть второе подключние то нужно получить все данные из второго подключения
+            List<Check> CheckPrizm = null;
+            if (Com.Lic.HashConnectPrizm && Com.ProviderPrizmFarm.CurProviderPrizm!=null)
+            {
+                CheckPrizm = Com.ProviderPrizmFarm.CurProviderPrizm.GetCheck(FilCustSid);
+            }
+            if (CheckPrizm == null) CheckPrizm = new List<Check>();
+            int indexCheckPrizm = (CheckPrizm.Count > 0 ? 0 :- 1);     // Это индекс в нашем списке для того чтобы обоготить инфу из первого источника
+
+            DateTime? tmpFirstDate = null;
+
             // Вне зависимости есть чеки или нет, для тех у кого есть бонусы которые должны примениться спустя указанные период, они должны примениться
             this.setApplayNextStoreCgreditORA();
-
 
             string CommandSql = @"select i.INVC_SID, i.invc_type, i.invc_no, ii.Item_Pos, i.created_date, i.post_date, inv.alu, inv.description1, inv.DESCRIPTION2,
         inv.siz, To_Char(ii.QTY) QTY, i.cust_sid, i.STORE_NO, i.disc_reason_id, ii.ITEM_SID, To_Char(ii.ORIG_PRICE) ORIG_PRICE, To_Char(ii.PRICE) PRICE, To_Char(ii.USR_DISC_PERC) USR_DISC_PERC
@@ -654,8 +664,6 @@ namespace AlgoritmDM.Com.Provider
                                 //}
 
 
-                                DateTime? tmpFirstDate = null;
-
                                 // пробегаем по строкам
                                 while (dr.Read())
                                 {
@@ -701,11 +709,27 @@ namespace AlgoritmDM.Com.Provider
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("USR_DISC_PERC").ToUpper()) tmpUsrDiscPerc = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                         }
-                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
 
                                         // Запоминаем первую дату для коректной работы прогресс бара
                                         if (tmpFirstDate == null) tmpFirstDate = tmpCreatedDate;
 
+                                        // Если у нас включена выкачка данных из второго источника если это функция включена
+                                        if (indexCheckPrizm >= 0)
+                                        {
+                                            // Если в призме есть чеки раньше текущего но по индексу ещё не передавались
+                                            while (CheckPrizm[indexCheckPrizm].PostDate<=tmpPostDate && indexCheckPrizm < CheckPrizm.Count)
+                                            {
+                                                // Создаём чек который передаём из Prizm
+                                                Check nChkPrizm = CheckPrizm[indexCheckPrizm];
+                                                // Передаём добытый чек обработчику
+                                                if (FuncTarget != null) rez = FuncTarget(nChkPrizm, CnfL, NextScenary, tmpFirstDate);
+                                                // счётчик крутим чтобы потом повторно не передавать чек попризму
+                                                indexCheckPrizm++;
+                                            }
+                                        }
+
+                                        // Создаём чек который передаём
+                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
                                         // Передаём добытый чек обработчику
                                         if (FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, tmpFirstDate);
 
@@ -734,6 +758,24 @@ namespace AlgoritmDM.Com.Provider
                                 }
                             }
                         }
+                    }
+                }
+
+                // Если у нас включена выкачка данных из второго источника если это функция включена
+                if (indexCheckPrizm >= 0)
+                {
+                    // Если в призме есть чеки раньше текущего но по индексу ещё не передавались
+                    while (indexCheckPrizm < CheckPrizm.Count)
+                    {
+                        // Запоминаем первую дату для коректной работы прогресс бара
+                        if (tmpFirstDate == null) tmpFirstDate = CheckPrizm[indexCheckPrizm].CreatedDate;
+
+                        // Создаём чек который передаём из Prizm
+                        Check nChkPrizm = CheckPrizm[indexCheckPrizm];
+                        // Передаём добытый чек обработчику
+                        if (FuncTarget != null) rez = FuncTarget(nChkPrizm, CnfL, NextScenary, tmpFirstDate);
+                        // счётчик крутим чтобы потом повторно не передавать чек попризму
+                        indexCheckPrizm++;
                     }
                 }
 
