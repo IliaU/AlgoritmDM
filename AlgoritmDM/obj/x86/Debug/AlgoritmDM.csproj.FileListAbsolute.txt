@@ -161,3 +161,30 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x8
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.Cache
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetupPrizm.resources
 C:\Users\User\Documents\Visual Studio 2015\Projects\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.PlgProviderPrizm.ODBC.FSetupConnectDB.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe.config
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.exe
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\bin\Debug\AlgoritmDM.pdb
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csprojAssemblyReference.cache
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.PlgProviderPrizm.ODBC.FSetupConnectDB.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FInfo.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.ODBC.FSetupConnectDB.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Provider.RPRO8.FSetupConnectDB.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FConfig.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.BonusDM.FInfo.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FConfig.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Com.Scenariy.NakopDM.FInfo.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetup.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FConnetSetupPrizm.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FCustDetail.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLogon.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FLic.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FMerge.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FPar.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FScenary.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FUsers.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.Properties.Resources.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.FStart.resources
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.GenerateResource.cache
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.csproj.CoreCompileInputs.cache
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.exe
+C:\Users\iliaP\source\GIT\AlgoritmDM\AlgoritmDM\obj\x86\Debug\AlgoritmDM.pdb

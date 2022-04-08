@@ -193,8 +193,14 @@ namespace AlgoritmDM.Com.PlgProviderPrizm
                 bool rez = false;
                 using (ODBC.FSetupConnectDB Frm = new ODBC.FSetupConnectDB(this))
                 {
-                    DialogResult Drez = Frm.ShowDialog();
-                    if (Drez == DialogResult.OK) rez = true;
+                    DialogResult drez = Frm.ShowDialog();
+
+                    // Если пользователь сохраняет новую строку подключения то сохраняем её в нашем объекте
+                    if (drez == DialogResult.Yes)
+                    {
+                        base.SetupConnectionStringAndVersionDB(Frm.ConnectionString, this.ServerVersion, this.DriverOdbc);
+                        rez = true;
+                    }
                 }
                 return rez;
             }

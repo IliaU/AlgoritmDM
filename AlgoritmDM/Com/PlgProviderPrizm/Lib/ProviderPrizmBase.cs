@@ -80,5 +80,17 @@ namespace AlgoritmDM.Com.PlgProviderPrizm.Lib
             }
         }
 
+        /// <summary>
+        /// Установка строки подключения
+        /// </summary>
+        /// <param name="ConnectionString">Строка подключения</param>
+        /// <param name="VersionDB">Возвращает версию базы данных в виде строки</param>
+        /// <param name="Driver">Возвращаем версию драйвера</param>
+        protected void SetupConnectionStringAndVersionDB(string ConnectionString, string VersionDB, string Driver)
+        {
+            this.ConnectionString = ConnectionString;
+            this.VersionDB = VersionDB;
+            this.Driver = Driver;
+        }
     }
 }

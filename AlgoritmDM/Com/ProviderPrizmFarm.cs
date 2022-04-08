@@ -163,6 +163,9 @@ namespace AlgoritmDM.Com
 
             ProviderPrizm rez = null;
 
+            // Если не задан тип провайдера для призма то передаём null
+            if (string.IsNullOrEmpty(PlugInType)) return rez;
+
             // Проверяем наличие существование этого типа документа
             foreach (string item in ListProviderPrizmName)
             {
@@ -198,7 +201,7 @@ namespace AlgoritmDM.Com
 
                 // Логируем изменение подключения
                 CurProviderPrizm = PrvPrizm;
-                Log.EventSave(string.Format("Пользователь настроил новое подключениe Prizm: {0} ({1})", PrvPrizm.PrintConnectionString(), PrvPrizm.PlugInType), "ProviderPrizmFarm.SetupCurrentProvider", EventEn.Message, true, false);
+                if (PrvPrizm!=null) Log.EventSave(string.Format("Пользователь настроил новое подключениe Prizm: {0} ({1})", PrvPrizm.PrintConnectionString(), PrvPrizm.PlugInType), "ProviderPrizmFarm.SetupCurrentProvider", EventEn.Message, true, false);
             }
             catch (Exception ex)
             {
