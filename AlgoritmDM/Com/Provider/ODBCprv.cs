@@ -975,9 +975,12 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
                                 //rez.Columns.Add(ncol);
                                 //}
 
+                                int uuu = 0;
                                 // пробегаем по строкам
                                 while (dr.Read())
                                 {
+                                    uuu++;
+                                    if (uuu > 1000) break;
 
                                     long tmpCustSid = -1;
                                     string tmpFirstName = null;
@@ -1015,7 +1018,7 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
                                         try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ACTIVE").ToUpper()) Active = int.Parse(dr.GetValue(i).ToString()); }
                                         catch { }
                                     }
-                                    Customer nCust = new Customer(tmpCustSid, tmpFirstName, tmpLastName, tmpCustId, tmpMaxDiscPerc, tmpStoreCredit, tmpScPerc, tmpPhone1, tmpAddress1, tmpFstSaleDate, tmpLstSaleDate, tmpEmailAddr, Active);
+                                    Customer nCust = new Customer(EnSourceType.Retail, tmpCustSid, 0, tmpFirstName, tmpLastName, tmpCustId, tmpMaxDiscPerc, tmpStoreCredit, tmpScPerc, tmpPhone1, tmpAddress1, tmpFstSaleDate, tmpLstSaleDate, tmpEmailAddr, Active);
 
                                     if (nCust.CustSid == -3834734573147189252)
                                     { }
@@ -1057,6 +1060,21 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")
                             }
                         }
                     }
+                }
+
+
+                // Если есть второе подключние то нужно получить все данные из второго подключения
+                List<Customer> nCustPrizm = null;
+                if (Com.Lic.HashConnectPrizm && Com.ProviderPrizmFarm.CurProviderPrizm != null)
+                {
+                    //nCustPrizm = Com.ProviderPrizmFarm.CurProviderPrizm.GetCustumers();
+                }
+                if (nCustPrizm == null) nCustPrizm = new List<Customer>();
+                //
+                foreach (Customer item in nCustPrizm)
+                {
+                     // Тут надо сделать проверки и если такого пользователя ещё нет то добавить его а может этого и не надо делать может просто сохранить в отдельном месте если есть копия либо второй идентификатор чтобы можно было понять какого пользователяобновлять
+                     FuncTarget(item);
                 }
 
                 return rez;
@@ -2220,7 +2238,7 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")
                                         try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("ACTIVE").ToUpper()) Active = dr.GetInt32(i); }
                                         catch { }
                                     }
-                                    Customer nCust = new Customer(tmpCustSid, tmpFirstName, tmpLastName, tmpCustId, tmpMaxDiscPerc, tmpStoreCredit, tmpScPerc, tmpPhone1, tmpAddress1, tmpFstSaleDate, tmpLstSaleDate, tmpEmailAddr, Active);
+                                    Customer nCust = new Customer(EnSourceType.Retail, tmpCustSid, 0, tmpFirstName, tmpLastName, tmpCustId, tmpMaxDiscPerc, tmpStoreCredit, tmpScPerc, tmpPhone1, tmpAddress1, tmpFstSaleDate, tmpLstSaleDate, tmpEmailAddr, Active);
 
                                     if (nCust.CustSid == 2959986429882994684)
                                     { }
@@ -3094,11 +3112,11 @@ where `seq_no`=1
                 Customer nCust = null;
 
                 // Создаём тестового пользователя и передаём его обработчику. Затем проверяем результат если всё ок то не выводим ошибку
-                nCust = new Customer(1, "Илья Михайлович", "Погодин", "100001", 5, 100, 0, "9163253757", "Москва...", DateTime.Now, null, "ilia82@mail.ru", 1);
+                nCust = new Customer(EnSourceType.Retail, 1, 0, "Илья Михайлович", "Погодин", "100001", 5, 100, 0, "9163253757", "Москва...", DateTime.Now, null, "ilia82@mail.ru", 1);
                 if (rez && FuncTarget != null) rez = FuncTarget(nCust);
                 if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи пользователя сид {0} обработчику Func<Customer, bool>", nCust.CustSid));
                 //
-                nCust = new Customer(2, "Константин", "Чудаков", "100002", 3, 50, 0, "91632", "Москва...", null, null, null, 1);
+                nCust = new Customer(EnSourceType.Retail, 2, 0, "Константин", "Чудаков", "100002", 3, 50, 0, "91632", "Москва...", null, null, null, 1);
                 if (rez && FuncTarget != null) rez = FuncTarget(nCust);
                 if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи пользователя сид {0} обработчику Func<Customer, bool>", nCust.CustSid));
 

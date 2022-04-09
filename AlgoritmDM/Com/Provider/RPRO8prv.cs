@@ -466,7 +466,7 @@ namespace AlgoritmDM.Com.Provider
                             if (CustSid != 0)
                             {
                                 // Создаём тестового пользователя и передаём его обработчику. Затем проверяем результат если всё ок то не выводим ошибку
-                                Customer nCust = new Customer((long)CustSid, LastName, FirstName, (CustId == null ? null : ((long)CustId).ToString()), (MaxDiscPerc == null ? 0 : (decimal)MaxDiscPerc), (StoreCredit == null ? 0 : (decimal)StoreCredit), (ScPerc == null ? 0 : (decimal)ScPerc), Phone1, Address1, null, LastSaleDate, EmailAddr, 1);
+                                Customer nCust = new Customer(EnSourceType.Retail, (long)CustSid, 0, LastName, FirstName, (CustId == null ? null : ((long)CustId).ToString()), (MaxDiscPerc == null ? 0 : (decimal)MaxDiscPerc), (StoreCredit == null ? 0 : (decimal)StoreCredit), (ScPerc == null ? 0 : (decimal)ScPerc), Phone1, Address1, null, LastSaleDate, EmailAddr, 1);
                                 if (rez && FuncTarget != null) rez = FuncTarget(nCust);
                                 if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи пользователя сид {0} обработчику Func<Customer, bool>", nCust.CustSid));
                             }
@@ -669,11 +669,11 @@ namespace AlgoritmDM.Com.Provider
                     Customer nCust = null;
 
                     // Создаём тестового пользователя и передаём его обработчику. Затем проверяем результат если всё ок то не выводим ошибку
-                    nCust = new Customer(1, "Илья Михайлович", "Погодин", "100001", 5, 100, 0, "9163253757", "Москва...", DateTime.Now, null, "ilia82@mail.ru", 1);
+                    nCust = new Customer(EnSourceType.Retail, 1, 0, "Илья Михайлович", "Погодин", "100001", 5, 100, 0, "9163253757", "Москва...", DateTime.Now, null, "ilia82@mail.ru", 1);
                     if (rez && FuncTarget != null) rez = FuncTarget(nCust);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи пользователя сид {0} обработчику Func<Customer, bool>", nCust.CustSid));
                     //
-                    nCust = new Customer(2, "Константин", "Чудаков", "100002", 3, 50, 0, "91632", "Москва...", null, null, null, 1);
+                    nCust = new Customer(EnSourceType.Retail, 2, 0, "Константин", "Чудаков", "100002", 3, 50, 0, "91632", "Москва...", null, null, null, 1);
                     if (rez && FuncTarget != null) rez = FuncTarget(nCust);
                     if (!rez) throw new ApplicationException(string.Format("Нет смысла продолжать дальше упали при попытке передачи пользователя сид {0} обработчику Func<Customer, bool>", nCust.CustSid));
 

@@ -22,9 +22,19 @@ namespace AlgoritmDM.Com.Data.Lib
         public int Index { get; private set; }
 
         /// <summary>
+        /// Тип источника откуда пришли данные
+        /// </summary>
+        EnSourceType SourceType = EnSourceType.Retail;
+
+        /// <summary>
         /// Id покупателя
         /// </summary>
         public long CustSid;
+
+        /// <summary>
+        /// Id покупателя из второй базы типа Prizm
+        /// </summary>
+        public long CustSidPrizm;
 
         /// <summary>
         /// Имя Отчество
@@ -118,7 +128,9 @@ namespace AlgoritmDM.Com.Data.Lib
         /// <summary>
         /// Инициализация базовых объектов
         /// </summary>
+        /// <param name="SourceType">Тип источника откуда пришли данные</param>
         /// <param name="CustSid">Id покупателя</param>
+        /// <param name="CustSidPrizm">Id покупателя из второй базы типа Prizm</param>
         /// <param name="FirstName">Имя Отчество</param>
         /// <param name="LastName">Фамилия</param>
         /// <param name="CustId">Номер карты</param>
@@ -131,9 +143,11 @@ namespace AlgoritmDM.Com.Data.Lib
         /// <param name="LstSaleDate">Последняя покупка</param>
         /// <param name="EmailAddr">Электронная почта</param>
         /// <param name="Active">Активность клиента</param>
-        protected void InitBaseObject(long CustSid, string FirstName, string LastName, string CustId, decimal MaxDiscPerc, decimal StoreCredit, decimal ScPerc, string Phone1, string Address1, DateTime? FstSaleDate, DateTime? LstSaleDate, string EmailAddr, int Active)
+        protected void InitBaseObject(EnSourceType SourceType, long CustSid, long CustSidPrizm, string FirstName, string LastName, string CustId, decimal MaxDiscPerc, decimal StoreCredit, decimal ScPerc, string Phone1, string Address1, DateTime? FstSaleDate, DateTime? LstSaleDate, string EmailAddr, int Active)
         {
+            this.SourceType = SourceType;
             this.CustSid = CustSid;
+            this.CustSidPrizm = CustSidPrizm;
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.CustId = CustId;

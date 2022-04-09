@@ -121,7 +121,7 @@ namespace AlgoritmDM.Com.Data
         /// <summary>
         /// Конструктор
         /// </summary>
-        /// <param name="InvcSid">Тип источника откуда пришли данные</param>
+        /// <param name="SourceType">Тип источника откуда пришли данные</param>
         /// <param name="InvcSid">SID чека</param>
         /// <param name="InvcType">Тип чека</param>
         /// <param name="InvcNo">Номер чека</param>

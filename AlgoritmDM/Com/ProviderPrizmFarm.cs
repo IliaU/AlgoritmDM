@@ -120,7 +120,6 @@ namespace AlgoritmDM.Com
             return ListProviderPrizmName;
         }
 
-
         /// <summary>
         /// Создание пустого ProviderPrizm
         /// </summary>
@@ -200,6 +199,7 @@ namespace AlgoritmDM.Com
                 }
 
                 // Логируем изменение подключения
+                PrvPrizm.TestConnection(PrvPrizm.ConnectionString, false);
                 CurProviderPrizm = PrvPrizm;
                 if (PrvPrizm!=null) Log.EventSave(string.Format("Пользователь настроил новое подключениe Prizm: {0} ({1})", PrvPrizm.PrintConnectionString(), PrvPrizm.PlugInType), "ProviderPrizmFarm.SetupCurrentProvider", EventEn.Message, true, false);
             }

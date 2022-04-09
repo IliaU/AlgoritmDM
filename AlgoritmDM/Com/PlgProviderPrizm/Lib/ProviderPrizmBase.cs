@@ -37,7 +37,7 @@ namespace AlgoritmDM.Com.PlgProviderPrizm.Lib
         /// <summary>
         /// Возвращаем версию драйвера
         /// </summary>
-        public string Driver { get; private set; }
+        public string Driver { get; protected set; }
 
         /// <summary>
         /// Конструктор

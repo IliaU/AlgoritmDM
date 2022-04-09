@@ -45,6 +45,19 @@ namespace AlgoritmDM.Com
         /// Проверка валидности подключения
         /// </summary>
         /// <param name="ConnectionString">Строка подключения которую нужно проверить</param>
+        /// <param name="VisibleError">Обрабатывать ошибки или нет</param>
+        /// <param name="Save">Сохранить результаты проверки в текущем провайдере или нет</param>
+        /// <returns>Возврощает результат проверки</returns>
+        public virtual bool TestConnection(string ConnectionString, bool VisibleError, bool Save)
+        {
+            throw new ApplicationException("Не реализован метод TestConnection");
+        }
+
+        /// <summary>
+        /// Проверка валидности подключения
+        /// </summary>
+        /// <param name="ConnectionString">Строка подключения которую нужно проверить</param>
+        /// <param name="VisibleError">Обрабатывать ошибки или нет</param>
         /// <returns>Возврощает результат проверки</returns>
         public virtual bool TestConnection(string ConnectionString, bool VisibleError)
         {
@@ -59,6 +72,16 @@ namespace AlgoritmDM.Com
         public virtual List<Com.Data.Check> GetCheck(long? FilCustSid)
         {
             throw new ApplicationException("Не реализован метод GetCheck");
+        }
+
+        /// <summary>
+        /// Заполнение справочника текущих пользователей
+        /// </summary>
+        /// <param name="FuncTarget">Функция котороая юудет заполнять справочник</param>
+        /// <returns>Успех обработки функции</returns>
+        public virtual List<Com.Data.Customer> GetCustumers()
+        {
+            throw new ApplicationException("Не реализован метод GetCustumers");
         }
     }
 }
