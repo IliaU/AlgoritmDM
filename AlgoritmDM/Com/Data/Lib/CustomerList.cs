@@ -306,6 +306,9 @@ namespace AlgoritmDM.Com.Data.Lib
                     base.Clear(true);
                 }
 
+                // Обновление данных в списке пользователей
+                if (Com.ProviderPrizmFarm.CurProviderPrizm != null) Com.ProviderPrizmFarm.CurProviderPrizm.UpdateCustomerDefaultCallOffSc();
+
                 // Создаём объект для доступа к интерфейсу ProviderTransferI
                 UProvider.Transfer TrfSource = new UProvider.Transfer(Com.ProviderFarm.CurrentPrv, this);
                 Func<Customer, bool> FuncTarget = TransferCustomers;

@@ -586,17 +586,6 @@ namespace AlgoritmDM.Com.Provider
         /// <returns>Успех обработки функции</returns>
         private bool getCheckORA(Func<Check, ConfigurationList, int, DateTime?, bool> FuncTarget, ConfigurationList CnfL, int NextScenary, DateTime? FirstDate, long? FilCustSid)
         {
-            // Если есть второе подключние то нужно получить все данные из второго подключения
-            List<Check> CheckPrizm = null;
-            if (Com.Lic.HashConnectPrizm && Com.ProviderPrizmFarm.CurProviderPrizm!=null)
-            {
-                CheckPrizm = Com.ProviderPrizmFarm.CurProviderPrizm.GetCheck(FilCustSid);
-            }
-            if (CheckPrizm == null) CheckPrizm = new List<Check>();
-            int indexCheckPrizm = (CheckPrizm.Count > 0 ? 0 :- 1);     // Это индекс в нашем списке для того чтобы обоготить инфу из первого источника
-
-            DateTime? tmpFirstDate = null;
-
             // Вне зависимости есть чеки или нет, для тех у кого есть бонусы которые должны примениться спустя указанные период, они должны примениться
             this.setApplayNextStoreCgreditORA();
 
@@ -663,6 +652,7 @@ namespace AlgoritmDM.Com.Provider
                                 //rez.Columns.Add(ncol);
                                 //}
 
+                                DateTime? tmpFirstDate = null;
 
                                 // пробегаем по строкам
                                 while (dr.Read())
@@ -709,27 +699,11 @@ namespace AlgoritmDM.Com.Provider
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("PRICE").ToUpper()) tmpPrice = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("USR_DISC_PERC").ToUpper()) tmpUsrDiscPerc = decimal.Parse(dr.GetValue(i).ToString().Replace(".", Com.Config.TekDelitel).Replace(",", Com.Config.TekDelitel));
                                         }
+                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
 
                                         // Запоминаем первую дату для коректной работы прогресс бара
                                         if (tmpFirstDate == null) tmpFirstDate = tmpCreatedDate;
 
-                                        // Если у нас включена выкачка данных из второго источника если это функция включена
-                                        if (indexCheckPrizm >= 0)
-                                        {
-                                            // Если в призме есть чеки раньше текущего но по индексу ещё не передавались
-                                            while (CheckPrizm[indexCheckPrizm].PostDate<=tmpPostDate && indexCheckPrizm < CheckPrizm.Count)
-                                            {
-                                                // Создаём чек который передаём из Prizm
-                                                Check nChkPrizm = CheckPrizm[indexCheckPrizm];
-                                                // Передаём добытый чек обработчику
-                                                if (FuncTarget != null) rez = FuncTarget(nChkPrizm, CnfL, NextScenary, tmpFirstDate);
-                                                // счётчик крутим чтобы потом повторно не передавать чек попризму
-                                                indexCheckPrizm++;
-                                            }
-                                        }
-
-                                        // Создаём чек который передаём
-                                        Check nChk = new Check(EnSourceType.Retail, tmpInvcSid, tmpInvcType, tmpInvcNo, tmpItemPos, tmpCreatedDate, tmpPostDate, tmpAlu, tmpDescription1, tmpDescription2, tmpSiz, tmpQty, tmpCustSid, tmpStoreNo, tmpDiscReasonId, tmpItemSid, tmpOrigPrice, tmpPrice, tmpUsrDiscPerc);
                                         // Передаём добытый чек обработчику
                                         if (FuncTarget != null) rez = FuncTarget(nChk, CnfL, NextScenary, tmpFirstDate);
 
@@ -758,24 +732,6 @@ namespace AlgoritmDM.Com.Provider
                                 }
                             }
                         }
-                    }
-                }
-
-                // Если у нас включена выкачка данных из второго источника если это функция включена
-                if (indexCheckPrizm >= 0)
-                {
-                    // Если в призме есть чеки раньше текущего но по индексу ещё не передавались
-                    while (indexCheckPrizm < CheckPrizm.Count)
-                    {
-                        // Запоминаем первую дату для коректной работы прогресс бара
-                        if (tmpFirstDate == null) tmpFirstDate = CheckPrizm[indexCheckPrizm].CreatedDate;
-
-                        // Создаём чек который передаём из Prizm
-                        Check nChkPrizm = CheckPrizm[indexCheckPrizm];
-                        // Передаём добытый чек обработчику
-                        if (FuncTarget != null) rez = FuncTarget(nChkPrizm, CnfL, NextScenary, tmpFirstDate);
-                        // счётчик крутим чтобы потом повторно не передавать чек попризму
-                        indexCheckPrizm++;
                     }
                 }
 
@@ -2118,7 +2074,7 @@ Where (CUST_SID={0} and POST_DATE>STR_TO_DATE('{1}','%d.%m.%Y'))
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit`+p.call_off_sc_def STORE_CREDIT,
   ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
@@ -2128,7 +2084,7 @@ from `rpsods`.`customer` s
                 }
                 else
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit`+p.call_off_sc_def STORE_CREDIT,
   ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
@@ -2143,7 +2099,7 @@ Where ap.`phone_no` like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit`+p.call_off_sc_def STORE_CREDIT,
   ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
@@ -2154,7 +2110,7 @@ Where coalesce(a.`country_sid`,0) in (" + Com.Config.CustomerCountryList + @")";
                 }
                 else
                 {
-                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit` STORE_CREDIT,
+                    CommandSql = @"select s.sid As cust_sid, s.first_name, s.last_name, s.cust_id, s.`max_disc_perc` MAX_DISC_PERC, s.`store_credit`+p.call_off_sc_def STORE_CREDIT,
   ap.`phone_no` As phone, a.`address_1` As address1, s.`first_sale_date` As FST_SALE_DATE, s.`last_sale_date` As lst_sale_date, ae.`email_address` As EMAIL_ADDR, p.SC_PERC
 from `rpsods`.`customer` s
     left join `rpsods`.`customer_address` a on s.sid=a.cust_sid and a.seq_no=1
@@ -2653,7 +2609,6 @@ Values({0},'{1}','{2}','{3}')", Cst.CustSid, Cst.FirstName.Replace("'", "''"), C
             }
         }
 
-
         /// <summary>
         /// Объединение клиентов
         /// </summary>
@@ -2805,7 +2760,6 @@ where `seq_no`=1
             }
 
         }
-
 
         /// <summary>
         /// Установка расчитанной скидки в базе у конкртеного клиента

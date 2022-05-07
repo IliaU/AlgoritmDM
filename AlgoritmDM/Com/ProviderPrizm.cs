@@ -65,23 +65,11 @@ namespace AlgoritmDM.Com
         }
 
         /// <summary>
-        /// Выкачивание чеков
+        /// Обновление в списке пользователей значений дефолтных для подтягивания данных из второй типа призм
         /// </summary>
-        /// <param name="FilCustSid">Фильтр для получения данных по конкретному клиенту. null значит пользователь выгребает по всем клиентам</param>
-        /// <returns>Список чеков из второго источника</returns>
-        public virtual List<Com.Data.Check> GetCheck(long? FilCustSid)
+        public virtual void UpdateCustomerDefaultCallOffSc()
         {
-            throw new ApplicationException("Не реализован метод GetCheck");
-        }
-
-        /// <summary>
-        /// Заполнение справочника текущих пользователей
-        /// </summary>
-        /// <param name="FuncTarget">Функция котороая юудет заполнять справочник</param>
-        /// <returns>Успех обработки функции</returns>
-        public virtual List<Com.Data.Customer> GetCustumers()
-        {
-            throw new ApplicationException("Не реализован метод GetCustumers");
+            throw new ApplicationException("Не реализован метод UpdateCustomerDefaultCallOffSc");
         }
     }
 }
