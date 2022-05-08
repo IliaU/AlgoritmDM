@@ -289,6 +289,16 @@ namespace AlgoritmDM.Lib
         }
 
         /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        public void SetCustomerDefaultCallOffSc(long CustSid, decimal DefaultCallOffSc)
+        {
+            this.PrvI.SetCustomerDefaultCallOffSc(CustSid, DefaultCallOffSc);
+        }
+
+        /// <summary>
         /// Класс для выкачивания или закачивания денных из провайдера
         /// </summary>
         public sealed class Transfer
@@ -347,6 +357,7 @@ namespace AlgoritmDM.Lib
                 this.DscReasL = null;
             }
         }
+
 
         /// <summary>
         /// Класс для выкачивания детелей по чекам по конкретному клиенту

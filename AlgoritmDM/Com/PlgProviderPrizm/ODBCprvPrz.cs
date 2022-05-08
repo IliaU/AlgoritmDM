@@ -306,6 +306,9 @@ namespace AlgoritmDM.Com.PlgProviderPrizm
                                             try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("MAX_DISC_PERC").ToUpper()) tmpCallOffSc = dr.GetDecimal(i); }
                                             catch { }
                                         }
+
+                                        // Установка значения по умолчанию в клиента для того чтобы учесть бонусы от призма
+                                        Com.ProviderFarm.CurrentPrv.SetCustomerDefaultCallOffSc(tmpCustSid, tmpCallOffSc);
                                     }
                                 }
                             }

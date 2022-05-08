@@ -504,6 +504,49 @@ namespace AlgoritmDM.Com.Provider
             }
         }
 
+        /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        public void SetCustomerDefaultCallOffSc(long CustSid, decimal DefaultCallOffSc)
+        {
+            try
+            {
+                // Если мы работаем в режиме без базы то выводим тестовые записи
+                if (Com.Config.Mode == ModeEn.NotDB) return;
+                else if (Com.Config.Mode == ModeEn.NotData && this.HashConnect()) { this.SetCustomerDefaultCallOffScNotDB(CustSid, DefaultCallOffSc); return; }
+                else if (Com.Config.Mode == ModeEn.NotData && !this.HashConnect()) throw new ApplicationException("Не установлено подключение с базой данных.");
+                else
+                {
+                    if (!base.HashConnect() && Com.Config.Mode != ModeEn.NotDB) new ApplicationException("Нет подключение к базе данных." + this.Driver);
+
+                    // Проверка типа трайвера мы не можем обрабатьывать любой тип у каждого типа могут быть свои особенности
+                    switch (this.Driver)
+                    {
+                        case "SQORA32.DLL":
+                        case "SQORA64.DLL":
+                            SetCustomerDefaultCallOffScORA(CustSid, DefaultCallOffSc);
+                            break;
+                        case "myodbc8a.dll":
+                        case "myodbc8w.dll":
+                            SetCustomerDefaultCallOffScMySql(CustSid, DefaultCallOffSc);
+                            break;
+                        default:
+                            throw new ApplicationException("Извините. Мы не умеем работать с драйвером: " + this.Driver);
+                            //break;
+                    }
+                }
+                //return true;
+            }
+            catch (Exception ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при получении данных с источника. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffSc", EventEn.Error);
+                //if (Com.Config.Trace) base.EventSave(SQL, GetType().Name + ".setData", EventEn.Dump);
+                throw;
+            }
+        }
+
         #endregion
 
         #region Private metod
@@ -1771,6 +1814,57 @@ where ADDR_NO=1
             return rez;
         }
 
+        /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        private void SetCustomerDefaultCallOffScORA(long CustSid, decimal DefaultCallOffSc)
+        {
+            //bool rez = false;
+            string CommandSql = string.Format("Update AKS.CUST_SC_PARAM Set CALL_OFF_SC_DEF={1} Where cust_sid={0}", CustSid.ToString().Replace(",", "."), DefaultCallOffSc.ToString().Replace(",", "."));
+
+            try
+            {
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScORA", EventEn.Dump);
+
+                // Закрывать конект не нужно он будет закрыт деструктором
+                using (OdbcConnection con = new OdbcConnection(base.ConnectionString))
+                {
+                    con.Open();
+
+                    using (OdbcCommand com = new OdbcCommand(CommandSql, con))
+                    {
+                        com.CommandTimeout = 900;  // 15 минут
+                        int dr = com.ExecuteNonQuery();
+
+                        /*
+                        // Проверяем кол-во обновлённых строк
+                        if (dr > 0)
+                        {
+                            //rez = true;
+                        }
+                        else
+                        {
+                            throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
+                        }*/
+                    }
+                }
+            }
+            catch (OdbcException ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScORA", EventEn.Error);
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScORA", EventEn.Dump);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScORA", EventEn.Error);
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScORA", EventEn.Dump);
+                throw;
+            }
+        }
+
         #endregion
 
         #region Private method MySql
@@ -2984,6 +3078,56 @@ where `seq_no`=1
             return rez;
         }
 
+        /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        private void SetCustomerDefaultCallOffScMySql(long CustSid, decimal DefaultCallOffSc)
+        {
+            //bool rez = false;
+            string CommandSql = string.Format("Update aks`.`cust_sc_param` Set `CALL_OFF_SC_DEF`={1} Where `CUST_SID`={0}", CustSid.ToString().Replace(",", "."), DefaultCallOffSc.ToString().Replace(",", "."));
+
+            try
+            {
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScMySql", EventEn.Dump);
+
+                // Закрывать конект не нужно он будет закрыт деструктором
+                using (OdbcConnection con = new OdbcConnection(base.ConnectionString))
+                {
+                    con.Open();
+
+                    using (OdbcCommand com = new OdbcCommand(CommandSql, con))
+                    {
+                        com.CommandTimeout = 900;  // 15 минут
+                        int dr = com.ExecuteNonQuery();
+
+                        /*
+                        // Проверяем кол-во обновлённых строк
+                        if (dr > 0)
+                        {
+                            //rez = true;
+                        }
+                        else
+                        {
+                            throw new ApplicationException("Количество строк которое обновилось в базе менее 1.");
+                        }*/
+                    }
+                }
+            }
+            catch (OdbcException ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScMySql", EventEn.Error);
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScMySql", EventEn.Dump);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScMySql", EventEn.Error);
+                if (Com.Config.Trace) base.EventSave(CommandSql, GetType().Name + ".SetCustomerDefaultCallOffScMySql", EventEn.Dump);
+                throw;
+            }
+        }
         #endregion
 
         #region Private metod For Mode NotDB
@@ -3232,6 +3376,25 @@ where `seq_no`=1
             catch (Exception ex)
             {
                 base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".AployDMCalkStoreCreditNotDB", EventEn.Error);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        private void SetCustomerDefaultCallOffScNotDB(long CustSid, decimal DefaultCallOffSc)
+        {
+            try
+            {
+                // имитация долгой работы, чтобы можно было увидеть пользователю визуально, что сейчас идёт обращение в базу данных
+                Thread.Sleep(2000);
+            }
+            catch (Exception ex)
+            {
+                base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScNotDB", EventEn.Error);
                 throw;
             }
         }

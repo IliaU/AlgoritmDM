@@ -39,5 +39,12 @@ namespace AlgoritmDM.Com.Provider.Lib
         /// <param name="MergeClientMain">Основной клиент</param>
         /// <param name="MergeClientDonors">Клинеты доноры</param>
         void MergeClient(Customer MergeClientMain, List<Customer> MergeClientDonors);
+
+        /// <summary>
+        /// Установка дефолтного значения для ретейла из призма
+        /// </summary>
+        /// <param name="CustSid">Сид пользователя</param>
+        /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+        void SetCustomerDefaultCallOffSc(long CustSid, decimal DefaultCallOffSc);
     }
 }
