@@ -303,7 +303,7 @@ namespace AlgoritmDM.Com.PlgProviderPrizm
                                         for (int i = 0; i < dr.FieldCount; i++)
                                         {
                                             if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("cust_sid").ToUpper()) tmpCustSid = long.Parse(dr.GetValue(i).ToString());
-                                            try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("MAX_DISC_PERC").ToUpper()) tmpCallOffSc = dr.GetDecimal(i); }
+                                            try { if (!dr.IsDBNull(i) && dr.GetName(i).ToUpper() == ("CALL_OFF_SC").ToUpper()) tmpCallOffSc = dr.GetDecimal(i); }
                                             catch { }
                                         }
 

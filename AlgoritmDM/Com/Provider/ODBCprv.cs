@@ -902,7 +902,7 @@ Where (CUST_SID={0} and POST_DATE>To_Date('{1}','DD.MM.YYYY'))
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
+                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) + p.CALL_OFF_SC_DEF STORE_CREDIT,
     a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
 from CMS.customer s
     left join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
@@ -910,12 +910,12 @@ from CMS.customer s
                 }
                 else
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
+                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) + p.CALL_OFF_SC_DEF STORE_CREDIT,
     a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
 from CMS.customer s
     left join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
     left join AKS.CUST_SC_PARAM p on s.cust_sid=p.cust_sid
-Where a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
+Where a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";//////////////////////////////and s.cust_sid=3983643970
                 }
             }
             else    // Если код региона указан
@@ -923,7 +923,7 @@ Where a.phone1 like '" + Com.Config.CustomerPrefixPhoneList.Trim() + @"%'";
                 if (string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList)  // Если префикс телефона не определён
                     || (!string.IsNullOrWhiteSpace(Com.Config.CustomerPrefixPhoneList) && Com.Config.CustomerPrefixPhoneList.IndexOf(",") > -1)) // Или если определено несколько префиксов телефона
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
+                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) + p.CALL_OFF_SC_DEF STORE_CREDIT,
     a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
 from CMS.customer s
     inner join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1
@@ -932,7 +932,7 @@ Where nvl(a.COUNTRY_ID,0) in (" + Com.Config.CustomerCountryList + @")";
                 }
                 else
                 {
-                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) STORE_CREDIT,
+                    CommandSql = @"select distinct s.cust_sid, s.first_name, s.last_name, s.cust_id, To_Char(s.MAX_DISC_PERC) MAX_DISC_PERC, To_Char(s.STORE_CREDIT) + p.CALL_OFF_SC_DEF STORE_CREDIT,
     a.phone1, a.address1, s.FST_SALE_DATE, s.lst_sale_date, s.EMAIL_ADDR, p.SC_PERC
 from CMS.customer s
     inner join CMS.cust_address a on s.cust_sid=a.cust_sid and ADDR_NO=1

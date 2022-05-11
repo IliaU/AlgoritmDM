@@ -310,11 +310,38 @@ namespace AlgoritmDM.Com.Provider
                
             }
 
+            /// <summary>
+            /// Установка дефолтного значения для ретейла из призма
+            /// </summary>
+            /// <param name="CustSid">Сид пользователя</param>
+            /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+            public void SetCustomerDefaultCallOffSc(long CustSid, decimal DefaultCallOffSc)
+            {
+                try
+                {
+                    // Если мы работаем в режиме без базы то выводим тестовые записи
+                    if (Com.Config.Mode == ModeEn.NotDB) this.SetCustomerDefaultCallOffScNotDB(CustSid, DefaultCallOffSc);
+                    else if (Com.Config.Mode == ModeEn.NotData && this.HashConnect()) this.SetCustomerDefaultCallOffScNotDB(CustSid, DefaultCallOffSc);
+                    else if (Com.Config.Mode == ModeEn.NotData && !this.HashConnect()) throw new ApplicationException("Не установлено подключение с базой данных.");
+                    else
+                    {
+                        if (!base.HashConnect() && Com.Config.Mode != ModeEn.NotDB) new ApplicationException("Нет подключение к базе данных." + this.ConnectionString);
+
+                        SetCustomerDefaultCallOffScRPro(CustSid, DefaultCallOffSc);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffSc", EventEn.Error);
+                    throw;
+                }
+            }
+
         #endregion
 
         #region Private metod
-            // Пользователь вызвал меню информации по провайдеру
-            private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
+        // Пользователь вызвал меню информации по провайдеру
+        private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
             {
                 //using (ODBC.FInfo Frm = new ODBC.FInfo(this))
                 //{
@@ -587,19 +614,43 @@ namespace AlgoritmDM.Com.Provider
                 }
             }
 
+            /// <summary>
+            /// Установка дефолтного значения для ретейла из призма
+            /// </summary>
+            /// <param name="CustSid">Сид пользователя</param>
+            /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+            private void SetCustomerDefaultCallOffScRPro(long CustSid, decimal DefaultCallOffSc)
+            {
+                try
+                {
+                    bool rez = true;
+
+                    // имитация долгой работы, чтобы можно было увидеть пользователю визуально, что сейчас идёт обращение в базу данных
+                    Thread.Sleep(2000);
+
+                    // Передаём результат операции
+                    //return rez;
+                }
+                catch (Exception ex)
+                {
+                    base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScRPro", EventEn.Error);
+                    throw;
+                }
+            }
+
         #endregion
 
         #region Private metod For Mode NotDB
-            /// <summary>
-            /// Выкачивание чеков
-            /// </summary>
-            /// <param name="FuncTarget">Функция которой передать строчку из чека</param>
-            /// <param name="CnfL">Текущая конфигурация в которой обрабатывается строка чека</param>
-            /// <param name="NextScenary">Индекс следующего элемента конфигурации который будет обрабатывать строку чека</param>
-            /// <param name="FirstDate">Первая дата чека, предпологается использовать для прогресс бара</param>
-            /// <param name="FilCustSid">Фильтр для получения данных по конкретному клиенту. null значит пользователь выгребает по всем клиентам</param>
-            /// <returns>Успех обработки функции</returns>
-            private bool getCheckNotDB(Func<Check, ConfigurationList, int, DateTime?, bool> FuncTarget, ConfigurationList CnfL, int NextScenary, DateTime? FirstDate, long? FilCustSid)
+        /// <summary>
+        /// Выкачивание чеков
+        /// </summary>
+        /// <param name="FuncTarget">Функция которой передать строчку из чека</param>
+        /// <param name="CnfL">Текущая конфигурация в которой обрабатывается строка чека</param>
+        /// <param name="NextScenary">Индекс следующего элемента конфигурации который будет обрабатывать строку чека</param>
+        /// <param name="FirstDate">Первая дата чека, предпологается использовать для прогресс бара</param>
+        /// <param name="FilCustSid">Фильтр для получения данных по конкретному клиенту. null значит пользователь выгребает по всем клиентам</param>
+        /// <returns>Успех обработки функции</returns>
+        private bool getCheckNotDB(Func<Check, ConfigurationList, int, DateTime?, bool> FuncTarget, ConfigurationList CnfL, int NextScenary, DateTime? FirstDate, long? FilCustSid)
             {
                 try
                 {
@@ -811,17 +862,42 @@ namespace AlgoritmDM.Com.Provider
                 }
             }
 
+
+            /// <summary>
+            /// Установка дефолтного значения для ретейла из призма
+            /// </summary>
+            /// <param name="CustSid">Сид пользователя</param>
+            /// <param name="DefaultCallOffSc">Значение которое выставляем в поле CallOffScDef</param>
+            private void SetCustomerDefaultCallOffScNotDB(long CustSid, decimal DefaultCallOffSc)
+            {
+                try
+                {
+                    bool rez = true;
+
+                    // имитация долгой работы, чтобы можно было увидеть пользователю визуально, что сейчас идёт обращение в базу данных
+                    Thread.Sleep(2000);
+
+                    // Передаём результат операции
+                    //return rez;
+                }
+                catch (Exception ex)
+                {
+                    base.EventSave(string.Format("Произожла ошибка при записи данных в источник. {0}", ex.Message), GetType().Name + ".SetCustomerDefaultCallOffScNotDB", EventEn.Error);
+                    throw;
+                }
+            }
+
         #endregion
 
         #region Специальные функции парсинга
-            /// <summary>
-            /// Чтение строк из файла
-            /// </summary>
-            /// <param name="FileName">Шаблон файла</param>
-            /// <param name="TopLen">Длина заголовка</param>
-            /// <param name="RowLen">Длина строки</param>
-            /// <returns>Массив байт</returns>
-            private IEnumerable<byte[]> GetRowsFromFile(string FileName, int TopLen, int RowLen)
+        /// <summary>
+        /// Чтение строк из файла
+        /// </summary>
+        /// <param name="FileName">Шаблон файла</param>
+        /// <param name="TopLen">Длина заголовка</param>
+        /// <param name="RowLen">Длина строки</param>
+        /// <returns>Массив байт</returns>
+        private IEnumerable<byte[]> GetRowsFromFile(string FileName, int TopLen, int RowLen)
             {
                 yield break;  // В 10 студии не компилится по этому всё что ниже казоментил и нарисовал заглушку 
                 /*

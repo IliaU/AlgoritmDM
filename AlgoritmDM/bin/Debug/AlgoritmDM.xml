@@ -13,7 +13,7 @@
     <Viktoriya Password="37B-38W-38S-38V-38Q-38S" Description="" Role="Admin" />
   </Users>
   <UScenariyList>
-    <UScenariy ScnFullName="BonusDMscn" ScenariyName="Стандартная бонусная программа" TraceCustSid="All" Start_SC_Summ="0" CustomerPrefixPhoneList="+7" Start_SC_Perc="5" Manual_SC_Perc="UDF15" Delay_Period="14" Deep_Conv_SC="2000" Start_SC_Program="" SC_Perc="ADDRESS4">
+    <UScenariy ScnFullName="BonusDMscn" ScenariyName="Стандартная бонусная программа" TraceCustSid="All" Start_SC_Summ="0" CustomerPrefixPhoneList="+7" Start_SC_Perc="5" Manual_SC_Perc="UDF15" Delay_Period="14" Deep_Conv_SC="2000" Start_SC_Program="01.01.2021" SC_Perc="ADDRESS4">
       <NotDiscReasonId>
       </NotDiscReasonId>
       <PorogPointList>
